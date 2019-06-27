@@ -13,6 +13,7 @@
  */
 body {
   scroll-behavior: smooth;
+  border: var(--color-theme-primary) solid 0.8rem;
 }
 
 main:focus {
