@@ -1,18 +1,18 @@
 {
   "items": [
     {
-      "text": "Home",
+      "text": "home",
       "url": "/",
       "external": false
     },
     {
-      "text": "GitHub",
-      "url": "https://github.com/andybelldesign/hylia",
+      "text": "codepen",
+      "url": "https://codepen.io/cassie-codes/",
       "external": true
     },
     {
       "text": "Twitter",
-      "url": "https://twitter.com/andybelldesign",
+      "url": "https://twitter.com/cassiecodes",
       "external": true
     }
   ]
