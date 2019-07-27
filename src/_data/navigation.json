@@ -1,11 +1,6 @@
 {
   "items": [
     {
-      "text": "home",
-      "url": "/",
-      "external": false
-    },
-    {
       "text": "codepen",
       "url": "https://codepen.io/cassie-codes/",
       "external": true
@@ -17,7 +12,8 @@
     },
     {
       "text": "writing",
-      "url": "/writing"
+      "url": "/writing",
+      "external": false
     }
   ]
 }
