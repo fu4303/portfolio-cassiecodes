@@ -4,11 +4,16 @@
   }
 
   &__link {
-    color: var(--color-theme-primary);
-    text-decoration: none;
+    color: var(--color-theme-highlight);
+    text-decoration: underline;
 
     &:hover {
-      text-decoration: underline;
+      text-decoration: none;
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0) 50%,
+        var(--color-theme-primary-glare) 50%
+      );
     }
   }
 }
