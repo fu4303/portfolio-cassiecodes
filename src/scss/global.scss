@@ -12,7 +12,23 @@
  * GLOBAL STYLES 
  */
 body {
+  position: relative;
   scroll-behavior: smooth;
+  padding: 0.8rem;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  user-select: none;
+  pointer-events: none;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
   border: var(--color-theme-primary) solid 0.8rem;
 }
 
