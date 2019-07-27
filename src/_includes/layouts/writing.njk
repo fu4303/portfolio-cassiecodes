@@ -2,11 +2,11 @@
 {% set pageType = 'Post Archive' %}
 
 {# Intro content #}
-{% set introHeading = title %}
+{% set introHeading = "Sometimes I write things" %}
 {% set introSummary %}{{ content | safe }}{% endset %}
 
 {# Post list content #}
-{% set postListHeading = 'All posts' %}
+{# {% set postListHeading = 'All posts' %} #}
 {% set postListItems = collections.posts %}
 
 {% block content %}
