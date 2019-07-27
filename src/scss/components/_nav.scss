@@ -8,6 +8,7 @@
     -ms-overflow-style: none;
 
     &::-webkit-scrollbar {
+      -webkit-appearance: none;
       background-color: #ebebeb;
     }
 
