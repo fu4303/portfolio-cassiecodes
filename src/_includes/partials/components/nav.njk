@@ -14,7 +14,9 @@
         {% endif %}
 
         <li class="nav__item">
-          <a href="{{ item.url }}"{{ externalAttribute | safe }}{{ currentAttribute | safe }}>{{ item.text }}</a>
+          <a href="{{ item.url }}"{{ externalAttribute | safe }}{{ currentAttribute | safe }} class="nav__item-hover">
+              <span class="nav__item-hover-inner" data-hover="{{ item.text }}">{{ item.text }}</span>
+          </a>
         </li>
       {% endfor %}
     </ul>

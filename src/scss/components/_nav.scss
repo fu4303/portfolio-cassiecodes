@@ -1,4 +1,7 @@
 .nav {
+  @include apply-utility('font', 'sans-serif');
+  text-transform: uppercase;
+  font-size: 1.3rem;
   &__list {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -19,12 +22,55 @@
 
     a {
       color: currentColor;
-
-      @include apply-utility('weight', 'mid');
-
-      &:not(:hover) {
-        text-decoration: none;
-      }
+      text-decoration: none;
     }
   }
+}
+
+.nav__item-hover {
+  margin: 0;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.nav__item-hover-inner {
+  display: block;
+  position: relative;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  line-height: 1.25;
+}
+
+.nav__item-hover-inner[data-hover] {
+  color: var(--color-theme-primary);
+}
+
+.nav__item-hover-inner::before {
+  content: attr(data-hover);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  color: var(--color-theme-primary-glare);
+  transition: all cubic-bezier(1, 0, 0, 1) 0.4s;
+}
+
+.nav__item-hover-inner::after {
+  content: attr(data-hover);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  color: var(--color-theme-primary);
+  transition: all cubic-bezier(1, 0, 0, 1) 0.4s 0.2s;
+}
+
+.nav__item:hover .nav__item-hover-inner::before,
+.nav__item:hover .nav__item-hover-inner::after {
+  width: 100%;
 }

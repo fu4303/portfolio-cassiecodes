@@ -32,6 +32,12 @@ body::after {
   border: var(--color-theme-primary) solid 0.8rem;
 }
 
+.logo {
+  width: 10rem;
+  visibility: hidden;
+  overflow: visible;
+}
+
 main:focus {
   outline: none;
 }

@@ -8,12 +8,7 @@ export default {
   output: {
     file: 'dist/admin/util.js',
     format: 'iife',
-    name: 'previewUtil',
+    name: 'previewUtil'
   },
-  plugins: [
-    builtins(),
-    nodeResolve(),
-    commonjs(),
-    json(),
-  ]
+  plugins: [builtins(), nodeResolve(), commonjs(), json()]
 };
