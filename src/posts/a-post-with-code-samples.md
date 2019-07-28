@@ -1,26 +1,44 @@
 ---
-title: A post with code samples
-date: '2022-07-28'
+title: Creating my logo animation
+date: '2019-07-28'
 tags:
-  - demo-content
-  - code
-  - blog
 ---
 
-I've been trying to get my own blog up and running for a _while_ now but I've struggled to find the time.
-You know what they say about cobblers children.
+Last week I posted my new logo animation on the [bird website](https://twitter.com).
 
-But no longer will my children go un-shod. I've managed to get a progressive, accessible blog up in record time thanks to the lovely [Andy Bell](https://andy-bell.design/) and his @eleventy starter kit, Hylia.
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">🙌 I finally got a break from all the talk prepping and had a long overdue play around on <a href="https://twitter.com/CodePen?ref_src=twsrc%5Etfw">@CodePen</a> again.<br><br>💜 Pleased with how this little logo animation turned out.<a href="https://t.co/RLUxfJUWGZ">https://t.co/RLUxfJUWGZ</a> <a href="https://t.co/2XY927q5zH">pic.twitter.com/2XY927q5zH</a></p>&mdash; Cassie Evans (@cassiecodes) <a href="https://twitter.com/cassiecodes/status/1154650488681435137?ref_src=twsrc%5Etfw">July 26, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-In typical perfectionist fashion I was planning on getting my own site looking _exactly right_ before revealing it to the world. But, as I've been preaching recently in one of my talks,
+Amongst everyone saying lovely things there was a resounding cry of "tutorial", so I'm going to try and break it down for you. Hope this helps someone, I had a ton of fun making it.
 
-> Perfect is the enemy of good
+There's a few things going on in this logo animation. We've got:
 
-Getting something up is better than getting nothing up at all! So this blog is
-
-The best way to demo a code post is to display a real life post, so check out this one from about a full bleed CSS utility.
+- [SVG stroke dasharray](#heading-svg-stroke-dasharray) path Animation
+- SVG [Clip-path](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/clipPath)
+- [Greensock](https://greensock.com) for the animation
+- Greensock's [Custom Bounce](https://greensock.com/docs/Easing/CustomBounce) plugin
+- and a _whole_ load of drawing stuff out in illustrator.
 
 ---
+
+I went with Greensock because I love it. As [Sara Soueidan](https://twitter.com/SaraSoueidan) has said
+
+>It's the best thing for SVG animation since SVG animation. 
+
+Greensock gives you a ton of really precise control over your animations.
+
+I'd also been side-eying their custom bounce plugin for a while, so when I saw an chance to use it to give the little dot some character I jumped (bounced?) at the chance.
+
+Sorry.
+
+The good news though is that you can do SVG path animations with CSS too, so I'll run through a couple of different ways to create the same effect.
+
+You can also do path animations without masking and without drawing out _too_ much in illustrator.
+
+So let's get going. First up...
+
+---
+
+## SVG `stroke-dasharray`
 
 Sometimes you want to break your components out of the constraints that they find themselves in. A common situation where this occurs is when you don’t have much control of the container that it exists in, such as a CMS main content area.
 
