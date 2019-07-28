@@ -35,6 +35,7 @@ I posted it on twitter when I finished it earlier this week. A few folks asked a
 This has definitely helped spur me on, it's a bit tricky to write a blog post without a blog.
 
 Tutorial post incoming!...
+
 <br>
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">🙌 I finally got a break from all the talk prepping and had a long overdue play around on <a href="https://twitter.com/CodePen?ref_src=twsrc%5Etfw">@CodePen</a> again.<br><br>💜 Pleased with how this little logo animation turned out.<a href="https://t.co/RLUxfJUWGZ">https://t.co/RLUxfJUWGZ</a> <a href="https://t.co/2XY927q5zH">pic.twitter.com/2XY927q5zH</a></p>&mdash; Cassie Evans (@cassiecodes) <a href="https://twitter.com/cassiecodes/status/1154650488681435137?ref_src=twsrc%5Etfw">July 26, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
