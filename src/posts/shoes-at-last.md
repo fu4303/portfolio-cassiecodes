@@ -1,16 +1,20 @@
 ---
 title: Shoes at last!
+metaTitle: Shoes at last!
+metaDesc: 'Fighting perfectionism, and finally getting my own blog started.'
+socialImage: /images/meta.jpg
 date: '2019-07-28'
 tags:
   - blog
 ---
+I've been trying to get my own website up and running for a _while_ now, but between a lack of spare time, endless design ideas and uncertainty about what tech to use I've ended up with nothing.
 
-I've been trying to get my own website up and running for a _while_ now, but between a lack of spare time, endless constantly evolving design ideas and uncertainty about what tech to use I've ended up with nothing.
+
 (You know what they say about cobblers children.)
 
 But no longer will my children go un-shod. I've managed to get a progressive, accessible blog up in record time thanks to the lovely [Andy Bell](https://andy-bell.design/) and his [eleventy](https://www.11ty.io/) starter kit, [Hylia](https://github.com/andybelldesign/hylia).
 
----
+- - -
 
 In typical perfectionist fashion I was planning on getting my own site looking _exactly right_ before revealing it to the world. But, as I've been saying recently in one of my [talks](https://www.youtube.com/watch?v=-OUClChwYt0),
 
@@ -22,7 +26,7 @@ So, after months of overpreparing, overthinking and procrastinating. This weeken
 
 I finally ditched the idea for a big reveal and instead worked on getting as much done as possible, within the time I had available.
 
----
+- - -
 
 I couldn't go full MVP though...
 
