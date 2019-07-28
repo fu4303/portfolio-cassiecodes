@@ -2,6 +2,9 @@
 title: Creating my logo animation
 date: '2022-07-28'
 tags:
+ - demo-content
+  - code
+  - blog
 ---
 
 Last week I posted my new logo animation on the [bird website](https://twitter.com).
@@ -40,21 +43,15 @@ So let's get going. First up...
 
 ## SVG `stroke-dasharray`
 
-Sometimes you want to break your components out of the constraints that they find themselves in. A common situation where this occurs is when you don’t have much control of the container that it exists in, such as a CMS main content area.
+`stroke-dasharray` is a CSS property we can use to make our SVG paths dashed instead of solid. The higher the number is, the the bigger the gap between dashes.
 
-This is even more the case with editing tools such as the [WordPress Gutenberg editor](https://wordpress.org/gutenberg/), where in theory, you could pull in a component from a design system and utilise it in the main content of your web page. In these situations, it can be pretty darn handy to have a little utility that makes the element 100% of the viewport’s width _and_ still maintain its flow within its parent container.
-
-This is when I normally pull the `.full-bleed` utility class out of my back pocket.
-
-## The `.full-bleed` utility
-
-It’s small, but hella mighty:
+```svg
+<path stroke-dasharray="10" ... />
+```
 
 ```css
-.full-bleed {
-  width: 100vw;
-  margin-left: 50%;
-  transform: translateX(-50%);
+.dashedPath {
+  stroke-dasharray: 10;
 }
 ```
 

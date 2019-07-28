@@ -5,9 +5,8 @@
       <h2 class="[ post-list__heading Heading--highlight ] [ text-600 md:text-700 ]">{{ postListHeading }}</h2>
       {% endif %}
       <ol class="[ post-list__items ] [ sf-flow ]" reversed>
-
-      <li class="post-list__item">
         {% for item in postListItems %}
+        {% if item.date.getTime() <= global.now %}
           <li class="post-list__item">
             <h3 class="font-base leading-tight text-600 weight-mid">
               <a href="{{ item.url }}" class="post-list__link" rel="bookmark">{{ item.data.title }}</a>
@@ -16,6 +15,7 @@
               <time datetime="{{ item.date | w3DateFilter }}">{{ item.date | dateFilter }}</time>
             </p>
           </li>
+        {% endif %}
         {% endfor %}
       </ol>
     </div>
