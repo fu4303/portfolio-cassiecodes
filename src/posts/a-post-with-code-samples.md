@@ -1,6 +1,6 @@
 ---
 title: Creating my logo animation
-date: '2019-07-28'
+date: '2022-07-28'
 tags:
 ---
 
