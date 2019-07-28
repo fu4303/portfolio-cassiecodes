@@ -18,7 +18,7 @@ html {
 body {
   position: relative;
   scroll-behavior: smooth;
-  padding: 0.8rem;
+  padding: 0.8rem 0.8rem 0 0.8rem;
 }
 
 body::after {
@@ -32,6 +32,17 @@ body::after {
   top: 0;
   z-index: 999;
   border: var(--color-theme-primary) solid 0.8rem;
+  border-bottom-width: 0;
+}
+
+@include media-query('md') {
+  body {
+    padding: 0.8rem;
+  }
+
+  body::after {
+    border-bottom-width: 0.8rem;
+  }
 }
 
 .logo {
