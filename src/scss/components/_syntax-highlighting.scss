@@ -1,29 +1,23 @@
-/**
- * a11y-dark theme for JavaScript, CSS, and HTML
- * Based on the okaidia theme: https://github.com/PrismJS/prism/blob/gh-pages/themes/prism-okaidia.css
- * @author ericwbailey
- */
+/*
+Name: Duotone Sea
+Author: by Simurai, adapted from DuoTone themes by Simurai for Atom (http://simurai.com/projects/2016/01/01/duotone-themes)
+
+Conversion: Bram de Haan (http://atelierbram.github.io/Base2Tone-prism/output/prism/prism-base2tone-sea-dark.css)
+Generated with Base16 Builder (https://github.com/base16-builder/base16-builder)
+*/
 
 code[class*='language-'],
 pre[class*='language-'] {
-  color: #f8f8f2;
-  background: none;
-  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-family: Consolas, Menlo, Monaco, 'Andale Mono WT', 'Andale Mono', 'Lucida Console',
+    'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
+    'Liberation Mono', 'Nimbus Mono L', 'Courier New', Courier, monospace;
+  font-size: 14px;
+  line-height: 1.375;
+  direction: ltr;
   text-align: left;
-  /* 
-  this suggestion provided by Chris Coyier on CSS-Tricks:
-  https://css-tricks.com/snippets/css/make-pre-text-wrap/
-  */
-  white-space: pre-wrap;       /* css-3 */
-  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-  white-space: -pre-wrap;      /* Opera 4-6 */
-  white-space: -o-pre-wrap;    /* Opera 7 */
-  word-wrap: break-word;       /* Internet Explorer 5.5+ */
-  
+  white-space: pre;
   word-spacing: normal;
   word-break: normal;
-  word-wrap: normal;
-  line-height: 1.5;
 
   -moz-tab-size: 4;
   -o-tab-size: 4;
@@ -33,124 +27,156 @@ pre[class*='language-'] {
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
+  background: #1d262f;
+  color: #57718e;
+}
+
+pre[class*='language-']::-moz-selection,
+pre[class*='language-'] ::-moz-selection,
+code[class*='language-']::-moz-selection,
+code[class*='language-'] ::-moz-selection {
+  text-shadow: none;
+  background: #004a9e;
+}
+
+pre[class*='language-']::selection,
+pre[class*='language-'] ::selection,
+code[class*='language-']::selection,
+code[class*='language-'] ::selection {
+  text-shadow: none;
+  background: #004a9e;
+}
+
+/* Code blocks */
+pre[class*='language-'] {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
 }
 
 /* Inline code */
 :not(pre) > code[class*='language-'] {
   padding: 0.1em;
   border-radius: 0.3em;
-  white-space: normal;
 }
 
 .token.comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: #d4d0ab;
+  color: #4a5f78;
 }
 
 .token.punctuation {
-  color: #fefefe;
+  color: #4a5f78;
+}
+
+.token.namespace {
+  opacity: 0.7;
+}
+
+.token.tag,
+.token.operator,
+.token.number {
+  color: #0aa370;
 }
 
 .token.property,
-.token.tag,
-.token.constant,
-.token.symbol,
-.token.deleted {
-  color: #ffa07a;
+.token.function {
+  color: #57718e;
 }
 
-.token.boolean,
-.token.number {
-  color: #00e0e0;
-}
-
+.token.tag-id,
 .token.selector,
-.token.attr-name,
-.token.string,
-.token.char,
-.token.builtin,
-.token.inserted {
-  color: #abe338;
+.token.atrule-id {
+  color: #ebf4ff;
 }
 
-.token.operator,
+code.language-javascript,
+.token.attr-name {
+  color: #7eb6f6;
+}
+
+code.language-css,
+code.language-scss,
+.token.boolean,
+.token.string,
 .token.entity,
 .token.url,
 .language-css .token.string,
+.language-scss .token.string,
 .style .token.string,
-.token.variable {
-  color: #00e0e0;
-}
-
-.token.atrule,
 .token.attr-value,
-.token.function {
-  color: #ffd700;
-}
-
-.token.keyword {
-  color: #00e0e0;
-}
-
+.token.keyword,
+.token.control,
+.token.directive,
+.token.unit,
+.token.statement,
 .token.regex,
-.token.important {
-  color: #ffd700;
+.token.atrule {
+  color: #47ebb4;
+}
+
+.token.placeholder,
+.token.variable {
+  color: #47ebb4;
+}
+
+.token.deleted {
+  text-decoration: line-through;
+}
+
+.token.inserted {
+  border-bottom: 1px dotted #ebf4ff;
+  text-decoration: none;
+}
+
+.token.italic {
+  font-style: italic;
 }
 
 .token.important,
 .token.bold {
   font-weight: bold;
 }
-.token.italic {
-  font-style: italic;
+
+.token.important {
+  color: #7eb6f6;
 }
 
 .token.entity {
   cursor: help;
 }
 
-@media screen and (-ms-high-contrast: active) {
-  code[class*='language-'],
-  pre[class*='language-'] {
-    color: windowText;
-    background: window;
-  }
+pre > code.highlight {
+  outline: 0.4em solid #34659d;
+  outline-offset: 0.4em;
+}
 
-  :not(pre) > code[class*='language-'],
-  pre[class*='language-'] {
-    background: window;
-  }
+/* overrides color-values for the Line Numbers plugin
+ * http://prismjs.com/plugins/line-numbers/
+ */
+.line-numbers .line-numbers-rows {
+  border-right-color: #1f2932;
+}
 
-  .token.important {
-    background: highlight;
-    color: window;
-    font-weight: normal;
-  }
+.line-numbers-rows > span:before {
+  color: #2c3847;
+}
 
-  .token.atrule,
-  .token.attr-value,
-  .token.function,
-  .token.keyword,
-  .token.operator,
-  .token.selector {
-    font-weight: bold;
-  }
-
-  .token.attr-value,
-  .token.comment,
-  .token.doctype,
-  .token.function,
-  .token.keyword,
-  .token.operator,
-  .token.property,
-  .token.string {
-    color: highlight;
-  }
-
-  .token.attr-value,
-  .token.url {
-    font-weight: normal;
-  }
+/* overrides color-values for the Line Highlight plugin
+* http://prismjs.com/plugins/line-highlight/
+*/
+.line-highlight {
+  background: rgba(10, 163, 112, 0.2);
+  background: -webkit-linear-gradient(
+    left,
+    rgba(10, 163, 112, 0.2) 70%,
+    rgba(10, 163, 112, 0)
+  );
+  background: linear-gradient(
+    to right,
+    rgba(10, 163, 112, 0.2) 70%,
+    rgba(10, 163, 112, 0)
+  );
 }

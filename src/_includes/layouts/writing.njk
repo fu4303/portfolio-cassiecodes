@@ -7,11 +7,13 @@
 
 {# Post list content #}
 {# {% set postListHeading = 'All posts' %} #}
+{% set externalPostListHeading = 'Articles from elsewhere' %}
 {% set postListItems = collections.posts %}
 
 {% block content %}
   <main id="main-content" tabindex="-1">
     {% include "partials/components/intro.njk" %}
     {% include "partials/components/post-list.njk" %}
+    {% include "partials/components/external-post-list.njk" %}
   </main>
 {% endblock %}
