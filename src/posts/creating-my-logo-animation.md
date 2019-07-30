@@ -111,7 +111,9 @@ Under the hood, this is how my logo animation works, but rather than having one 
 Chaining animations in CSS is a bit of a nightmare as we have to do it with `animation-delay`.
 With Greensock, you can line these animations (or tweens) up on a timeline and easily tweak the timings of each tween in relation to the others.
 
-You may have noticed that this version of my logo looks a little... messy though? SVG paths are a fixed width, but we can make them look more stylised by using `<clipPath>`
+You may have noticed that this version of my logo looks a little... messy though? SVG paths are a consistant width the whole way along. We can change the overall `stroke-width` and the shape of the `stroke-linecap` but we can't do much more than that.
+
+Enter `<clipPath>`, we can use clip path to "cut out" a more stylised shape.
 
 
 ## SVG `<clipPath>`
