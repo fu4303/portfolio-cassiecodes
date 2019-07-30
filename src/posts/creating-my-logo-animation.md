@@ -2,7 +2,6 @@
 title: Creating my logo animation
 date: '2019-07-30'
 tags:
-  - demo-content
   - code
   - blog
 ---
