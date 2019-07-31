@@ -1,5 +1,8 @@
 ---
 title: Creating my logo animation
+metaTitle: Creating an SVG path drawing animation.
+metaDesc: Creating my logo animation using SVG and Greensock
+socialImage: /images/meta.jpg
 date: '2019-07-30'
 tags:
   - code
