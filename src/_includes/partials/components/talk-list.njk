@@ -1,0 +1,32 @@
+{% if talks.length %}
+  <section class="[ post-list ] [ pad-top-700 gap-bottom-900 ]">
+    <div class="[ inner-wrapper ] [ sf-flow ]">
+      {% if talkListHeading %} 
+      <h2 class="[ post-list__heading Heading--highlight ] [ text-600 md:text-700 ]">{{ talkListHeading }}</h2>
+      {% endif %}
+      <ol class="[ post-list__items ] [ sf-flow ]" reversed>
+        {% for talk in talks %}
+          <li class="post-list__item">
+            <h3 class="font-base leading-tight text-600 weight-mid">
+              <a href="{{ talk.link }}" class="post-list__link" rel="bookmark">{{ talk.title }}</a>
+            </h3>
+            <p class="text-500 gap-top-300 weight-mid">{{ talk.description }}</p>
+            <span class="text-500 gap-top-300 weight-light">
+              <time datetime="{{ talk.datetime }}">{{ talk.date }}</time>
+            </span>
+            {% if talk.location %}
+             <span class="text-500 gap-top-300 weight-light">
+              <span>| {{ talk.location }}</span>
+            </span>
+            {% endif %}
+            {% if talk.video %}
+             <div class="gap-top-300">
+            <iframe width="560" height="315" src="{{ talk.video }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            {% endif %}
+            </div>
+          </li>
+        {% endfor %}
+      </ol>
+    </div>
+  </section>
+{% endif %}

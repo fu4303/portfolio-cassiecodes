@@ -14,6 +14,11 @@
       "text": "writing",
       "url": "/writing",
       "external": false
+    },
+    {
+      "text": "speaking",
+      "url": "/speaking",
+      "external": false
     }
   ]
 }
