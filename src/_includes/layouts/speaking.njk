@@ -1,0 +1,84 @@
+{% extends 'layouts/base.njk' %}
+{% set pageType = 'Speaking' %}
+
+{# Intro content #}
+{% set introHeading = "Speaking." %}
+{% set introSummary %}{{ content | safe }}{% endset %}
+
+
+{% set talks = [{
+    title: 'Finch Conf',
+    description: 'Interactive web animation with SVG',
+    link: 'https://finchconf.uk',
+    date: '24th September 2019',
+    datetime: '2019-09-24',
+    location: 'Edinburgh, UK'
+  },
+  {
+    title: 'Generate Conf',
+    description: 'Limitation breeds creativity',
+    link: 'https://www.generateconf.com',
+    date: '26th September 2019',
+    datetime: '2019-09-26',
+    location: 'London, UK'
+  },
+  {
+    title: 'Devfest',
+    description: 'Interactive web animation with SVG',
+    link: 'https://devfest.gdgnantes.com/',
+    date: '21st October 2019',
+    datetime: '2019-09-26',
+    location: 'Nantes, France'
+  }
+] %}
+
+{% set webinars = [{
+    title: 'Interactive web animation with SVG',
+    description: 'Smashing TV',
+    link: 'https://www.smashingmagazine.com/smashing-tv/interactive-web-animation-with-svg/',
+    date: '20th August 2019, 16:00 GMT',
+    datetime: '2019-08-20T16:00:00Z'
+  }
+] %}
+
+{% set workshops = [{
+    title: 'Workshop Summit',
+    description: 'Getting started with SVG animation',
+    link: 'https://workshop-summit.com/',
+    date: '5th March 2020',
+    datetime: '2020-03-05',
+    location: 'Brussels, Belgium'
+  }
+] %}
+
+{% set previousTalks = [{
+    title: 'Bytes Conf',
+    description: 'Limitation breeds creativity',
+    link: 'https://workshop-summit.com/',
+    date: '7th March 2019',
+    datetime: '2019-03-07',
+    location: 'Brighton, UK',
+    video: "https://www.youtube.com/embed/cgDBFldyJdM"
+  }
+] %}
+
+{% block content %}
+  <main id="main-content" tabindex="-1">
+    {% include "partials/components/intro.njk" %}
+
+    {% set talkListHeading = "Upcoming talks" %}
+    {% include 'partials/components/talk-list.njk' %}
+
+    {% set talkListHeading = "Webinars" %}
+    {% set talks = webinars %}
+    {% include 'partials/components/talk-list.njk' %}
+
+    {% set talkListHeading = "Workshops" %}
+    {% set talks = workshops %}
+    {% include 'partials/components/talk-list.njk' %}
+
+    {% set talkListHeading = "Previous Talks" %}
+    {% set talks = previousTalks %}
+    {% include 'partials/components/talk-list.njk' %}
+  </main>
+{% endblock %}
