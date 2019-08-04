@@ -224,7 +224,7 @@ The final cherry on top is the little dot on the i. 💚
 
 In order to make a realistic bounce, the element needs to abide by the [squash and stretch](https://blog.animationmentor.com/squash-and-stretch-the-12-basic-principles-of-animation/) animation principle. 
 
-This helps make the movement feel more lifelike. The i should squash and stick to the ground at the bottom of the bounce and stretch out at the top. You can definitely acheive this withs ome really fine tuned keyframes or individual, overlapping tweens. But Greensock make it easier for us with their [Custom Bounce](https://greensock.com/wiggle-bounce) plugin.
+This helps make the movement feel more lifelike. The i should squash and stick to the ground at the bottom of the bounce and stretch out at the top. You can definitely achieve this with some really fine tuned keyframes or individual, overlapping tweens. But Greensock make it easier for us with their [Custom Bounce](https://greensock.com/wiggle-bounce) plugin.
 
 Using the plugin you set a few parameters and it creates an ease for the bounce and for the squash and stretch.
 
