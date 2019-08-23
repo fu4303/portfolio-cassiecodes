@@ -57,13 +57,6 @@ Amplifying voices like these
 And supporting initiatives like this
 [reactjsgirls.com](ttps://reactjsgirls.com)
 
-Can we all step down off our high horses and try to actually listen to each other?
-I feel the same. I leaned towards learning Vue before React because the community seemed more friendly and helpful.
+Enough shouting.
 
-
-
-
-
-
-
-But there are plenty of intelligent React devs building accessible user-centered
+It's time for the quiet majority to have their say.
