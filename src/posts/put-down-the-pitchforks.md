@@ -1,8 +1,8 @@
 ---
 layout: layouts/post.njk
 title: Put down the pitchforks.
-metaTitle: a call to end the JS framework war.
-metaDesc: a call to end the JS framework war.
+metaTitle: Put down the pitchforks.
+metaDesc: I've had enough of the React bro narrative.
 date: 2019-08-23T07:47:49.431Z
 tags:
   - opinion
@@ -33,12 +33,15 @@ Yes, we should be considering the user first. But as long as that's considered, 
 
 ---
 
-Now, I'm not saying there isn't a problem. I'm aware of the toxic voices in the React community. But by acknowledging and subtweeting them we're amplifying this noise and drowning out people who have more interesting things to say.
+Now, I'm not saying there isn't a problem. I'm aware of the toxic voices in the React community. But by acknowledging and subtweeting them we're amplifying this noise and drowning out people who have more interesting things to say. 
+(I'm aware of the irony of writing a blog post which is basically a subtweet.)
 
 As a woman, I'm also very tired of the "React bro" narrative. I'm tired of seeing it from people who list in in their bio's like some bizarre badge of honour and I'm tired of hearing it used as an insult. 
 All it serves to do is create yet another unnecessary gendered layer to an industry already riddled with misogyny. It makes it sounds like all React devs are just ripped dudes, swaggering about, high fiving each other and belching. We already have enough damaging stereotypes in the tech industry that don't include women.
 
 I'm bored folks. I'm bored of hearing the same loud voices, shouting about the same boring reductionist stuff day after day. They're drowning out the quieter, more interesting conversations happening in the background.
+
+It’s undeniably important to call out intolerant attitudes in a community. These views, if left unnoticed can fester and spread. But we can call them out without being equally provocative. We can lead by example. While everyone was shouting yesterday, a female friend of mine was quietly consulting and making plans to help move this community in a more positive direction.
 
 Can we please put down the pitchforks, stop the subtweeting and focus on the people in the community doing great things. We can shape the direction this community takes by choosing to listen to the right people.
 
