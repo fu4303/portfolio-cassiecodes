@@ -5,7 +5,7 @@ metaTitle: a call to end the JS framework war.
 metaDesc: a call to end the JS framework war.
 date: 2019-08-23T07:47:49.431Z
 tags:
-  - rants
+  - opinion
 ---
 A while back I witnessed a conversation between two developers. I feel like I've seen similar conversations play out infinitely on twitter since then. 
 
