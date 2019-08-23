@@ -35,10 +35,27 @@ People are not inherently bad because of the tools they're using at their workpl
 
 ---
 
-Now, I'm not saying there isn't a problem. There are, without a doubt some very loud toxic voices in the React community. But by acknowledging and subtweeting them we're amplifying this noise and drowning out people who have more interesting things to say.
+Now, I'm not saying there isn't a problem. There are, without a doubt some very loud, toxic voices in the React community. But by acknowledging and subtweeting them we're amplifying this noise and drowning out people who have more interesting things to say.
 
-Yesterday particularly hit a nerve 
+I'm also sick of the "React bro" narrative. I'm sick of it from the people who list in in their bio's like some bizarre badge of honour and I'm sick of hearing it from people who are making fun of it. All it serves to do is create yet another unnecessary gendered layer to an industry already riddled with misogyny. It makes it sounds like all React devs are just dudes, swaggering about, high fiving each other and belching. We already have enough damaging stereotypes in the tech industry that don't include women.
 
+I'm bored folks. I'm bored of hearing the same loud voices, shouting about the same boring reductionist stuff day after day. They're drowning out the interesting conversations happening in the background.
+
+Can we please just put down the pitchforks, stop the subtweeting and vitriol. Sure. The React community has it's problems. It's a huge community so there are bound to be some rotten eggs in the basket. 
+But there's also a ton of people in the community doing great things. 
+
+Let's use our energy and our online platform more wisely. 
+
+Spend our time sharing articles like this
+
+[Getting started with web accessibility in React: Emily Mears](https://medium.com/@emilymears/getting-started-with-web-accessibility-in-react-9e591fdb0d52)
+
+Amplifying voices like these
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Who are the women of React that you look up to? <a href="https://t.co/ikpzFyMGKo">https://t.co/ikpzFyMGKo</a></p>&mdash; “K-Nearest” Nabors 💙 (@rachelnabors) <a href="https://twitter.com/rachelnabors/status/1164087457064849408?ref_src=twsrc%5Etfw">August 21, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+And supporting initiatives like this
+[reactjsgirls.com](ttps://reactjsgirls.com)
 
 Can we all step down off our high horses and try to actually listen to each other?
 I feel the same. I leaned towards learning Vue before React because the community seemed more friendly and helpful.
