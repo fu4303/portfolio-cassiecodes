@@ -37,7 +37,7 @@ Now, I'm not saying there isn't a problem. I'm aware of the toxic voices in the 
 (I'm aware of the irony of writing a blog post which is basically a subtweet.)
 
 As a woman, I'm also very tired of the "React bro" narrative. I'm tired of seeing it from people who list in in their bio's like some bizarre badge of honour and I'm tired of hearing it used as an insult. 
-All it serves to do is create yet another unnecessary gendered layer to an industry already riddled with misogyny. It makes it sounds like all React devs are just ripped dudes, swaggering about, high fiving each other and belching. We already have enough damaging stereotypes in the tech industry that don't include women.
+All it serves to do is create yet another unnecessary gendered layer to an industry already riddled with misogyny. It makes it sound like all React devs are just ripped dudes, swaggering about, high fiving each other and belching. We already have enough damaging stereotypes in the tech industry that don't include women.
 
 I'm bored folks. I'm bored of hearing the same loud voices, shouting about the same boring reductionist stuff day after day. They're drowning out the quieter, more interesting conversations happening in the background.
 
