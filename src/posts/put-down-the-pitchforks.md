@@ -57,7 +57,7 @@ Amplifying voices like these
 
 And supporting initiatives like this
 
-[reactjsgirls.com](ttps://reactjsgirls.com)
+[reactjsgirls.com](https://reactjsgirls.com)
 
 Enough shouting.
 It's time for the quiet majority to have their say.
