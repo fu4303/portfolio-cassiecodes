@@ -7,7 +7,7 @@ date: 2019-08-23T07:47:49.431Z
 tags:
   - opinion
 ---
-> **26th August - Important update.**
+> **26th August - A short but important update.**
 
 In the wake of the issues surfaced around the React community over the last few days, I need to clarify something.
 
@@ -21,7 +21,7 @@ As overrepresented people, we have the privilege of being able to walk away when
 
 Don't take personal offense when toxic behavior is called out in your community. Listen. Take steps to fix it.
 
-**Suggested reading**
+## Suggested reading
 
 
 
@@ -31,6 +31,8 @@ Don't take personal offense when toxic behavior is called out in your community.
 -Claudia Rankine
 
 - - -
+
+> **23th August - Original post.**
 
 A while back I witnessed a conversation between two developers. I feel like I've seen similar conversations play out infinitely on twitter since then. 
 
