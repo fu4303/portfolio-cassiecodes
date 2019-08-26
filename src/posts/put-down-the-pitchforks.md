@@ -21,9 +21,7 @@ As overrepresented people, we have the privilege of being able to walk away when
 
 Don't take personal offense when toxic behavior is called out in your community. Listen. Take steps to fix it.
 
-## Suggested reading
-
-
+**Suggested reading**
 
 [White Fragility: Why It's So Hard for White People to Talk About Racism](https://www.amazon.co.uk/White-Fragility-People-About-Racism/dp/0141990562/ref=sr_1_1?adgrpid=63360820236&gclid=EAIaIQobChMI4LLV3aih5AIVguFRCh1XJAprEAAYAiAAEgLLs_D_BwE&hvadid=317560218377&hvdev=c&hvlocphy=9045162&hvnetw=g&hvpos=1t2&hvqmt=e&hvrand=5133184283976352269&hvtargid=kwd-652158945522&hydadcr=24428_1748934&keywords=white+fragility+books&qid=1566849367&s=gateway&sr=8-1)
 
