@@ -7,6 +7,31 @@ date: 2019-08-23T07:47:49.431Z
 tags:
   - opinion
 ---
+> **26th August - A short but important update.**
+
+In the wake of the issues surfaced around the React community over the last few days, I need to clarify something.
+
+This post was written before the main issues unraveled on twitter and is currently being shared out of context. It was a reaction to witnessing months of overblown, real life arguments around the framework choice itself, and my frustration at the "React bro" stereotype that was emerging.
+
+If you're looking to share this as a call to "just ignore" the uncomfortable conversations about white supremacy. Don't.
+
+**We can't ignore them.**
+
+As overrepresented people, we have the privilege of being able to walk away when we're uncomfortable, while marginalized people can't and are left to pick up the pieces.
+
+Don't take personal offense when toxic behavior is called out in your community. Listen. Take steps to fix it.
+
+## Suggested reading
+
+
+
+[White Fragility: Why It's So Hard for White People to Talk About Racism](https://www.amazon.co.uk/White-Fragility-People-About-Racism/dp/0141990562/ref=sr_1_1?adgrpid=63360820236&gclid=EAIaIQobChMI4LLV3aih5AIVguFRCh1XJAprEAAYAiAAEgLLs_D_BwE&hvadid=317560218377&hvdev=c&hvlocphy=9045162&hvnetw=g&hvpos=1t2&hvqmt=e&hvrand=5133184283976352269&hvtargid=kwd-652158945522&hydadcr=24428_1748934&keywords=white+fragility+books&qid=1566849367&s=gateway&sr=8-1)
+
+"With clarity and compassion, DiAngelo allows us to understand racism as a practice not restricted to "bad people." In doing so, she moves our national discussions forward. This is a necessary book for all people invested in societal change"
+-Claudia Rankine
+
+- - -
+
 A while back I witnessed a conversation between two developers. I feel like I've seen similar conversations play out infinitely on twitter since then. 
 
 One developer had spent the previous few months focusing on increasing the accessibility of an existing large scale project. The other was a respected voice on accessibility.
@@ -23,7 +48,7 @@ This conversation could have been educational. But instead both developers left 
 
 I wish this feeling had ended there. But I'm still exhausted. I'm writing this partially to implore everyone to put the damn pitchforks down, but also, frankly, because I need to vent.
 
----
+- - -
 
 A framework choice is not a personality. There is no right or wrong choice. Just the right choice for a particular team and project and time. 
 
@@ -31,7 +56,7 @@ Viewing framework choices as "us vs them" just fosters a culture of superiority 
 
 Yes, we should be considering the user first. But as long as that's considered, at the end of the day. the tool you use to get the job done is just a tool. People are not inherently bad because of the tools they're using at their workplace.
 
----
+- - -
 
 Now, I'm not saying there isn't a problem. I'm aware of the toxic voices in the React community. But by acknowledging and subtweeting them we're amplifying this noise and drowning out people who have more interesting things to say. 
 (I'm aware of the irony of writing a blog post which is basically a subtweet.)
