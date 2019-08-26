@@ -30,6 +30,8 @@ Don't take personal offense when toxic behavior is called out in your community.
 "With clarity and compassion, DiAngelo allows us to understand racism as a practice not restricted to "bad people." In doing so, she moves our national discussions forward. This is a necessary book for all people invested in societal change"
 -Claudia Rankine
 
+- - -
+
 > **23th August - Original post.**
 
 A while back I witnessed a conversation between two developers. I feel like I've seen similar conversations play out infinitely on twitter since then. 
