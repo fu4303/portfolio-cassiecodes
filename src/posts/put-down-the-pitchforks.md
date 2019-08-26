@@ -76,11 +76,11 @@ Spend our time sharing articles like this -
 
 [Getting started with web accessibility in React: Emily Mears](https://medium.com/@emilymears/getting-started-with-web-accessibility-in-react-9e591fdb0d52)
 
-Amplifying voices like the ones in this thread -
+Amplifying the voices in this thread, especially the women of colour.
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Who are the women of React that you look up to? <a href="https://t.co/ikpzFyMGKo">https://t.co/ikpzFyMGKo</a></p>&mdash; “K-Nearest” Nabors 💙 (@rachelnabors) <a href="https://twitter.com/rachelnabors/status/1164087457064849408?ref_src=twsrc%5Etfw">August 21, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-And supporting initiatives like this -
+And supporting positive initiatives like this -
 
 [reactjsgirls.com](https://reactjsgirls.com)
 
