@@ -22,15 +22,14 @@
       color: currentcolor;
       position: relative;
       display: inline;
-      padding: 0.2rem 0.4rem 0.3rem 0.4rem;
-      white-space: pre-wrap;
+      padding: 0.1rem 0.2rem 0.2rem 0.1rem;
+      white-space: pre;
       text-decoration: none;
       background: linear-gradient(
         180deg,
-        rgba(255, 255, 255, 0) 65%,
-        var(--color-theme-primary) 65%
+        rgba(255, 255, 255, 0) 85%,
+        var(--color-theme-primary) 85%
       );
-      @include apply-utility('leading', 'tight');
     }
 
     a:not([class]):hover {
