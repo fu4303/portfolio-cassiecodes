@@ -64,6 +64,26 @@ hr {
   margin: get-size(900) auto;
 }
 
+a:not([class]) {
+  color: currentcolor;
+  position: relative;
+  display: inline;
+  padding: 0.1rem 0.2rem 0.2rem 0.1rem;
+  white-space: pre;
+  text-decoration: none;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 85%,
+    var(--color-theme-primary) 85%
+  );
+}
+
+a:not([class]):hover {
+  text-decoration: none;
+  color: var(--color-light);
+  background: var(--color-theme-primary);
+}
+
 // .arrowLink {
 //   display: inline-block;
 //   position: relative;
