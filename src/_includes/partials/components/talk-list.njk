@@ -1,6 +1,6 @@
 {% if talks.length %}
   <section class="[ post-list ] [ pad-top-700 gap-bottom-900 ]">
-    <div class="[ inner-wrapper ] [ sf-flow ]">
+    <div class="[ sf-flow ]">
       {% if talkListHeading %} 
       <h2 class="[ post-list__heading Heading--highlight ] [ text-600 md:text-700 ]">{{ talkListHeading }}</h2>
       {% endif %}
@@ -18,11 +18,6 @@
              <span class="text-500 gap-top-300 weight-light">
               <span>| {{ talk.location }}</span>
             </span>
-            {% endif %}
-            {% if talk.video %}
-             <div class="gap-top-300 video-player">
-              <iframe width="560" height="315" src="{{ talk.video }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-             </div>
             {% endif %}
           </li>
         {% endfor %}
