@@ -38,14 +38,25 @@ module.exports = function(config) {
 
   // Custom collections
   const livePosts = post => post.date <= now && !post.data.draft;
+  const public    = post => !post.data.tags.includes('notes');
+
   config.addCollection('posts', collection => {
     return [
-      ...collection.getFilteredByGlob('./src/posts/*.md').filter(livePosts)
-    ].reverse();
+      ...collection.getFilteredByGlob('./src/posts/*.md').filter(livePosts).filter(public)
+    ].reverse()
   });
 
+
+
   config.addCollection('postFeed', collection => {
-    return [...collection.getFilteredByGlob('./src/posts/*.md').filter(livePosts)]
+    return [...collection.getFilteredByGlob('./src/posts/*.md').filter(livePosts).filter(public)]
+      .reverse()
+      .slice(0, site.maxPostsPerPage);
+  });
+
+
+  config.addCollection('notes', collection => {
+    return [...collection.getFilteredByTag("notes").filter(livePosts)]
       .reverse()
       .slice(0, site.maxPostsPerPage);
   });
