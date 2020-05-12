@@ -9,7 +9,7 @@
 
 {# Post list content #}
 {% set postListHeading = postsHeading %}
-{% set postListItems = collections.postFeed %}
+{% set postListItems = collections.postFeed.slice(0, 1) %}
 
 {# Archive link #}
 {% if postListItems.length < collections.posts.length %} 
