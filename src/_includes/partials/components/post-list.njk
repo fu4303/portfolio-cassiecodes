@@ -2,16 +2,16 @@
   <section class="[ post-list ] [ pad-top-700 gap-bottom-900 ]">
     <div class="[ inner-wrapper ] [ sf-flow ]">
       {% if postListHeading %} 
-      <h2 class="[ post-list__heading Heading--highlight ] [ text-600 md:text-700 ]">{{ postListHeading }}</h2>
+      <h2 class="[ post-list__heading Heading--highlight ] [ h4 font-sans-serif ]">{{ postListHeading }}</h2>
       {% endif %}
       <ol class="[ post-list__items ] [ sf-flow ]" reversed>
         {% for item in postListItems %}
         {% if item.date.getTime() <= global.now %}
           <li class="post-list__item">
-            <h3 class="font-base leading-tight text-600 weight-mid">
+            <h3 class="font-base leading-tight h4 weight-mid">
               <a href="{{ item.url }}" class="post-list__link" rel="bookmark">{{ item.data.title }}</a>
             </h3>
-            <p class="text-500 gap-top-300 weight-mid">
+            <p class="h5 gap-top-300 weight-mid">
               <time datetime="{{ item.date | w3DateFilter }}">{{ item.date | dateFilter }}</time>
             </p>
           </li>

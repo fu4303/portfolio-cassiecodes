@@ -39,7 +39,7 @@
     }
 
     code {
-      font-size: 1.2em;
+      font-size: var(--step-0);
       white-space: pre;
       color: var(--color-theme-highlight);
       font-weight: 600;
@@ -116,7 +116,7 @@
     pre > code {
       display: block;
       padding: get-size(700);
-      font-size: 1.1rem;
+      font-size: var(--step-0);
     }
   }
 

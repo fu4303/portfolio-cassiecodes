@@ -1,7 +1,7 @@
 .intro {
   &__summary {
     --flow-space: #{get-size(500)};
-    font-size: get-size(500);
+    font-size: var(--step-1);
   }
 
   &__heading {

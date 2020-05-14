@@ -43,13 +43,15 @@ permalink: /styleguide/
     {% include "partials/components/intro.njk" %}
     <article class="[ inner-wrapper ] [ post ]">
       <section class="[ post__body ] [ sf-flow ] [ pad-top-900 pad-bottom-900 ]">
-        <h2>Colours</h2>
+        
+        <h2 class="h4">Colours</h2>
         <p class="visually-hidden">Colour swatches with various values that you can copy.</p>
+        
         <ul class="swatches">
           {% for color in styleguide.colors() %}
             <li class="sf-flow">
               <div class="[ color ] [ pad-top-900 pad-bottom-900 ]" style="background: {{ color.value }}"></div>
-              <h3 class="font-base text-500">{{ color.key }}</h3>
+              <h3 class="font-base h6">{{ color.key }}</h3>
               <dl class="props">
                 <dt>Value</dt>
                 <dd><code>{{ color.value }}</code></dd>
@@ -65,24 +67,40 @@ permalink: /styleguide/
             </li>
           {% endfor %}
         </ul>
-        <h2>Fonts</h2>
-        <h3>Base — System stack</h3>
+
+
+        <h2 class="h4">Fonts</h2>
+        <h3 class="p">Base — System stack</h3>
         <p class="sf-flow">
-          <span aria-hidden="true" role="presentation" class="font-base text-600 md:text-800 box-block leading-tight">The quick brown fox jumps over the lazy fox</span>
+          <span aria-hidden="true" role="presentation" class="font-base h4 box-block leading-tight pad-bottom-500">The quick brown fox jumps over the lazy fox</span>
           <code>.font-base</code>
         </p>
-        <h3>Sans-Serif — Rubik</h3>
+        <h3 class="p">Sans-Serif — Mosk</h3>
         <p class="sf-flow">
-          <span aria-hidden="true" role="presentation" class="font-serif text-600 md:text-800 box-block leading-tight">The quick brown fox jumps over the lazy fox</span>
+          <span aria-hidden="true" role="presentation" class="font-sans-serif h4 box-block leading-tight pad-bottom-500">The quick brown fox jumps over the lazy fox</span>
           <code>.font-sans-serif</code>
         </p>
-        <h2>Text sizes</h2>
-        <p>Text sizes are available as standard classes or media query prefixed, such as <code>lg:text-500</code>.</p>
-        {% for size in styleguide.sizes() %}
-          <p class="text-{{ size.key }}" style="--flow-space: 1.5rem">{{ size.value }} - <code>text-{{ size.key }}</code></p>
-        {% endfor %}
-        <h2>Spacing</h2>
-        <p>There’s size ratio utilities that give you margin (<code>gap-top, gap-bottom</code>) and padding (<code>pad-top, pad-left, pad-bottom</code>).
+        <h3 class="p">Cursive — Jenthill</h3>
+        <p class="sf-flow">
+          <span aria-hidden="true" role="presentation" class="font-cursive h4 box-block leading-tight pad-bottom-500">The
+            quick brown fox jumps over the lazy fox</span>
+          <code>.font-cursive</code>
+        </p>
+
+
+        <h2 class="h4">Text sizes</h2>
+        <p>Text sizes use fluid responsive scales from a minor to major third. <br> Base font size 18px to 20px</p>
+          <h2 class="h1" style="--flow-space: 1.5rem">h1</h2>
+          <h2 class="h2" style="--flow-space: 1.5rem">h2</h2>
+          <h2 class="h3" style="--flow-space: 1.5rem">h3</h2>
+          <h2 class="h4" style="--flow-space: 1.5rem">h4</h2>
+          <h2 class="h5" style="--flow-space: 1.5rem">h5</h2>
+          <h2 class="h6" style="--flow-space: 1.5rem">h6</h2>
+          <p style="--flow-space: 1.5rem"> body text </p>
+          <p class="small" style="--flow-space: 1.5rem"> small </p>
+
+        <h2 class="h4">Spacing</h2>
+        <p>Size ratio utilities that give you margin (<code>gap-top, gap-bottom</code>) and padding (<code>pad-top, pad-left, pad-bottom</code>).
         <h3>Margin</h3>
         <p class="visually-hidden">Margin token classes that you can copy</p>
         <div>

@@ -1,7 +1,7 @@
 .nav {
   @include apply-utility('font', 'sans-serif');
   text-transform: uppercase;
-  font-size: 1.3rem;
+  font-size: var(--step-0);
   &__list {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
