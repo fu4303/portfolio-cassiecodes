@@ -16,34 +16,29 @@ html {
   background-color: var(--color-light);
   color: var(--color-dark);
 }
+
 body {
   position: relative;
   scroll-behavior: smooth;
-  padding: 0.8rem 0.8rem 0 0.8rem;
 }
 
-body::after {
-  content: '';
-  position: fixed;
-  user-select: none;
-  pointer-events: none;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  z-index: 999;
-  border: var(--color-mint) solid 0.8rem;
-  border-bottom-width: 0;
-}
-
-@include media-query('md') {
-  body {
-    padding: 0.8rem;
-  }
-
-  body::after {
-    border-bottom-width: 0.8rem;
-  }
+.night {
+  --color-mint: hsl(181, 25%, 43%);
+  --color-mint-up: hsl(182, 31%, 37%);
+  --color-mint-down: hsl(181, 31%, 27%);
+  --color-lilac: hsl(257, 15%, 37%);
+  --color-lilac-up: hsl(257, 17%, 41%);
+  --color-sherbet: hsl(0, 0%, 24%);
+  --color-rose: hsl(344, 29%, 57%);
+  --color-peach: hsl(4, 30%, 73%);
+  --color-biscuit: hsl(25, 12%, 50%);
+  --color-oat: hsl(19, 8%, 62%);
+  --color-light: hsl(274, 5%, 10%);
+  --color-light-down: hsl(210, 4%, 98%);
+  --color-light-down-2: hsl(210, 4%, 95%);
+  --color-light-down-3: hsl(210, 4%, 80%);
+  --color-mid: hsl(0, 0%, 80%);
+  --color-dark: hsl(0, 0%, 98%);
 }
 
 .logo {

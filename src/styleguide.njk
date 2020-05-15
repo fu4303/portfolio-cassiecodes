@@ -14,6 +14,7 @@ permalink: /styleguide/
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(17.5rem, 1fr));
       grid-gap: 2.5rem 2rem;
+      margin-left: 0!important;
     }
 
     .swatches > * {
@@ -50,9 +51,9 @@ permalink: /styleguide/
         <ul class="swatches">
           {% for color in styleguide.colors() %}
             <li class="sf-flow">
-              <div class="[ color ] [ pad-top-900 pad-bottom-900 ]" style="background: {{ color.value }}"></div>
+              <div class="[ color ] [ pad-top-900 pad-bottom-900 ]" style="background: var(--color-{{ color.key }})"></div>
               <h3 class="font-base h6">{{ color.key }}</h3>
-              <dl class="props">
+              <dl class="props small">
                 <dt>Value</dt>
                 <dd><code>{{ color.value }}</code></dd>
                 <dt>Sass function</dt>
@@ -90,6 +91,7 @@ permalink: /styleguide/
 
         <h2 class="h4">Text sizes</h2>
         <p>Text sizes use fluid responsive scales from a minor to major third. <br> Base font size 18px to 20px</p>
+          <h2 class="headline" style="--flow-space: 1.5rem">headline</h2>  
           <h2 class="h1" style="--flow-space: 1.5rem">h1</h2>
           <h2 class="h2" style="--flow-space: 1.5rem">h2</h2>
           <h2 class="h3" style="--flow-space: 1.5rem">h3</h2>

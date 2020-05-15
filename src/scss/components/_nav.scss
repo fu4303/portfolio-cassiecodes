@@ -1,6 +1,5 @@
 .nav {
   @include apply-utility('font', 'sans-serif');
-  text-transform: uppercase;
   font-size: var(--step-0);
   &__list {
     overflow-x: auto;
@@ -52,7 +51,6 @@
   display: block;
   position: relative;
   font-weight: normal;
-  text-transform: uppercase;
   letter-spacing: 0.15rem;
   line-height: 1.25;
 }
@@ -69,7 +67,7 @@
   width: 0;
   overflow: hidden;
   white-space: nowrap;
-  color: var(--color-mint);
+  color: var(--color-lilac);
   transition: all cubic-bezier(1, 0, 0, 1) 0.4s;
 }
 
