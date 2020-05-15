@@ -1,0 +1,58 @@
+.Hero {
+  position: relative;
+  height: 100vh;
+
+  &__inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    > * + * {
+      padding-left: 2rem;
+    }
+  }
+
+  &__content {
+    width: 62%;
+  }
+
+  &__eyebrow {
+    transform: rotate(-5deg);
+    transform-origin: bottom left;
+    span {
+      opacity: 0.7;
+    }
+  }
+
+  &__heading {
+    letter-spacing: 0.6px;
+    .outline {
+      transition: all 0.3s ease-out;
+      color: var(--color-dark);
+      -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: var(--color-dark);
+    }
+    .outline:hover {
+      -webkit-text-fill-color: var(--color-dark);
+    }
+  }
+
+  &__svg {
+    height: 100vh;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 68%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-mint);
+    z-index: -1;
+    transition: background-color 0.2s ease-out;
+  }
+}

@@ -67,8 +67,8 @@
   width: 0;
   overflow: hidden;
   white-space: nowrap;
-  color: var(--color-lilac);
-  transition: all cubic-bezier(1, 0, 0, 1) 0.4s;
+  color: var(--color-highlight);
+  transition: all cubic-bezier(1, 0, 0, 1) 0.3s;
 }
 
 .nav__item-hover-inner::after {
@@ -80,7 +80,7 @@
   overflow: hidden;
   white-space: nowrap;
   color: var(--color-dark);
-  transition: all cubic-bezier(1, 0, 0, 1) 0.4s 0.2s;
+  transition: all cubic-bezier(1, 0, 0, 1) 0.3s 0.2s;
 }
 
 .nav__item:hover .nav__item-hover-inner::before,

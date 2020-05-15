@@ -1,0 +1,23 @@
+.wrapper {
+  max-width: map-get($metrics, 'wrap-max-width');
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: get-size(500);
+  padding-right: get-size(500);
+}
+
+.inner-wrapper {
+  max-width: map-get($metrics, 'wrap-inner-max-width');
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: get-size(500);
+  padding-right: get-size(500);
+}
+
+.wrapper-lg {
+  max-width: map-get($metrics, 'wrap-large-max-width');
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: get-size(x-lg);
+  padding-right: get-size(x-lg);
+}
