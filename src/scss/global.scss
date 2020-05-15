@@ -13,7 +13,8 @@
  */
 
 html {
-  background-color: var(--color-theme-primary);
+  background-color: var(--color-light);
+  color: var(--color-dark);
 }
 body {
   position: relative;
@@ -31,7 +32,7 @@ body::after {
   bottom: 0;
   top: 0;
   z-index: 999;
-  border: var(--color-theme-primary) solid 0.8rem;
+  border: var(--color-mint) solid 0.8rem;
   border-bottom-width: 0;
 }
 
@@ -74,75 +75,15 @@ a:not([class]) {
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0) 85%,
-    var(--color-theme-primary) 85%
+    var(--color-mint) 85%
   );
 }
 
 a:not([class]):hover {
   text-decoration: none;
   color: var(--color-light);
-  background: var(--color-theme-primary);
+  background: var(--color-mint);
 }
-
-// .arrowLink {
-//   display: inline-block;
-//   position: relative;
-//   color: #fff;
-//   font-weight: bold;
-//   text-decoration: none;
-//   padding: 0 6px;
-//   transition: 100ms ease-out 50ms;
-//   background: var(--color-theme-primary);
-//   &:before,
-//   &:after {
-//     will-change: transform;
-//     content: '';
-//     display: block;
-//     position: absolute;
-//     z-index: -1;
-//   }
-//   &:before {
-//     transition: 100ms ease-out 50ms;
-//     transform-origin: 0 24px;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     background: var(--color-theme-primary);
-//   }
-//   &:after {
-//     transition: 50ms ease-out;
-//     transform: scaleX(0);
-//     transform-origin: left center;
-//     bottom: 2px;
-//     right: -12px;
-//     border: 8px solid transparent;
-//     border-left-color: var(--color-theme-primary);
-//   }
-//   &:hover {
-//     color: var(--color-text);
-//     font-weight: bold;
-//     &:before {
-//       transition: 100ms ease-out;
-//       transform: scaleY(0.18);
-//       background: var(--color-theme-primary);
-//     }
-//     &:after {
-//       transition: 50ms ease-out 100ms;
-//       transform: none;
-//     }
-//   }
-//   &:active {
-//     &:before {
-//       transition: 100ms ease-in;
-//       background: var(--color-theme-primary);
-//     }
-//     &:after {
-//       transition: 100ms ease-in;
-//       border-left-color: var(--color-theme-primary);
-//     }
-//   }
-// }
 
 .videos {
   margin: 0 1rem;

@@ -23,7 +23,7 @@
     &::-webkit-scrollbar-thumb {
       border-radius: 8px;
       border: 2px solid #ebebeb;
-      background-color: var(--color-theme-highlight);
+      background-color: var(--color-mint);
     }
 
     > * + * {
@@ -58,7 +58,7 @@
 }
 
 .nav__item-hover-inner[data-hover] {
-  color: var(--color-theme-highlight);
+  color: var(--color-dark);
 }
 
 .nav__item-hover-inner::before {
@@ -69,7 +69,7 @@
   width: 0;
   overflow: hidden;
   white-space: nowrap;
-  color: var(--color-theme-primary);
+  color: var(--color-mint);
   transition: all cubic-bezier(1, 0, 0, 1) 0.4s;
 }
 
@@ -81,7 +81,7 @@
   width: 0;
   overflow: hidden;
   white-space: nowrap;
-  color: var(--color-theme-highlight);
+  color: var(--color-dark);
   transition: all cubic-bezier(1, 0, 0, 1) 0.4s 0.2s;
 }
 

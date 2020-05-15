@@ -28,20 +28,20 @@
       background: linear-gradient(
         180deg,
         rgba(255, 255, 255, 0) 85%,
-        var(--color-theme-primary) 85%
+        var(--color-mint) 85%
       );
     }
 
     a:not([class]):hover {
       text-decoration: none;
       color: var(--color-light);
-      background: var(--color-theme-primary);
+      background: var(--color-mint);
     }
 
     code {
       font-size: var(--step-0);
       white-space: pre;
-      color: var(--color-theme-highlight);
+      color: var(--color-mint);
       font-weight: 600;
       margin-left: 0.5ch;
       margin-right: 0.5ch;
@@ -53,7 +53,7 @@
     }
 
     blockquote {
-      border-left: 0.4rem solid var(--color-theme-highlight);
+      border-left: 0.4rem solid var(--color-mint);
       margin-left: 0;
       padding-left: get-size(500);
       font-style: italic;
@@ -121,7 +121,7 @@
   }
 
   &__footer {
-    background: var(--color-theme-primary);
+    background: var(--color-mint);
 
     h2 {
       flex-shrink: 0;
