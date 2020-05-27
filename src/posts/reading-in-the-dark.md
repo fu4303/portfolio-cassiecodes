@@ -8,7 +8,7 @@ tags:
   - blog
 ---
 
-#### Content warning - depression
+#### Content warning - Depression
 
 Reading is my favourite form of escapism. Whenever everything gets a bit much, I grab a blanket, a cup of tea and lose myself in a book for a few hours.
 
