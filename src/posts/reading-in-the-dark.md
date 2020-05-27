@@ -69,6 +69,6 @@ I'm writing this for two reasons.
 
 Firstly as a reminder to go easy on myself. Sometimes it's going to be easy to read, sometimes it's going to be harder. We can't expect to always be as productive as our best days. Our productivity doesn't define our worth.
 
-I'm also writing this for anyone that's trying to read in dim light at the moment. If you're struggling please don't be hard on yourself. It's not your fault. Let yourself put the book down for a while, see if you can get that light on.
+I'm also writing this for anyone that's trying to read in dim light at the moment. If you're battling please don't be hard on yourself. It's not your fault. Let yourself put the book down for a while, see if you can get that light on.
 
-Also. If you're struggling, please reach out. I'm always here and happy to talk.
+Also. If you need someone to talk to, please reach out. I'm always here and happy to talk.
