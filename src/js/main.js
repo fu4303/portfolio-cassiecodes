@@ -32,21 +32,42 @@
       delay: -0.9
     })
     .staggerTo('.iPath', 0.5, {drawSVG: '100%', ease: Linear.easeNone}, 0.05, 'i')
-    .staggerTo('.ePath', 0.5, {drawSVG: '100%', ease: Linear.easeNone}, 0.05, '-=0.3');
+    .staggerTo('.ePath', 0.5, {drawSVG: '100%', ease: Linear.easeNone}, 0.05, '-=0.3')
+    .to('#strokes1', 0.01, {
+      opacity: 0
+    });
 })();
 
 (function() {
-  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  let light = document.querySelector('#light');
+  let toggle = document.querySelector('.js-night-toggle');
+  let checkbox = document.querySelector('.js-night-checkbox');
+
+  if (window.localStorage.darkMode === 'true') {
+    console.log('setdarkmode');
     document.documentElement.classList.add('night');
+    checkbox.checked = true;
+    localStorage.setItem('darkMode', checkbox.checked);
+
+    console.log('darkMode', checkbox.checked, window.localStorage.darkMode);
   }
 
-  let light = document.querySelector('#light');
-
-  if (!light) {
+  if (!toggle) {
     return;
   }
 
-  light.addEventListener('click', e => {
+  if (light) {
+    light.addEventListener('mouseup', e => {
+      document.documentElement.classList.toggle('night');
+      checkbox.checked = checkbox.checked ? false : true;
+
+      localStorage.setItem('darkMode', checkbox.checked);
+    });
+  }
+
+  toggle.addEventListener('mouseup', e => {
+    console.log('beep');
     document.documentElement.classList.toggle('night');
+    localStorage.setItem('darkMode', checkbox.checked ? false : true);
   });
 })();
