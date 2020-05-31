@@ -2,7 +2,7 @@
 <header role="banner" class="[ Site-head ] [ pad-top-500 pad-bottom-500 ]">
   <div class="wrapper-lg">
     <span class="visually-hidden">{{ site.name }}: {{ pageType }}</span>
-    <div class="[ Site-head__inner ] [ md:box-flex space-between align-center ]">
+    <div class="[ Site-head__inner ] [ box-flex space-between align-center ]">
       <a href="/" class="[ Site-head__site-name ] [ leading-tight ]"{{ 'aria-current=page' if page.url == '/' | safe }}>
         <span class="visually-hidden">{{ 'Back to homepage' if page.url != '/' else 'Homepage' }}</span>
          {% include "partials/components/logo.njk" %}

@@ -18,6 +18,14 @@
   max-width: map-get($metrics, 'wrap-large-max-width');
   margin-left: auto;
   margin-right: auto;
-  padding-left: get-size(x-lg);
-  padding-right: get-size(x-lg);
+  padding-left: calc(0.5rem + (6 - 0.5) * ((100vw - 20rem) / (100 - 20)));
+  padding-right: calc(0.5rem + (6 - 0.5) * ((100vw - 20rem) / (100 - 20)));
+}
+
+
+@media screen and (min-width: 100em) {
+  .wrapper-lg {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
 }

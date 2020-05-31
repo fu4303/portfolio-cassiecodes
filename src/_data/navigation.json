@@ -2,17 +2,22 @@
   "items": [
     {
       "text": "writing",
-      "url": "/writing",
+      "url": "/writing/",
       "external": false
     },
     {
       "text": "speaking",
-      "url": "/speaking",
+      "url": "/speaking/",
       "external": false
     },
     {
+      "text": "playing",
+      "url": "https://codepen.io/cassie-codes",
+      "external": true
+    },
+    {
       "text": "about me",
-      "url": "/is",
+      "url": "/is/",
       "external": false
     }
   ]

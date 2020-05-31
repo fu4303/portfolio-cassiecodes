@@ -1,58 +1,94 @@
 .Hero {
-  position: relative;
-  height: 100vh;
+  // background-color: var(--color-mint);
+  min-height: 100vh;
 
+  ::-moz-selection {
+    /* Code for Firefox */
+    color: var(--color-mint);
+    background-color: rgba(255, 255, 255, 0.99);
+  }
+
+  ::selection {
+    color: var(--color-mint);
+    background-color: rgba(255, 255, 255, 0.99);
+  }
+
+  .outline::selection {
+    color: var(--color-mint);
+    -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: var(--color-mint);
+  }
+
+  &__svg {
+    display: none;
+  }
   &__inner {
+    min-height: 100vh;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-
-    > * + * {
-      padding-left: 2rem;
-    }
-  }
-
-  &__content {
-    width: 62%;
   }
 
   &__eyebrow {
     transform: rotate(-5deg);
     transform-origin: bottom left;
     span {
-      opacity: 0.7;
+      opacity: 0.9;
     }
   }
 
   &__heading {
     letter-spacing: 0.6px;
     .outline {
-      transition: all 0.3s ease-out;
       color: var(--color-dark);
       -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
-      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-width: 1.5px;
       -webkit-text-stroke-color: var(--color-dark);
     }
     .outline:hover {
       -webkit-text-fill-color: var(--color-dark);
     }
   }
+}
 
-  &__svg {
-    height: 100vh;
-  }
+@media screen and (min-width: 800px) {
+  .Hero {
+    background-color: transparent;
+    position: relative;
 
-  &:after {
-    content: '';
-    position: absolute;
-    width: 68%;
-    height: 100%;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    background-color: var(--color-mint);
-    z-index: -1;
-    transition: background-color 0.2s ease-out;
+    &__inner {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+
+      > * + * {
+        padding-left: 2rem;
+      }
+    }
+
+    &__content {
+      width: 62%;
+    }
+
+    &__svg {
+      display: block;
+      height: 100vh;
+      flex-grow: 1;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 68%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background-color: var(--color-mint);
+      z-index: -1;
+    }
   }
 }
