@@ -23,16 +23,11 @@ body {
 }
 
 .night {
-  --color-mint: hsl(181, 25%, 43%);
-  --color-mint-up: hsl(182, 31%, 37%);
-  --color-mint-down: hsl(181, 31%, 27%);
-  --color-lilac: hsl(257, 15%, 37%);
+  --color-mint: hsl(316, 30%, 36%);
+  --color-highlight: hsl(240, 33%, 77%);
+  --color-lilac: hsl(256, 28%, 37%);
   --color-lilac-up: hsl(257, 17%, 41%);
   --color-sherbet: hsl(0, 0%, 24%);
-  --color-rose: hsl(344, 29%, 57%);
-  --color-peach: hsl(4, 30%, 73%);
-  --color-biscuit: hsl(25, 12%, 50%);
-  --color-oat: hsl(19, 8%, 62%);
   --color-light: hsl(274, 5%, 10%);
   --color-light-down: hsl(210, 4%, 98%);
   --color-light-down-2: hsl(210, 4%, 95%);
@@ -42,7 +37,7 @@ body {
 }
 
 .logo {
-  width: 10rem;
+  width: 8rem;
   visibility: hidden;
   overflow: visible;
 }
@@ -67,11 +62,7 @@ a:not([class]) {
   padding: 0.1rem 0.2rem 0.2rem 0.1rem;
   white-space: pre;
   text-decoration: none;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0) 85%,
-    var(--color-mint) 85%
-  );
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 85%, var(--color-mint) 85%);
 }
 
 a:not([class]):hover {
@@ -105,15 +96,15 @@ a:not([class]):hover {
  */
 
 // Utils
-@import 'utilities/inner-wrapper';
 @import 'utilities/visually-hidden';
-@import 'utilities/wrapper';
+@import 'utilities/wrappers';
 @import 'utilities/grid';
 
 // Components
 @import 'components/heading-permalink';
 @import 'components/intro';
 @import 'components/nav';
+@import 'components/toggle';
 @import 'components/pagination';
 @import 'components/post';
 @import 'components/post-list';
@@ -122,3 +113,5 @@ a:not([class]):hover {
 @import 'components/skip-link';
 @import 'components/syntax-highlighting';
 @import 'components/video-player';
+@import 'components/hero';
+@import 'components/illustration';

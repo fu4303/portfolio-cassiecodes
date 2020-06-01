@@ -1,26 +1,12 @@
-{% extends 'layouts/base.njk' %}
-{% set pageType = 'Homepage' %}
-
-{# Intro content #}
-{% set introHeading = title %}
-{% set introSummary %}
-  {{ content | safe }}
-{% endset %}
-
-{# Post list content #}
-{% set postListHeading = postsHeading %}
-{% set postListItems = collections.postFeed.slice(0, 1) %}
-
-{# Archive link #}
-{% if postListItems.length < collections.posts.length %} 
-  {% set paginationNextText = archiveButtonText %}
-  {% set paginationNextUrl = '/writing' %}
-{% endif %}
-
-{% block content %}
-  <main id="main-content" tabindex="-1">
-    {% include "partials/components/mainIntro.njk" %}
-    {% include "partials/components/post-list.njk" %}
-    {% include "partials/components/pagination.njk" %}
-  </main>
+{% extends 'layouts/base.njk' %} {% set pageType = 'Homepage' %} {# Intro content #} {%
+set introHeading = title %} {% set introSummary %}
+{{ content | safe }}
+{% endset %} {# Post list content #} {% set postListHeading = postsHeading %} {% set
+postListItems = collections.postFeed.slice(0, 1) %} {# Archive link #} {% if
+postListItems.length < collections.posts.length %} {% set paginationNextText =
+archiveButtonText %} {% set paginationNextUrl = '/writing' %} {% endif %} {% block content
+%}
+<main id="main-content" tabindex="-1">
+  {% include "partials/components/hero.njk" %}
+</main>
 {% endblock %}
