@@ -70,7 +70,7 @@
     }
 
     &__content {
-      width: 62%;
+      width: 60%;
     }
 
     &__svg {
@@ -89,6 +89,14 @@
       bottom: 0;
       background-color: var(--color-mint);
       z-index: -1;
+    }
+  }
+}
+
+@media screen and (min-width: 1900px) {
+  .Hero {
+    &__content {
+      width: 55%;
     }
   }
 }
