@@ -28,7 +28,7 @@ body {
   --color-lilac: hsl(256, 28%, 37%);
   --color-lilac-up: hsl(257, 17%, 41%);
   --color-sherbet: hsl(0, 0%, 24%);
-  --color-light: hsl(274, 5%, 10%);
+  --color-light: hsl(274, 3%, 11%);
   --color-light-down: hsl(210, 4%, 98%);
   --color-light-down-2: hsl(210, 4%, 95%);
   --color-light-down-3: hsl(210, 4%, 80%);
@@ -56,19 +56,50 @@ hr {
 }
 
 a:not([class]) {
-  color: currentcolor;
-  position: relative;
-  display: inline;
-  padding: 0.1rem 0.2rem 0.2rem 0.1rem;
-  white-space: pre;
   text-decoration: none;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 85%, var(--color-mint) 85%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 90%, var(--color-mint) 90%);
 }
 
-a:not([class]):hover {
-  text-decoration: none;
-  color: var(--color-light);
-  background: var(--color-mint);
+.underline {
+  line-height: 1.5;
+  display: inline;
+  background-image: linear-gradient(
+    transparent 50%,
+    var(--color-peach) 50%,
+    var(--color-peach) 85%,
+    transparent 85%,
+    transparent 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+}
+
+.underline:hover {
+  transition: 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  background-size: 100% 100%;
+}
+
+a.arrow {
+  position: relative;
+  padding-right: 2rem;
+
+  &::after {
+    content: '';
+    line-height: 1.2;
+    position: absolute;
+    height: 100%;
+    width: 1.2rem;
+    background-repeat: no-repeat;
+    top: 0%;
+    right: 0.5rem;
+    background-position: 0% 60%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 10' aria-hidden='true'%3E%3Cpath fill='%23404040' d='M1 4h11.59l-2.3-2.29A1 1 0 0111.71.29l4 4a1 1 0 010 1.41l-4 4a1 1 0 01-1.41-1.41L12.59 6H1a1 1 0 010-2z'/%3E%3C/svg%3E");
+    transition: ease-out 0.2s;
+  }
+
+  &:hover::after {
+    transform: translateX(0.3rem);
+  }
 }
 
 .videos {
@@ -99,19 +130,27 @@ a:not([class]):hover {
 @import 'utilities/visually-hidden';
 @import 'utilities/wrappers';
 @import 'utilities/grid';
+@import 'utilities/layout';
 
 // Components
-@import 'components/heading-permalink';
-@import 'components/intro';
+// @import 'components/heading-permalink';
+// @import 'components/intro';
+
+// @import 'components/pagination';
+// @import 'components/post';
+// @import 'components/post-list';
+
+// @import 'components/site-foot';
+
+// @import 'components/syntax-highlighting';
+// @import 'components/video-player';
+
+//Mine
+@import 'components/skip-link';
+@import 'components/site-head';
 @import 'components/nav';
 @import 'components/toggle';
-@import 'components/pagination';
-@import 'components/post';
-@import 'components/post-list';
-@import 'components/site-head';
-@import 'components/site-foot';
-@import 'components/skip-link';
-@import 'components/syntax-highlighting';
-@import 'components/video-player';
-@import 'components/hero';
 @import 'components/illustration';
+@import 'components/hero';
+@import 'components/posts-intro';
+@import 'components/browser';

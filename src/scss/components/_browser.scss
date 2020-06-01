@@ -1,0 +1,50 @@
+.Browser {
+  color: var(--color-dark);
+  position: relative;
+  background-color: var(--color-light);
+  border-radius: 20px;
+  border: solid 2px var(--color-dark);
+  padding: 4rem 1rem 1rem;
+
+  &__heading {
+    display: inline-block;
+    color: var(--color-dark);
+    text-decoration: none;
+    padding-bottom: 0.5rem;
+  }
+
+  &__footer {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a {
+      color: var(--color-dark);
+      text-decoration: none;
+      @include apply-utility('font', 'sans-serif');
+      font-weight: 600;
+    }
+  }
+
+  &:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--color-dark);
+    top: 2rem;
+  }
+
+  &:before {
+    position: absolute;
+    content: '';
+    width: 4rem;
+    left: 1rem;
+    height: 1.5rem;
+    top: 0.5rem;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 21'%3E%3Cg id='Layer_1' data-name='Layer 1'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23404040'/%3E%3Ccircle cx='40' cy='10' r='10' fill='%23404040'/%3E%3Ccircle cx='70' cy='10' r='10' fill='%23404040'/%3E%3C/g%3E%3C/svg%3E%0A");
+  }
+}

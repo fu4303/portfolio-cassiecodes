@@ -1,0 +1,15 @@
+.Posts-intro {
+  background-color: var(--color-lilac);
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+
+  &__inner {
+  }
+
+  &__heading {
+    color: var(--color-light);
+    letter-spacing: 0.6px;
+    margin-bottom: 1em;
+  }
+}

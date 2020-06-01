@@ -33,7 +33,7 @@
     })
     .staggerTo('.iPath', 0.5, {drawSVG: '100%', ease: Linear.easeNone}, 0.05, 'i')
     .staggerTo('.ePath', 0.5, {drawSVG: '100%', ease: Linear.easeNone}, 0.05, '-=0.3')
-    .to('#strokes1', 0.01, {
+    .to('#strokes', 0.2, {
       opacity: 0
     });
 })();
