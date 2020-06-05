@@ -3,14 +3,16 @@
   font-family: 'Mosk';
   font-style: normal;
   font-weight: 600;
-  src: url('/fonts/mosk-600.woff2') format('woff2'), url('/fonts/mosk-600.woff') format('woff');
+  src: url('/fonts/mosk-600.woff2') format('woff2'),
+    url('/fonts/mosk-600.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Mosk';
   font-style: normal;
   font-weight: 900;
-  src: url('/fonts/mosk-900.woff2') format('woff2'), url('/fonts/mosk-900.woff') format('woff');
+  src: url('/fonts/mosk-900.woff2') format('woff2'),
+    url('/fonts/mosk-900.woff') format('woff');
 }
 
 /* Jenthill */
@@ -34,6 +36,7 @@ h1,
 h2,
 h3 {
   @include apply-utility('font', 'sans-serif');
+  letter-spacing: 0.04em;
 }
 
 .headline {
@@ -65,6 +68,7 @@ h2,
 h3,
 .h5 {
   font-size: var(--step-2);
+  letter-spacing: 1.2;
 }
 
 h4,
@@ -72,6 +76,7 @@ h5,
 h6,
 .h6 {
   font-size: var(--step-1);
+  letter-spacing: 0.02em;
 }
 
 small,
