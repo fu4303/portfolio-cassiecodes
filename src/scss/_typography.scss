@@ -26,7 +26,7 @@
 
 body {
   // Strip the unit off the size ratio to generate a line height
-  $line-height: get-size(600);
+  $line-height: 1.75rem;
   line-height: $line-height / ($line-height * 0 + 1);
   @include apply-utility('font', 'base');
   font-size: var(--step-0);
@@ -63,14 +63,14 @@ h1,
 h2,
 .h4 {
   font-size: var(--step-3);
-  line-height: 1.1;
+  line-height: 1.2;
 }
 
 h3,
 .h5 {
   font-size: var(--step-2);
   letter-spacing: 1.2;
-  line-height: 1.1;
+  line-height: 1.5;
 }
 
 h4,
@@ -79,7 +79,7 @@ h6,
 .h6 {
   font-size: var(--step-1);
   letter-spacing: 0.02em;
-  line-height: 1.1;
+  line-height: 1.6;
 }
 
 small,
@@ -141,7 +141,7 @@ small,
 
   --fluid-min-scale-1: var(--fluid-min-scale-0) * var(--fluid-min-ratio);
   --fluid-max-scale-1: var(--fluid-max-scale-0) * var(--fluid-max-ratio);
-  --fluid-min-size-1: (var(--fluid-min-size) * var(--fluid-min-scale-0)) / 16;
+  --fluid-min-size-1: (var(--fluid-min-size) * var(--fluid-min-scale-0)) / 20;
   --fluid-max-size-1: (var(--fluid-max-size) * var(--fluid-max-scale-0)) / 16;
   --step-1: calc(
     (
@@ -152,7 +152,7 @@ small,
 
   --fluid-min-scale-2: var(--fluid-min-scale-1) * var(--fluid-min-ratio);
   --fluid-max-scale-2: var(--fluid-max-scale-1) * var(--fluid-max-ratio);
-  --fluid-min-size-2: (var(--fluid-min-size) * var(--fluid-min-scale-1)) / 16;
+  --fluid-min-size-2: (var(--fluid-min-size) * var(--fluid-min-scale-1)) / 20;
   --fluid-max-size-2: (var(--fluid-max-size) * var(--fluid-max-scale-1)) / 16;
   --step-2: calc(
     (
@@ -196,7 +196,7 @@ small,
 
   --fluid-min-scale-6: var(--fluid-min-scale-5) * var(--fluid-min-ratio);
   --fluid-max-scale-6: var(--fluid-max-scale-5) * var(--fluid-max-ratio);
-  --fluid-min-size-6: (var(--fluid-min-size) * var(--fluid-min-scale-5)) / 16;
+  --fluid-min-size-6: (var(--fluid-min-size) * var(--fluid-min-scale-5)) / 20;
   --fluid-max-size-6: (var(--fluid-max-size) * var(--fluid-max-scale-5)) / 16;
   --step-6: calc(
     (
@@ -207,7 +207,7 @@ small,
 
   --fluid-min-scale-7: var(--fluid-min-scale-6) * var(--fluid-min-ratio);
   --fluid-max-scale-7: var(--fluid-max-scale-6) * var(--fluid-max-ratio);
-  --fluid-min-size-7: (var(--fluid-min-size) * var(--fluid-min-scale-6)) / 16;
+  --fluid-min-size-7: (var(--fluid-min-size) * var(--fluid-min-scale-6)) / 20;
   --fluid-max-size-7: (var(--fluid-max-size) * var(--fluid-max-scale-6)) / 16;
   --step-7: calc(
     (

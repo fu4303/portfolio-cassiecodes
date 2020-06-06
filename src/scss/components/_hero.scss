@@ -1,5 +1,5 @@
 .Hero {
-  // background-color: var(--color-mint);
+  background-color: var(--color-light);
   min-height: 100vh;
 
   ::-moz-selection {
@@ -24,6 +24,8 @@
     display: none;
   }
   &__inner {
+    position: relative;
+    z-index: 1;
     min-height: 100vh;
     display: flex;
     flex-direction: row;
@@ -55,7 +57,6 @@
 
 @media screen and (min-width: 800px) {
   .Hero {
-    background-color: transparent;
     position: relative;
 
     &__inner {
@@ -63,6 +64,7 @@
       flex-direction: row;
       justify-content: flex-start;
       align-items: center;
+
 
       > * + * {
         padding-left: 2rem;
@@ -88,7 +90,7 @@
       right: 0;
       bottom: 0;
       background-color: var(--color-mint);
-      z-index: -1;
+      z-index: 0;
     }
   }
 }
