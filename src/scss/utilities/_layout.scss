@@ -53,11 +53,16 @@
 }
 
 .pad-before-xlg {
-  padding-top: calc(7.5rem + (15 - 7.5) * ((100vw - 20rem) / (100 - 20)));
+  padding-top: calc(7.5rem + (10 - 7.5) * ((100vw - 20rem) / (100 - 20)));
 }
 
 .pad-after-xlg {
-  padding-bottom: calc(7.5rem + (15 - 7.5) * ((100vw - 20rem) / (100 - 20)));
+  padding-bottom: calc(7.5rem + (10 - 7.5) * ((100vw - 20rem) / (100 - 20)));
+}
+
+.pad-around-xlg {
+  padding-top: calc(7.5rem + (10 - 7.5) * ((100vw - 20rem) / (100 - 20)));
+  padding-bottom: calc(7.5rem + (10 - 7.5) * ((100vw - 20rem) / (100 - 20)));
 }
 
 @media screen and (min-width: 100em) {
@@ -102,6 +107,13 @@
     padding-bottom: 6rem;
   }
   .pad-before-xlg {
-    padding-top: 15rem;
+    padding-top: 10rem;
+  }
+  .pad-after-xlg {
+    padding-bottom: 10rem;
+  }
+  .pad-around-xlg {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
   }
 }
