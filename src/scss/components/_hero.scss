@@ -1,24 +1,7 @@
 .Hero {
   background-color: var(--color-light);
   min-height: 100vh;
-
-  ::-moz-selection {
-    /* Code for Firefox */
-    color: var(--color-mint);
-    background-color: rgba(255, 255, 255, 0.99);
-  }
-
-  ::selection {
-    color: var(--color-mint);
-    background-color: rgba(255, 255, 255, 0.99);
-  }
-
-  .outline::selection {
-    color: var(--color-mint);
-    -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
-    -webkit-text-stroke-width: 1.5px;
-    -webkit-text-stroke-color: var(--color-mint);
-  }
+  --color-selection: var(--color-mint);
 
   &__svg {
     display: none;
@@ -65,14 +48,13 @@
       justify-content: flex-start;
       align-items: center;
 
-
       > * + * {
         padding-left: 2rem;
       }
     }
 
     &__content {
-      width: 60%;
+      width: 49%;
     }
 
     &__svg {
@@ -98,7 +80,7 @@
 @media screen and (min-width: 1900px) {
   .Hero {
     &__content {
-      width: 55%;
+      width: 59%;
     }
   }
 }

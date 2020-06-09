@@ -1,4 +1,5 @@
 .Contact {
+  --color-selection: var(--color-mint);
   min-height: 100vh;
   background-color: var(--color-mint);
   padding-left: 1rem;
@@ -17,6 +18,15 @@
       var(--color-light) 2.4rem,
       var(--color-light) 100%
     );
+
+    .link {
+      color: var(--color-dark);
+      z-index: 1;
+      text-decoration: none;
+      @include apply-utility('font', 'sans-serif');
+      font-weight: 600;
+      border-bottom: 1.5px solid var(--color-mint);
+    }
   }
 
   &__heading {
@@ -30,9 +40,11 @@
   }
 
   &__social {
+    display: inline-block;
     a {
       font-size: 0;
       color: var(--color-dark);
+      transition: color 0.2s ease-out;
     }
     a:hover {
       color: var(--color-mint);

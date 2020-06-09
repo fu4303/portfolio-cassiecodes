@@ -21,6 +21,8 @@ body {
   position: relative;
   scroll-behavior: smooth;
   color: var(--color-dark);
+  --color-selection: var(--color-dark);
+  --color-selection-bg: var(--color-mint);
 }
 
 .main-content {
@@ -39,15 +41,38 @@ body {
   -webkit-font-smoothing: antialiased;
   --color-mint: hsl(316, 30%, 36%);
   --color-highlight: hsl(240, 33%, 77%);
-  --color-lilac: hsl(256, 23%, 22%);
+  --color-lilac: hsl(263, 29%, 32%);
   --color-lilac-up: hsl(257, 17%, 41%);
-  --color-sherbet: hsl(316, 27%, 18%);
+  --color-sherbet: hsl(260, 24%, 18%);
   --color-light: hsl(274, 4%, 15%);
   --color-light-down: hsl(210, 4%, 98%);
   --color-light-down-2: hsl(210, 4%, 95%);
   --color-light-down-3: hsl(210, 4%, 80%);
   --color-mid: hsl(0, 0%, 80%);
   --color-dark: hsl(0, 0%, 98%);
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: var(--color-selection);
+  background-color: rgba(255, 255, 255, 0.99);
+}
+
+::selection {
+  color: var(--color-selection);
+  background-color: rgba(255, 255, 255, 0.99);
+}
+
+.night ::selection {
+  color: var(--color-selection);
+  background-color: rgba(43, 42, 45, 0.99);
+}
+
+.outline::selection {
+  color: var(--color-selection);
+  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: var(--color-selection);
 }
 
 .logo {
