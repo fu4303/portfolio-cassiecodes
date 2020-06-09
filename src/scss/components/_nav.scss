@@ -151,3 +151,11 @@
     }
   }
 }
+
+.night {
+  .nav__item {
+    a:after {
+      filter: invert(1);
+    }
+  }
+}

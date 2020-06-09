@@ -13,13 +13,13 @@
  */
 
 html {
-  background-color: var(--color-light);
   color: var(--color-dark);
 }
 
 body {
   position: relative;
   scroll-behavior: smooth;
+  background-color: var(--color-light);
   color: var(--color-dark);
   --color-selection: var(--color-dark);
   --color-selection-bg: var(--color-mint);
@@ -50,6 +50,48 @@ body {
   --color-light-down-3: hsl(210, 4%, 80%);
   --color-mid: hsl(0, 0%, 80%);
   --color-dark: hsl(0, 0%, 98%);
+  --color-dark-down: hsl(0, 0%, 98%);
+}
+
+.day {
+  --color-mint: hsl(164, 61%, 65%);
+  --color-mint-up: hsl(148, 35%, 74%);
+  --color-mint-down: hsl(163, 36%, 51%);
+  --color-lilac: hsl(264, 51%, 71%);
+  --color-sea: hsl(189, 58%, 65%);
+  --color-highlight: hsl(264, 51%, 71%);
+  --color-lilac-up: hsl(240, 33%, 77%);
+  --color-sherbet: hsl(55, 97%, 85%);
+  --color-rose: hsl(344, 56%, 69%);
+  --color-marshmellow: hsl(329, 44%, 71%);
+  --color-peach: hsl(4, 65%, 85%);
+  --color-biscuit: hsl(26, 18%, 61%);
+  --color-oat: hsl(17, 12%, 77%);
+  --color-light: hsl(0, 0%, 97%);
+  --color-light-down: hsl(210, 4%, 98%);
+  --color-light-down-2: hsl(210, 4%, 95%);
+  --color-light-down-3: hsl(210, 4%, 80%);
+  --color-mid: hsl(0, 0%, 80%);
+  --color-dark: hsl(0, 0%, 25%);
+  --color-dark-down: hsl(237, 18%, 23%);
+}
+
+pre {
+  --color-mint: hsl(164, 61%, 65%);
+  --color-lilac: hsl(264, 51%, 71%);
+  --color-sea: hsl(189, 58%, 65%);
+  --color-sherbet: hsl(55, 97%, 85%);
+  --color-rose: hsl(344, 56%, 69%);
+  --color-rose: hsl(329, 44%, 71%);
+  --color-marshmellow: hsl(329, 44%, 71%);
+  --color-peach: hsl(4, 65%, 85%);
+  --color-light: hsl(0, 0%, 97%);
+  --color-dark-down: hsl(237, 18%, 23%);
+}
+
+.night .logo {
+  --color-mint: hsl(240, 33%, 77%);
+  --color-highlight: hsl(316, 30%, 36%);
 }
 
 ::-moz-selection {
@@ -219,17 +261,14 @@ a.arrow {
 @import 'utilities/layout';
 
 // Components
-// @import 'components/heading-permalink';
-// @import 'components/intro';
+@import 'components/heading-permalink';
+@import 'components/intro';
 
-// @import 'components/pagination';
-// @import 'components/post';
-// @import 'components/post-list';
+@import 'components/post';
+@import 'components/post-list';
 
-// @import 'components/site-foot';
-
-// @import 'components/syntax-highlighting';
-// @import 'components/video-player';
+@import 'components/syntax-highlighting';
+@import 'components/video-player';
 
 //Mine
 @import 'components/skip-link';

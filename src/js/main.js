@@ -51,10 +51,21 @@
   let toggle = document.querySelector('.js-night-toggle');
   let checkbox = document.querySelector('.js-night-checkbox');
 
-  if (window.localStorage.darkMode === 'true') {
-    document.documentElement.classList.add('night');
+  function toggleMode() {
+    document.body.classList.toggle('night');
+    document.body.classList.toggle('day');
+  }
+
+  if (
+    window.localStorage.darkMode === 'true' ||
+    (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
+  ) {
     checkbox.checked = true;
-    localStorage.setItem('darkMode', checkbox.checked);
+    document.body.classList.add('night');
+    document.body.classList.remove('day');
+  } else {
+    document.body.classList.add('day');
+    document.body.classList.remove('night');
   }
 
   if (!toggle) {
@@ -63,7 +74,7 @@
 
   if (light) {
     light.addEventListener('mouseup', e => {
-      document.documentElement.classList.toggle('night');
+      toggleMode();
       checkbox.checked = checkbox.checked ? false : true;
 
       localStorage.setItem('darkMode', checkbox.checked);
@@ -71,7 +82,7 @@
   }
 
   toggle.addEventListener('mouseup', e => {
-    document.documentElement.classList.toggle('night');
+    toggleMode();
     localStorage.setItem('darkMode', checkbox.checked ? false : true);
   });
 })();
