@@ -45,9 +45,9 @@ body {
   --color-lilac-up: hsl(257, 17%, 41%);
   --color-sherbet: hsl(260, 24%, 18%);
   --color-light: hsl(274, 4%, 15%);
-  --color-light-down: hsl(210, 4%, 98%);
-  --color-light-down-2: hsl(210, 4%, 95%);
-  --color-light-down-3: hsl(210, 4%, 80%);
+  --color-light-down: hsl(274, 4%, 16%);
+  --color-light-down-2: hsl(274, 4%, 18%);
+  --color-light-down-3: hsl(274, 4%, 20%);
   --color-mid: hsl(0, 0%, 80%);
   --color-dark: hsl(0, 0%, 98%);
   --color-dark-down: hsl(0, 0%, 98%);
@@ -70,7 +70,7 @@ body {
   --color-light: hsl(0, 0%, 97%);
   --color-light-down: hsl(210, 4%, 98%);
   --color-light-down-2: hsl(210, 4%, 95%);
-  --color-light-down-3: hsl(210, 4%, 80%);
+  --color-light-down-3: hsl(210, 4%, 89%);
   --color-mid: hsl(0, 0%, 80%);
   --color-dark: hsl(0, 0%, 25%);
   --color-dark-down: hsl(237, 18%, 23%);
@@ -82,7 +82,6 @@ pre {
   --color-sea: hsl(189, 58%, 65%);
   --color-sherbet: hsl(55, 97%, 85%);
   --color-rose: hsl(344, 56%, 69%);
-  --color-rose: hsl(329, 44%, 71%);
   --color-marshmellow: hsl(329, 44%, 71%);
   --color-peach: hsl(4, 65%, 85%);
   --color-light: hsl(0, 0%, 97%);
@@ -121,6 +120,11 @@ pre {
   width: 8rem;
   visibility: hidden;
   overflow: visible;
+}
+
+.posts .logo {
+  --color-mint: var(--color-light);
+  --color-highlight: var(--color-sherbet);
 }
 
 main:focus {

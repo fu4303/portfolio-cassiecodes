@@ -30,7 +30,8 @@ $stalfos-util-prefix: 'sf-';
 $metrics: (
   'wrap-max-width': 80rem,
   'wrap-large-max-width': 95rem,
-  'wrap-inner-max-width': 60rem,
+  'wrap-medium-max-width': 65rem,
+  'wrap-small-max-width': 55rem,
   'md-breakpoint': 48rem
 );
 

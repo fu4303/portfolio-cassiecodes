@@ -1,5 +1,6 @@
 // setting dark vars before DOM content is loading to avoid flicker
 (function() {
+  
   if (
     window.localStorage.darkMode === 'true' ||
     (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)

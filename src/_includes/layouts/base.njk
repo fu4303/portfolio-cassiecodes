@@ -63,7 +63,9 @@
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script src="/js/night-mode.js"></script>
   </head>
-  <body>
+  <body {% if 'posts' in page.url %}
+      class="posts"
+  {% endif %}>
     {% include "partials/global/site-head.njk" %} {% block content %} {% endblock content
     %}
     <script>

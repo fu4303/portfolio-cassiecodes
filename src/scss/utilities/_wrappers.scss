@@ -6,25 +6,32 @@
   padding-right: calc(1rem + (6 - 1) * ((100vw - 20rem) / (100 - 20)));
 }
 
-.inner-wrapper {
-  max-width: map-get($metrics, 'wrap-inner-max-width');
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: get-size(500);
-  padding-right: get-size(500);
+.wrapper-sm {
+  max-width: map-get($metrics, 'wrap-small-max-width');
+  padding-left: calc(1rem + (4 - 1) * ((100vw - 20rem) / (100 - 20)));
+  padding-right: calc(1rem + (4 - 1) * ((100vw - 20rem) / (100 - 20)));
+}
+
+.wrapper-md {
+  max-width: map-get($metrics, 'wrap-medium-max-width');
+  padding-left: calc(1rem + (4 - 1) * ((100vw - 20rem) / (100 - 20)));
+  padding-right: calc(1rem + (4 - 1) * ((100vw - 20rem) / (100 - 20)));
 }
 
 .wrapper-lg {
   max-width: map-get($metrics, 'wrap-large-max-width');
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: calc(1rem + (6 - 1) * ((100vw - 20rem) / (100 - 20)));
-  padding-right: calc(1rem + (6 - 1) * ((100vw - 20rem) / (100 - 20)));
 }
 
 @media screen and (min-width: 100em) {
-  .wrapper .wrapper-lg {
+  .wrapper,
+  .wrapper-lg {
     padding-left: 6rem;
     padding-right: 6rem;
+  }
+
+  .wrapper-sm,
+  .wrapper-md {
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 }

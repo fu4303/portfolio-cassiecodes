@@ -1,45 +1,45 @@
-{% extends 'layouts/base.njk' %} {% set pageType = 'Post' %} {# Intro content #} {% set
-introHeading = title %} {% set introSummary %}
-<p class="[ intro__meta ] [ small leading-tight ]">
-  {% if date %}
-  <time datetime="{{ date | w3DateFilter }}" class="dt-published">{{
-    date | dateFilter
-  }}</time>
-  {% endif %}
-  <span role="text">— {{ helpers.getReadingTime(content) }} minute read</span>
-</p>
-{% endset %} {% block content %}
-<main id="main-content" tabindex="-1">
-  <article class="[ post ] [ h-entry ]">
-    {% include "partials/components/intro.njk" %}
-    <div
-      class="[ post__body ] [ inner-wrapper ] [ pad-top-900 {{ 'pad-bottom-900' if not site.enableThirdPartyComments }} ] [ sf-flow ] [ e-content ]"
-    >
-      {{ content | safe }}
-    </div>
-    {% if site.enableThirdPartyComments %}
-    <hr />
-    <aside class="[ post__body ] [ inner-wrapper ] [ pad-bottom-900 ]">
-      {% include "partials/global/third-party-comments.njk" %}
-    </aside>
-    {% endif %} {% if tags %}
-    <footer class="[ post__footer ] [ pad-top-500 pad-bottom-500 ]">
-      <div class="inner-wrapper">
-        <div class="[ box-flex align-center ]">
-          <h2 class="font-base h4 weight-mid">Filed under</h2>
-          <ul class="[ nav__list ] [ box-flex align-center pad-left-400 ] [ p-category ]">
-            {% for item in tags %}
-            <li class="nav__item">
-              <a href="/tags/{{ item }}">{{ item }}</a>
-            </li>
-            {% endfor %}
-          </ul>
-        </div>
-      </div>
-    </footer>
-    {% endif %}
-  </article>
-</main>
-{% endblock %}
+{% extends 'layouts/base.njk' %} 
+{% set pageType = 'Post' %} {# Intro content #} 
 
-{{ content | safe }}
+{% set introHeading = title %} 
+
+{% set introSummary %}
+{% if tags %}
+<div class="[ wrapper ]">
+  <ul>
+    {% for item in tags %}
+    <li>
+      <a href="/tags/{{ item }}">{{ item }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  <p>
+    {% if date %}
+    <time datetime="{{ date | w3DateFilter }}" class="dt-published">{{
+      date | dateFilter
+    }}</time>
+    {% endif %}
+  </p>
+  <p role="text">{{ helpers.getReadingTime(content) }} minute read</p>
+</div>
+{% endset %} 
+  
+  {% block content %}
+  <main id="main-content" tabindex="-1">
+    <div class="[ post__intro ]">
+      <div class="[ wrapper wrapper-md ] [ pad-before-xlg ]">
+        {% include "partials/components/intro.njk" %}
+      </div>
+    </div>
+
+    <article class="[ post__body-cont ] [ h-entry ] [ pad-after-xlg ]">
+      <div class="[ post__body ] [ wrapper wrapper-sm ] [ pad-around-lg ] [ sf-flow ] [ e-content ] [ h6 ]">
+        {{ content | safe }}
+      </div>
+    </article>
+  </main>
+  {% endblock %}
+
+  {{ content | safe }}
+</div>
