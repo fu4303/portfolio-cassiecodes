@@ -25,6 +25,10 @@ body {
   --color-selection-bg: var(--color-mint);
 }
 
+main {
+  overflow: hidden;
+}
+
 .main-content {
   position: relative;
   z-index: 1;
@@ -69,8 +73,8 @@ body {
   --color-oat: hsl(17, 12%, 77%);
   --color-light: hsl(0, 0%, 97%);
   --color-light-down: hsl(210, 4%, 98%);
-  --color-light-down-2: hsl(210, 4%, 95%);
-  --color-light-down-3: hsl(210, 4%, 89%);
+  --color-light-down-2: hsl(210, 4%, 96%);
+  --color-light-down-3: hsl(210, 4%, 93%);
   --color-mid: hsl(0, 0%, 80%);
   --color-dark: hsl(0, 0%, 25%);
   --color-dark-down: hsl(237, 18%, 23%);
@@ -122,11 +126,6 @@ pre {
   overflow: visible;
 }
 
-.posts .logo {
-  --color-mint: var(--color-light);
-  --color-highlight: var(--color-sherbet);
-}
-
 main:focus {
   outline: none;
 }
@@ -137,14 +136,52 @@ hr {
   max-width: 500px;
   background: var(--color-stroke);
   border: none;
-  margin: get-size(900) auto;
+  margin: get-size(700) auto;
 }
 
 a:not([class]) {
-  display: inline-block;
-  color: inherit;
+  position: relative;
+  display: inline;
+  padding: 0.1rem 0.2rem 4px 0.1rem;
+  white-space: pre;
   text-decoration: none;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 88%, var(--color-mint) 88%);
+  z-index: 1;
+  font-weight: bold;
+  line-height: 1;
+  background: none;
+  white-space: no-wrap;
+  color: inherit;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    background-color: var(--color-lilac-no-swop);
+    height: 3px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+  }
+
+  &:after {
+    transform-origin: center right;
+    transition: all cubic-bezier(0.39, 0.575, 0.565, 1) 0.8s;
+  }
+
+  &:before {
+    transform-origin: center left;
+    transform: scaleX(0);
+    transition: transform cubic-bezier(0.39, 0.575, 0.565, 1) 0.6s;
+  }
+
+  &:hover:after {
+    transform: scaleX(0);
+    transition: transform cubic-bezier(0.39, 0.575, 0.565, 1) 0.3s;
+  }
+
+  &:hover:before {
+    transform: scaleX(1);
+  }
 }
 
 .underline__text {
