@@ -14,7 +14,7 @@
 
   CustomBounce.create('myBounce', {strength: 0.6, squash: 2});
 
-  const logoTl = gsap.timeline({delay: 2});
+  const logoTl = gsap.timeline({});
 
   logoTl
     .addLabel('i', 3.6)

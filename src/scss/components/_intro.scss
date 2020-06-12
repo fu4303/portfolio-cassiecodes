@@ -4,7 +4,7 @@
   color: var(--color-dark);
   border: solid 3px var(--color-dark);
   background-color: var(--color-light);
-  box-shadow: 0.5rem 0.5rem 0 0 var(--color-dark);
+  box-shadow: 0.5rem 0.5rem 0 0 var(--color-dark-down);
   padding-left: 1rem;
   padding-right: 1rem;
   max-width: 80vw;
@@ -102,19 +102,14 @@
     background-image: linear-gradient(
       transparent 0%,
       transparent 55%,
-      var(--color-peach) 55%,
-      var(--color-peach) 90%,
+      var(--color-mint) 55%,
+      var(--color-mint) 90%,
+      transparent 90%,
       transparent 100%
     );
     background-repeat: no-repeat;
     background-size: 0% 100%;
     animation: underline 0.5s 1s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
-  }
-
-  &__heading:only-child {
-    padding-bottom: 1.5rem;
-    border-bottom: 3px solid var(--color-dark);
-    background-image: none;
   }
 
   &__copy {
@@ -131,6 +126,17 @@
 
   &__tag {
     text-decoration: none;
+  }
+}
+
+.posts {
+  .Intro {
+    &__heading:only-child {
+      display: block;
+      padding-bottom: 1.5rem;
+      border-bottom: 3px solid var(--color-dark);
+      background-image: none;
+    }
   }
 }
 
@@ -198,6 +204,31 @@
   .Intro {
     &:after {
       background-color: var(--color-lilac);
+    }
+  }
+}
+
+@keyframes underline {
+  to {
+    background-size: 8rem 100%;
+  }
+}
+
+.tags {
+  .Intro {
+    &:after {
+      background-color: var(--color-marshmellow);
+    }
+    &__heading {
+      display: inline;
+      background-image: linear-gradient(
+        transparent 0%,
+        transparent 55%,
+        var(--color-peach) 55%,
+        var(--color-peach) 90%,
+        transparent 90%,
+        transparent 100%
+      );
     }
   }
 }

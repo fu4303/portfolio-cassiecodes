@@ -46,7 +46,9 @@ main {
   --color-mint: hsl(316, 30%, 36%);
   --color-highlight: hsl(240, 33%, 77%);
   --color-lilac: hsl(263, 29%, 32%);
+  --color-peach: hsl(316, 30%, 36%);
   --color-sherbet: hsl(260, 24%, 18%);
+  --color-marshmellow: hsl(314, 22%, 42%);
   --color-light: hsl(274, 4%, 15%);
   --color-light-fade: hsl(274, 4%, 16%);
   --color-light-down: hsl(274, 4%, 16%);
@@ -54,6 +56,7 @@ main {
   --color-light-down-3: hsl(274, 4%, 20%);
   --color-mid: hsl(0, 0%, 80%);
   --color-dark: hsl(0, 0%, 98%);
+  --color-dark-opacity: hsla(0, 0%, 98%, 0.3);
   --color-dark-down: hsl(0, 0%, 98%);
   --color-mint-selection: rgba(119, 64, 105, 0.9);
   --color-lilac-selection: rgba(76, 58, 105, 0.9);
@@ -76,12 +79,13 @@ main {
   --color-biscuit: hsl(26, 18%, 61%);
   --color-oat: hsl(17, 12%, 77%);
   --color-light: hsl(0, 0%, 97%);
-  --color-light-fade: hsl(282, 12%, 93%);
+  --color-light-fade: hsl(300, 11%, 96%);
   --color-light-down: hsl(210, 4%, 98%);
   --color-light-down-2: hsl(210, 4%, 96%);
   --color-light-down-3: hsl(210, 4%, 93%);
   --color-mid: hsl(0, 0%, 80%);
   --color-dark: hsl(0, 0%, 25%);
+  --color-dark-opacity: hsla(0, 0%, 25%, 0.3);
   --color-dark-down: hsl(237, 18%, 23%);
   --color-mint-selection: rgba(111, 220, 191, 0.9);
   --color-lilac-selection: rgba(173, 143, 219, 0.9);
@@ -219,20 +223,23 @@ a:not([class]) {
 
 a.arrow {
   position: relative;
-  padding-right: 2rem;
+  padding-right: 1.25rem;
+  text-decoration: none;
+  @include apply-utility('font', 'sans-serif');
+  letter-spacing: 0.05rem;
 
   &::after {
     content: '';
     line-height: 1.2;
     position: absolute;
     height: 100%;
-    width: 1.2rem;
+    width: 1rem;
     background-repeat: no-repeat;
     top: 0%;
-    right: 0.5rem;
-    background-position: 0% 60%;
+    right: 0;
+    background-position: 0% 50%;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 10' aria-hidden='true'%3E%3Cpath fill='%23404040' d='M1 4h11.59l-2.3-2.29A1 1 0 0111.71.29l4 4a1 1 0 010 1.41l-4 4a1 1 0 01-1.41-1.41L12.59 6H1a1 1 0 010-2z'/%3E%3C/svg%3E");
-    transition: ease-out 0.2s;
+    transition: transform ease-out 0.2s;
   }
 
   &:hover::after {

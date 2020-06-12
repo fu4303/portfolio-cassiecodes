@@ -1,86 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="alternate"
-      type="application/rss+xml"
-      title="{{ site.title }}"
-      href="{{ site.url }}/feed.xml"
-    />
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
-    <link
-      rel="preload"
-      as="font"
-      type="font/woff2"
-      crossorigin
-      href="/fonts/mosk-600.woff2"
-    />
-    <link
-      rel="preload"
-      as="font"
-      type="font/woff"
-      crossorigin
-      href="/fonts/mosk-600.woff"
-    />
-    <link
-      rel="preload"
-      as="font"
-      type="font/woff2"
-      crossorigin
-      href="/fonts/mosk-900.woff2"
-    />
-    <link
-      rel="preload"
-      as="font"
-      type="font/woff"
-      crossorigin
-      href="/fonts/mosk-900.woff"
-    />
-    <link
-      rel="preload"
-      as="font"
-      type="font/woff2"
-      crossorigin
-      href="/fonts/jenthill.woff2"
-    />
-    <link
-      rel="preload"
-      as="font"
-      type="font/woff"
-      crossorigin
-      href="/fonts/jenthill.woff"
-    />
-    {% include "partials/global/meta-info.njk" %}
-    <style>
-      {% include "assets/css/global.css" %}
-    </style>
-    {% block head %} {% endblock %}
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <script src="/js/night-mode.js"></script>
-  </head>
-  <body {% if 'posts' in page.url %}
-      class="posts"
-  {% endif %}>
-    {% include "partials/global/site-head.njk" %} {% block content %} {% endblock content
-    %}
-    <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/service-worker.js');
-        });
-      }
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
-    <script src="/js/DrawSVGPlugin.min.js"></script>
-    <script src="/js/CustomEase.min.js"></script>
-    <script src="/js/CustomBounce.min.js"></script>
-    <script src="/js/CustomWiggle.min.js"></script>
-    <script src="/js/main.js"></script>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+		<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}/feed.xml"/>
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png"/>
+		<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png"/>
+		<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png"/>
+		<link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/mosk-600.woff2"/>
+		<link rel="preload" as="font" type="font/woff" crossorigin href="/fonts/mosk-600.woff"/>
+		<link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/mosk-900.woff2"/>
+		<link rel="preload" as="font" type="font/woff" crossorigin href="/fonts/mosk-900.woff"/>
+		<link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/jenthill.woff2"/>
+		<link rel="preload" as="font" type="font/woff" crossorigin href="/fonts/jenthill.woff"/>
+		{% include "partials/global/meta-info.njk" %}
+		<style>
+			{% include "assets/css/global.css" %}</style>
+		{% block head %}{% endblock %}
+		<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+		<script src="/js/night-mode.js"></script>
+	</head>
+	<body {% if 'posts' in page.url %} class="posts" {% endif %}>
 
-  </body>
+		{% include "partials/global/site-head.njk" %}
+		{% block content %}{% endblock content%}
+
+		<script>
+			if ('serviceWorker' in navigator) {
+window.addEventListener('load', () => {
+navigator.serviceWorker.register('/service-worker.js');
+});
+}
+		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
+		<script src="/js/DrawSVGPlugin.min.js"></script>
+		<script src="/js/CustomEase.min.js"></script>
+		<script src="/js/CustomBounce.min.js"></script>
+		<script src="/js/CustomWiggle.min.js"></script>
+		<script src="/js/main.js"></script>
+
+	</body>
 </html>

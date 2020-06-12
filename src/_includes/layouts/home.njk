@@ -1,17 +1,32 @@
-{% extends 'layouts/base.njk' %} {% set pageType = 'Homepage' %} {# Intro content #} {%
-set introHeading = title %} {% set introSummary %}{{ content | safe }}{% endset %} {# Post
-list content #} {% set postListHeading = postsHeading %} {% set postListItems =
-collections.postFeed.slice(0, 1) %} {# Archive link #} {% if postListItems.length <
-collections.posts.length %} {% set paginationNextText = archiveButtonText %} {% set
-paginationNextUrl = '/writing' %} {% endif %} {% block content %}
+{% extends 'layouts/base.njk' %}
+{% set pageType = 'Homepage' %}
+{# Intro content #}
+{%
+set introHeading = title %}
+{% set introSummary %}{{ content | safe }}{% endset %}
+{# Post
+list content #}
+{% set postListHeading = postsHeading %}
+{% set postListItems =
+collections.postFeed.slice(0, 1) %}
+{# Archive link #}
+{% if postListItems.length <
+collections.posts.length %}
+	{% set paginationNextText = archiveButtonText %}
+	{% set
+paginationNextUrl = '/writing' %}
+{% endif %}
+{% block content %}
 
-<main id="main-content" class="main-content" tabindex="-1">
-  {% include "partials/components/hero.njk" %} {% include
-  "partials/components/posts-intro.njk" %} {% include "partials/components/speaking.njk"
+	<main id="main-content" class="main-content" tabindex="-1">
+		{% include "partials/components/hero.njk" %}
+		{% include
+  "partials/components/posts-intro.njk" %}
+		{% include "partials/components/speaking.njk"
   %}
-</main>
+	</main>
 
-<section class="slide-out">
-  {% include "partials/components/contact.njk" %}
-</section>
+	<section class="slide-out">
+		{% include "partials/components/contact.njk" %}
+	</section>
 {% endblock %}

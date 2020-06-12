@@ -3,7 +3,8 @@
     {
       "external": true,
       "data": {
-        "title": "Motion Paths – Past, Present and Future"
+        "title": "Motion Paths – Past, Present and Future",
+        "metaDesc": "Exploring the upcoming CSS motion path module and the newly released GSAP3."
       },
       "publication": {
         "name": "Codrops",
@@ -15,7 +16,8 @@
     {
       "external": true,
       "data": {
-        "title": "Earth day, API's and sunshine"
+        "title": "Earth day, API's and sunshine",
+        "metaDesc": "Hooking into a solar panel API and creating an animated, SVG forest to celebrate Earth day"
       },
       "publication": {
         "name": "Clearleft",
@@ -27,7 +29,8 @@
     {
       "external": true,
       "data": {
-        "title": "The many ways to change an SVG fill on hover"
+        "title": "The many ways to change an SVG fill on hover",
+        "metaDesc": "How do you go about adding a colored hover effect to an icon if it’s not an inline SVG? An exploration into CSS and SVG filters"
       },
       "publication": {
         "name": "CSS tricks",
