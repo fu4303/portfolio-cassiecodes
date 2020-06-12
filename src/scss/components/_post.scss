@@ -2,26 +2,15 @@
   &__intro {
     position: relative;
     z-index: 1;
-
-    &:after {
-      pointer-events: none;
-      content: '';
-      position: absolute;
-      width: 20vw;
-      height: 20vw;
-      min-width: 300px;
-      min-height: 300px;
-      top: 0%;
-      right: 50vw;
-      background-image: url('/images/dots.svg');
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: bottom;
-      z-index: -2;
-    }
+    // background-image: linear-gradient(
+    //   to bottom,
+    //   var(--color-sea-fade) 0%,
+    //   transparent 75%,
+    //   transparent 100%
+    // );
   }
   &__body-cont {
-    background-color: var(--color-light);
+    // background-color: var(--color-light);
   }
 
   &__body {
@@ -47,6 +36,11 @@
       }
     }
 
+    pre {
+      position: relative;
+      border-radius: 15px;
+    }
+
     code {
       font-size: var(--step-1);
       white-space: pre;
@@ -57,12 +51,61 @@
     }
 
     pre > code {
+      overflow: auto;
+      position: unset;
       width: 100%;
       margin-right: 0;
+      --color-selection: var(--color-peach);
+    }
+
+    pre[class*='language-'] {
+      overflow: visible;
+      margin-top: 2rem;
+      &:after {
+        @include apply-utility('font', 'sans-serif');
+        font-size: var(--step--1);
+        position: absolute;
+        content: '';
+        bottom: 100%;
+        right: 1.5rem;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        background-color: inherit;
+        color: var(--color-lilac-up);
+        padding: 0.5rem 0.5rem 0 0.5rem;
+      }
+    }
+
+    pre[class*='language-'] + pre[class*='language-'] {
+      margin-top: 4rem;
+    }
+
+    pre.language-css {
+      &:after {
+        content: 'CSS';
+      }
+    }
+
+    pre.language-svg {
+      &:after {
+        content: 'SVG';
+      }
+    }
+
+    pre.language-html {
+      &:after {
+        content: 'HTML';
+      }
+    }
+
+    pre.language-js {
+      &:after {
+        content: 'JS';
+      }
     }
 
     blockquote {
-      border-left: 0.4rem solid var(--color-mint-no-swop);
+      border-left: 0.4rem solid var(--color-mint);
       margin-left: 0;
       padding-left: get-size(500);
       font-style: italic;
@@ -124,8 +167,13 @@
 
     pre > code {
       display: block;
-      padding: get-size(700);
       font-size: var(--step-0);
+    }
+
+    @media screen and (min-width: 800px) {
+      pre > code {
+        padding: get-size(500);
+      }
     }
   }
 

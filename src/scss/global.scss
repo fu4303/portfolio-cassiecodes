@@ -19,10 +19,10 @@ html {
 body {
   position: relative;
   scroll-behavior: smooth;
-  background-color: var(--color-light);
   color: var(--color-dark);
   --color-selection: var(--color-dark);
   --color-selection-bg: var(--color-mint);
+  background-color: var(--color-light-fade);
 }
 
 main {
@@ -46,15 +46,19 @@ main {
   --color-mint: hsl(316, 30%, 36%);
   --color-highlight: hsl(240, 33%, 77%);
   --color-lilac: hsl(263, 29%, 32%);
-  --color-lilac-up: hsl(257, 17%, 41%);
   --color-sherbet: hsl(260, 24%, 18%);
   --color-light: hsl(274, 4%, 15%);
+  --color-light-fade: hsl(274, 4%, 16%);
   --color-light-down: hsl(274, 4%, 16%);
   --color-light-down-2: hsl(274, 4%, 18%);
   --color-light-down-3: hsl(274, 4%, 20%);
   --color-mid: hsl(0, 0%, 80%);
   --color-dark: hsl(0, 0%, 98%);
   --color-dark-down: hsl(0, 0%, 98%);
+  --color-mint-selection: rgba(119, 64, 105, 0.9);
+  --color-lilac-selection: rgba(76, 58, 105, 0.9);
+  --color-light-selection: rgba(38, 37, 40, 0.9);
+  --color-dark-selection: rgba(250, 250, 250, 0.9);
 }
 
 .day {
@@ -72,12 +76,17 @@ main {
   --color-biscuit: hsl(26, 18%, 61%);
   --color-oat: hsl(17, 12%, 77%);
   --color-light: hsl(0, 0%, 97%);
+  --color-light-fade: hsl(282, 12%, 93%);
   --color-light-down: hsl(210, 4%, 98%);
   --color-light-down-2: hsl(210, 4%, 96%);
   --color-light-down-3: hsl(210, 4%, 93%);
   --color-mid: hsl(0, 0%, 80%);
   --color-dark: hsl(0, 0%, 25%);
   --color-dark-down: hsl(237, 18%, 23%);
+  --color-mint-selection: rgba(111, 220, 191, 0.9);
+  --color-lilac-selection: rgba(173, 143, 219, 0.9);
+  --color-light-selection: rgba(247, 247, 247, 0.9);
+  --color-dark-selection: rgba(64, 64, 64, 0.9);
 }
 
 pre {
@@ -100,17 +109,17 @@ pre {
 ::-moz-selection {
   /* Code for Firefox */
   color: var(--color-selection);
-  background-color: rgba(255, 255, 255, 0.99);
+  background-color: var(--color-selection-bg);
 }
 
 ::selection {
   color: var(--color-selection);
-  background-color: rgba(255, 255, 255, 0.99);
+  background-color: var(--color-selection-bg);
 }
 
 .night ::selection {
   color: var(--color-selection);
-  background-color: rgba(43, 42, 45, 0.99);
+  background-color: var(--color-selection-bg);
 }
 
 .outline::selection {
@@ -118,6 +127,11 @@ pre {
   -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 1.5px;
   -webkit-text-stroke-color: var(--color-selection);
+}
+
+.posts {
+  --color-selection: var(--color-dark);
+  --color-selection-bg: var(--color-mint-selection);
 }
 
 .logo {
