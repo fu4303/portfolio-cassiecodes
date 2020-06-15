@@ -354,3 +354,41 @@
 
   window.addEventListener('resize', updateWindowSize);
 })();
+
+(function() {
+  const video = document.querySelector('#js-featured-video');
+  const loader = document.querySelector('#js-featured-loader');
+  const tabs = document.querySelectorAll('#js-featured-tab');
+
+  if (!video || !tabs) {
+    return;
+  }
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', e => {
+      e.preventDefault();
+
+      const clickedTab = event.target;
+      var previousTab = document.querySelector('[aria-selected="true"]');
+
+      previousTab.setAttribute('aria-selected', false);
+      clickedTab.setAttribute('aria-selected', true);
+
+      const url = clickedTab.getAttribute('data-href');
+      const title = clickedTab.getAttribute('data-title');
+
+      video.style.opacity = '0';
+      loader.style.opacity = '1';
+      loader.style.animationPlayState = 'running';
+
+      video.src = url;
+      video.title = `Video player: ${title}`;
+
+      setTimeout(function() {
+        loader.style.animationPlayState = 'paused';
+        video.style.opacity = '1';
+        loader.style.opacity = '0';
+      }, 800);
+    });
+  });
+})();

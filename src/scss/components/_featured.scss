@@ -23,9 +23,30 @@
     width: calc(100% + 4px);
     margin-bottom: -2px;
     margin-left: -2px;
+    background-color: var(--color-marshmellow);
 
     iframe {
       bottom: -2px;
+    }
+  }
+
+  &__loader {
+    position: absolute;
+    width: 30%;
+    min-width: 100px;
+    transform-origin: center;
+    animation: rotate infinite 1s linear paused both;
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    opacity: 0;
+  }
+
+  @keyframes rotate {
+    to {
+      transform: translate(-50%, -50%) rotate(360deg);
     }
   }
 
@@ -39,6 +60,10 @@
       padding: 0.5rem 1rem;
       background-color: var(--color-light);
       transition: transform 0.2s ease-out, background-color 0.2s ease-out;
+    }
+
+    * {
+      pointer-events: none;
     }
   }
 
