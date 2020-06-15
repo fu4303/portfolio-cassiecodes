@@ -10,6 +10,7 @@
 					{% if item.external or item.date.getTime() <= global.now %}
 
 						<li class="[ Post-list__item ] [ sf-flow ]">
+							<img class="[ Post-list__item__image ]" src="{{ item.data.image }}" alt="{{ item.data.alt }}">
 							<p class="[ small font-sans-serif spacing-md ] [ Post-list__item__date ]">
 								<time datetime="{{ item.date | w3DateFilter }}">{{ item.date | dateFilter }}</time>
 							</p>

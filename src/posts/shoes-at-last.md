@@ -4,6 +4,8 @@ metaTitle: Shoes at last!
 metaDesc: 'Fighting perfectionism, and finally getting my own blog started.'
 socialImage: /images/meta.jpg
 date: '2019-07-28'
+image: /images/perfectionism.svg
+alt: 'The word perfectionism on a blue background, the letter T is wonky'
 tags:
   - blog
 ---

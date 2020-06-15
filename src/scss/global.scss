@@ -12,35 +12,6 @@
  * GLOBAL STYLES 
  */
 
-html {
-  color: var(--color-dark);
-}
-
-body {
-  position: relative;
-  scroll-behavior: smooth;
-  color: var(--color-dark);
-  --color-selection: var(--color-dark);
-  --color-selection-bg: var(--color-mint);
-  background-color: var(--color-light-fade);
-}
-
-main {
-  overflow: hidden;
-}
-
-.main-content {
-  position: relative;
-  z-index: 1;
-}
-
-.slide-out {
-  position: sticky;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-}
-
 .night {
   -webkit-font-smoothing: antialiased;
   --color-mint: hsl(316, 30%, 36%);
@@ -104,6 +75,43 @@ pre {
   --color-light: hsl(0, 0%, 97%);
   --color-dark-down: hsl(237, 18%, 23%);
 }
+
+html {
+  color: var(--color-dark);
+}
+
+body {
+  position: relative;
+  scroll-behavior: smooth;
+  color: var(--color-dark);
+  --color-selection: var(--color-dark);
+  --color-selection-bg: var(--color-mint);
+  background-color: var(--color-light-fade);
+}
+
+main {
+  overflow: hidden;
+}
+
+.main-content {
+  position: relative;
+  z-index: 1;
+}
+
+.slide-out {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+// .subpage {
+//   min-height: 100vh;
+// }
+
+// .writing .subpage {
+//   --background: var(--color-sherbet);
+// }
 
 .night .logo {
   --color-mint: hsl(240, 33%, 77%);
@@ -312,6 +320,24 @@ a.arrow {
   }
 }
 
+// @media screen and (min-width: 800px) {
+//   .subpage {
+//     position: relative;
+
+//     &:after {
+//       content: '';
+//       position: absolute;
+//       width: 68%;
+//       height: 100%;
+//       top: 0;
+//       right: 0;
+//       bottom: 0;
+//       background-color: var(--color-mint);
+//       background-color: var(--background);
+//       z-index: -3;
+//     }
+//   }
+// }
 /**
  * PROJECT IMPORTS
  */

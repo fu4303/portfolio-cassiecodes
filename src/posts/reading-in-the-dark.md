@@ -2,6 +2,8 @@
 title: Reading in the dark
 metaTitle: Reading in the dark
 metaDesc: "Your productivity doesn't define your worth. - A reminder to myself after a bout of depression"
+image: /images/reading.svg
+alt: 'A book lies open on a black background'
 socialImage: /images/meta.jpg
 date: '2020-05-27'
 tags:

@@ -20,7 +20,7 @@
     .addLabel('i', 3.6)
     .set('.logo', {autoAlpha: 1})
     .timeScale(0.9)
-    .staggerTo('.cPath', 0.5, {drawSVG: '100%', ease: Linear.easeNone}, 0.2, 1.5)
+    .staggerTo('.cPath', 0.5, {drawSVG: '100%', ease: Linear.easeNone}, 0.2, 1)
     .staggerTo('.a1Path', 0.25, {drawSVG: '100%', ease: Linear.easeNone}, 0.1, '-=0.4')
     .staggerTo('.a2Path', 0.25, {drawSVG: '100%', ease: Linear.easeNone}, 0.1, '-=0.2')
     .staggerTo('.s1Path', 0.4, {drawSVG: '100%', ease: Linear.easeNone}, 0.1, '-=0.4')
@@ -289,8 +289,8 @@
     .to(
       '#me',
       {
-        duration: 3.7,
-        scale: 0.98,
+        duration: 4,
+        scale: 0.99,
         transformOrigin: '50% 100%',
         ease: 'lessWiggle'
       },

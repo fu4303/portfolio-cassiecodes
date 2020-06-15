@@ -95,40 +95,40 @@
 ] %}
 
 {% block content %}
-  <main id="main-content" tabindex="-1">
-    {% include "partials/components/intro.njk" %}
+	<main id="main-content" tabindex="-1">
+		{% include "partials/components/intro.njk" %}
 
-    <div class="[ wrapper ] [ videos ]">
-      <div class="video-player">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/8p5SDI4TNDc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <div class="video-player">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/cgDBFldyJdM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <div class="video-player">
-        <iframe src="https://player.vimeo.com/video/373163932" width="560" height="315" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-      </div>
-    </div>
+		<div class="[ wrapper ] [ videos ]">
+			<div class="video-player">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/8p5SDI4TNDc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+			<div class="video-player">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/cgDBFldyJdM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+			<div class="video-player">
+				<iframe src="https://player.vimeo.com/video/373163932" width="560" height="315" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+			</div>
+		</div>
 
-    <div class="[ wrapper grid ]">
-      <div>
-        {% set talkListHeading = "Upcoming" %}
-        {% set talks = workshops %}
-        {% include 'partials/components/talk-list.njk' %}
+		<div class="[ wrapper grid ]">
+			<div>
+				{% set talkListHeading = "Upcoming" %}
+				{% set talks = workshops %}
+				{% include 'partials/components/talk-list.njk' %}
 
-        {% set talkListHeading = "Webinars" %}
-        {% set talks = webinars %}
-        {% include 'partials/components/talk-list.njk' %}
-      </div>
-      
-      <div>
-        {# {% set talkListHeading = "Upcoming talks" %}
-        {% include 'partials/components/talk-list.njk' %} #}
+				{% set talkListHeading = "Webinars" %}
+				{% set talks = webinars %}
+				{% include 'partials/components/talk-list.njk' %}
+			</div>
 
-        {% set talkListHeading = "Previous Talks" %}
-        {% set talks = previousTalks %}
-        {% include 'partials/components/talk-list.njk' %}
-      </div>
-    </div>
-  </main>
+			<div>
+				{# {% set talkListHeading = "Upcoming talks" %}
+								        {% include 'partials/components/talk-list.njk' %} #}
+
+				{% set talkListHeading = "Previous Talks" %}
+				{% set talks = previousTalks %}
+				{% include 'partials/components/talk-list.njk' %}
+			</div>
+		</div>
+	</main>
 {% endblock %}

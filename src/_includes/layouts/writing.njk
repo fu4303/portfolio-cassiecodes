@@ -11,11 +11,19 @@
 <p>Occasionally I write articles elsewhere, you can find them here too.</p>
 
 {% endset %}
+{# 
+{% set postListItems = collections.postFeed.slice(0, 1) %}
+{# Archive link #}
+{# {% if postListItems.length <
+collections.posts.length %}
+	{% set paginationNextText = archiveButtonText %}
+	{% set
+paginationNextUrl = '/writing' %}
+{% endif %} #}
 
 
-{% block content %}
-	<main id="main-content" tabindex="-1" class="writing">
-		<div class="[ pad-before-xlg ]">
+	{% block content %}
+		<main id="main-content" tabindex="-1" class="writing"> <div class="[ pad-before-xlg ]">
 			<div class="[ wrapper wrapper-sm ] [ pad-before ]">
 				{% include "partials/components/intro.njk" %}
 			</div>
@@ -32,6 +40,5 @@
 				{% include "partials/components/post-list.njk" %}
 			</div>
 		</div>
-
 	</main>
 {% endblock %}
