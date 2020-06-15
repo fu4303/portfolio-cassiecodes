@@ -2,32 +2,25 @@
 	<div class="[ wrapper ]">
 		<div class="[ Speaking__intro ]">
 			<div class="[ Speaking__text ] [ sf-flow ]">
-				<h2 class="[ Speaking__heading ] [ h1 ]">Speaking.</h2>
-				<p>
-					The first time I got asked to speak at a conference, my gut reaction was “heck no. That sounds terrifying”. So naturally I said yes.
-				</p>
-				<p>
-					Since then I’ve spoken at conferences and meet-ups all over the world. It still terrifies me.
-				</p>
+				<h2 class="[ Speaking__heading ] [ h1 ]">{{ speakingHeading }}</h2>
+				{% if speakingIntro %}
+					{{ speakingIntro | safe }}
+				{% endif %}
+
 			</div>
-			<figure class="[ Speaking__image ]">
-				<img src="/images/speaker.jpg" alt="black and white photo of Cassie on stage at beyond tellerand. Screen behind her shows an SVG neopet."/>
-				<figcaption class="[ h6 ]" data-content="beyond tellerand">
-					beyond tellerand
-				</figcaption>
-			</figure>
+			{% if speakingImage %}
+				<figure class="[ Speaking__image ]">
+					<img src="{{ speakingImage }}" alt="{{ speakingAlt }}"/>
+					<figcaption class="[ h6 ]" data-content="{{ speakingCaption }}">
+						{{ speakingCaption }}
+					</figcaption>
+				</figure>
+			{% endif %}
 		</div>
 
-		<div class="[ Speaking__talks ] [ sf-flow ]">
-			{% for item in speaking.items %}
-				<article class="[ Card ]">
-					<p class="[ Card__type ] [ font-cursive h6 ] {% if loop.last %}js-last-card{% endif %}">{{ item.type }}</p>
-					<a href="{{ item.url }}" class="[ Card__link ] [ sf-flow underline ]">
-						<h2 class="[ h4 ] [ underline__text ]">{{ item.title }}</h2>
-						{{ item.content | safe }}
-					</a>
-				</article>
-			{% endfor %}
-		</div>
-	</div>
-</section>
+		{% if talks %}
+			<div class="[ Speaking__talks ] [ sf-flow ]">
+				{% include "partials/components/talks.njk" %}
+			</div>
+		{% endif %}
+	</section>

@@ -105,6 +105,16 @@ main {
   width: 100%;
 }
 
+.speaking .Speaking__image {
+  min-width: 55%;
+  max-width: 600px;
+  height: 400px;
+}
+
+.speaking {
+  background-color: var(--color-sherbet);
+}
+
 // .subpage {
 //   min-height: 100vh;
 // }
@@ -370,3 +380,4 @@ a.arrow {
 @import 'components/speaking';
 @import 'components/card';
 @import 'components/contact';
+@import 'components/featured';

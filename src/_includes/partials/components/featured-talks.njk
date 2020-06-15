@@ -1,0 +1,21 @@
+<section class="[ Featured ] [ pad-around-xlg ]">
+	<div class="[ wrapper ] [ Featured__inner ]">
+		<ul class="[ Featured__tabs ]">
+			{% for video in videos.items %}
+				<li class="[ Featured__tab ]">
+					<a class="[ Featured__link ]" id="js-featured-tab" role="tab" href="#" data-href="{{ video.url }}" aria-selected="{% if loop.first %}true{% else %}false{% endif %}">
+						<div class="[ Featured__link-inner ]">
+							<h2 class="[ h6 ]">{{ video.title }}</h2>
+							<p>{{ video.conference }}</p>
+						</div>
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+		<div class="[ Browser ] [ Featured__player ]">
+			<div class="[ video-player ]">
+				<iframe title="Video player: Interactive web animation with SVG" width="560" height="315" src="https://player.vimeo.com/video/373163932" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+		</div>
+	</div>
+</section>

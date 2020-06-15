@@ -1,16 +1,16 @@
 {
   "items": [
     {
-      "type": "talk",
-      "title": "Painting with SVG",
-      "url": "#",
-      "content": "<p>SVG's a great format for creating illustrative graphics on the web, but it can sometimes feel a bit... flat?</p><p>Illustration in the real-world is gloriously messy. It's full of texture, human error, smudges, and paint splatters. Let's take a look at how we can use different SVG techniques to recreate some of this tactile 'messiness'</p>"
-    },
-    {
       "type": "workshop",
       "title": "Getting started with SVG animation",
       "url": "#",
       "content": "<p> Have you wanted to give SVG animation a go but haven’t found the time or known where to start?</p><p>Animation is one of the best ways to bring brand personality and character to an online experience, but in the busy world of front-end development, it can often be overlooked.</p><p>Join me for a day of SVG animation fun!</p>"
+    },
+    {
+      "type": "talk",
+      "title": "Painting with SVG",
+      "url": "#",
+      "content": "<p>SVG's a great format for creating illustrative graphics on the web, but it can sometimes feel a bit... flat?</p><p>Illustration in the real-world is gloriously messy. It's full of texture, human error, smudges, and paint splatters. Let's take a look at how we can use different SVG techniques to recreate some of this tactile 'messiness'</p>"
     },
     {
       "type": "talk",
