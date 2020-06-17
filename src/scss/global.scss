@@ -106,9 +106,13 @@ main {
 }
 
 .speaking .Speaking__image {
-  min-width: 55%;
+  min-width: 50%;
   max-width: 600px;
   height: 400px;
+}
+
+.speaking .Speaking__talks {
+  margin-top: 5rem;
 }
 
 .speaking {

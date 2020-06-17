@@ -1,20 +1,35 @@
 {% extends 'layouts/base.njk' %}
 {% set pageType = 'Speaking' %}
 
-
-{% set speakingHeading = "Talks & workshops." %}
+{% set speakingHeading = "Speaking" %}
 {% set speakingImage = '/images/css-camp.jpg' %}
 {% set speakingAlt = 'Cassie on stage at CSS camp in barcelona. Screen behind her shows an SVG jellyfish.'%}
 {% set speakingCaption = 'CSS Camp' %}
-{% set speakingIntro = "<p>I got into making things on the web back in the days of myspace and neopets. Those sites encouraged so many kids to learn how to code. <br> It was such a creative, collaborative time." %}
+{% set speakingIntro = "<p>I got into making things on the web back in the whimsical days of myspace and neopets.</p><p>Remember the space jam website, blink tags and sparkly trailing cursors?</p><p>I aim to bring back some of that playfulness to the web through my talks and workshops.</p>" %}
 
 
 {% block content %}
 	<main id="main-content" tabindex="-1" class="speaking">
 
+		<div class="[ wrapper wrapper-lg ]">
+			{% include "partials/components/speaking.njk" %}
+		</div>
 
-		{% include "partials/components/speaking.njk" %}
 		{% include "partials/components/featured-talks.njk" %}
+
+		{% set speakingHeading = "Talks & workshops." %}
+		{% set speakingIntro = null %}
+		{% set speakingImage = null %}
+		{% set talks = true %}
+
+		<div class="[ wrapper ] [ pad-after-xlg pad-before-lg ] ">
+			{% if talks %}
+				<div class="[ Speaking__talks ] [ sf-flow ]">
+					{% include "partials/components/talks.njk" %}
+				</div>
+			{% endif %}
+		</div>
+
 	</main>
 
 {% endblock %}

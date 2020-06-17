@@ -11,7 +11,7 @@
 			{% if speakingImage %}
 				<figure class="[ Speaking__image ]">
 					<img src="{{ speakingImage }}" alt="{{ speakingAlt }}"/>
-					<figcaption class="[ h6 ]" data-content="{{ speakingCaption }}">
+					<figcaption class="[ small ]" data-content="{{ speakingCaption }}">
 						{{ speakingCaption }}
 					</figcaption>
 				</figure>
@@ -23,4 +23,5 @@
 				{% include "partials/components/talks.njk" %}
 			</div>
 		{% endif %}
-	</section>
+	</div>
+</section>
