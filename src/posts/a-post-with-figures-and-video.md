@@ -2,7 +2,7 @@
 title: A post with figures and video
 date: '2022-06-18'
 tags:
- - demo-content
+  - demo-content
   - code
   - blog
 ---

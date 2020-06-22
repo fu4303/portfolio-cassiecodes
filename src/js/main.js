@@ -299,7 +299,7 @@
     .to(
       '.dizzy-1',
       {
-        rotate: 360,
+        rotate: -360,
         duration: 1,
         repeat: 5,
         transformOrigin: '50% 50%',
@@ -310,7 +310,7 @@
     .to(
       '.dizzy-2',
       {
-        rotate: -360,
+        rotate: 360,
         duration: 1,
         repeat: 5,
         transformOrigin: '50% 50%',

@@ -18,7 +18,8 @@
   --color-highlight: hsl(240, 33%, 77%);
   --color-lilac: hsl(263, 29%, 32%);
   --color-peach: hsl(316, 30%, 36%);
-  --color-sherbet: hsl(260, 24%, 18%);
+  --color-sherbet: hsl(257, 8%, 18%);
+  --color-sherbet-fade: hsl(260, 24%, 18%);
   --color-marshmellow: hsl(314, 22%, 42%);
   --color-light: hsl(274, 4%, 15%);
   --color-light-fade: hsl(274, 4%, 16%);
@@ -44,6 +45,7 @@
   --color-highlight: hsl(264, 51%, 71%);
   --color-lilac-up: hsl(240, 33%, 77%);
   --color-sherbet: hsl(55, 97%, 85%);
+  --color-sherbet-fade: hsl(55, 100%, 94%);
   --color-rose: hsl(344, 56%, 69%);
   --color-marshmellow: hsl(329, 44%, 71%);
   --color-peach: hsl(4, 65%, 85%);
@@ -87,6 +89,22 @@ body {
   --color-selection: var(--color-dark);
   --color-selection-bg: var(--color-mint);
   background-color: var(--color-light-fade);
+}
+
+* ::-webkit-scrollbar {
+  width: 11px;
+}
+* {
+  scrollbar-width: auto;
+  scrollbar-color: var(--color-mint) var(--color-sherbet-fade);
+}
+*::-webkit-scrollbar-track {
+  background: var(--color-sherbet-fade);
+}
+*::-webkit-scrollbar-thumb {
+  background-color: var(--color-mint);
+  border-radius: 6px;
+  border: 3px solid vvar(--color-sherbet-fade);
 }
 
 main {
@@ -368,6 +386,7 @@ a.arrow {
 
 @import 'components/post';
 @import 'components/post-list';
+@import 'components/workshop';
 
 @import 'components/syntax-highlighting';
 @import 'components/video-player';
@@ -385,3 +404,4 @@ a.arrow {
 @import 'components/card';
 @import 'components/contact';
 @import 'components/featured';
+@import 'components/events';
