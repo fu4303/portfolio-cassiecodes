@@ -1,71 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}/feed.xml" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/Rubik-Bold.woff2" />
-  {% include "partials/global/meta-info.njk" %}
-  <style>{% include "assets/css/global.css" %}</style>
-  {% block head %}
-  {% endblock %}
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-</head>
-<body>
-  {% include "partials/global/site-head.njk" %}
-  {% block content %}
-  {% endblock content %}
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/service-worker.js');
-      });
-    }
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-    <script src="/js/DrawSVGPlugin.min.js"></script>
-    <script src="/js/CustomEase.min.js"></script>
-    <script src="/js/CustomBounce.min.js"></script>
-    <script>
-    console.log('beepboop');
-    TweenMax.set('.path', {
-      drawSVG: '0% 0%'
-    });
-    TweenMax.set('.dot-group', {
-      yPercent: 100
-    });
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+		<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}/feed.xml"/>
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png"/>
+		<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png"/>
+		<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png"/>
+		<link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/mosk-600.woff2"/>
+		<link rel="preload" as="font" type="font/woff" crossorigin href="/fonts/mosk-600.woff"/>
+		<link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/mosk-900.woff2"/>
+		<link rel="preload" as="font" type="font/woff" crossorigin href="/fonts/mosk-900.woff"/>
+		<link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/jenthill.woff2"/>
+		<link rel="preload" as="font" type="font/woff" crossorigin href="/fonts/jenthill.woff"/>
+		{% include "partials/global/meta-info.njk" %}
+		<style>
+			{% include "assets/css/global.css" %}</style>
+		{% block head %}{% endblock %}
+		<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+		<script src="/js/night-mode.js"></script>
+	</head>
+	<body {% if 'posts' in page.url %} class="posts" {% endif %}>
 
-    CustomBounce.create('myBounce', {strength: 0.6, squash: 2});
+		{% include "partials/global/site-head.njk" %}
+		{% block content %}{% endblock content%}
 
-    tl = new TimelineMax({delay: 0.5});
-
-    tl.addLabel('i', 2.85)
-      .set('.logo', {autoAlpha: 1})
-      .timeScale(1.2)
-      .staggerTo('.cPath', 0.5, {drawSVG: '100%', ease: Linear.easeNone}, 0.2)
-      .staggerTo('.a1Path', 0.25, {drawSVG: '100%', ease: Linear.easeNone}, 0.2, '-=0.35')
-      .staggerTo('.a2Path', 0.25, {drawSVG: '100%', ease: Linear.easeNone}, 0.1, '-=0.04')
-      .staggerTo('.s1Path', 0.4, {drawSVG: '100%', ease: Linear.easeNone}, 0.1, '-=0.02')
-      .staggerTo('.s2Path', 0.3, {drawSVG: '100%', ease: Linear.easeNone}, 0.07, '-=0.1')
-      .staggerTo('.s3Path', 0.4, {drawSVG: '100%', ease: Linear.easeNone}, 0.1, '-=0.4')
-      .staggerTo('.s4Path', 0.2, {drawSVG: '100%', ease: Linear.easeNone}, 0.07, '-=0.1')
-      .from('#dot', 0.01, {autoAlpha: 0}, '-=0.03')
-      .to('#dot', 0.4, {yPercent: -500, ease: Power4.easeOut}, '-=0.01')
-      .to('.dot-group', 0.4, {scale: 1.4, ease: Power4.easeOut}, '-=0.4')
-      .to('#dot', 0.9, {yPercent: -150, ease: 'myBounce'})
-      .to('#dot', 0.9, {
-        scaleY: 0.6,
-        scaleX: 1.2,
-        ease: 'myBounce-squash',
-        transformOrigin: 'bottom',
-        delay: -0.9
-      })
-      .staggerTo('.iPath', 0.5, {drawSVG: '100%', ease: Linear.easeNone}, 0.05, 'i')
-      .staggerTo('.ePath', 0.5, {drawSVG: '100%', ease: Linear.easeNone}, 0.05, '-=0.3');
-    </script>
-</body>
+		<script>
+			if ('serviceWorker' in navigator) {
+window.addEventListener('load', () => {
+navigator.serviceWorker.register('/service-worker.js');
+});
+}
+		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
+		<script src="/js/DrawSVGPlugin.min.js"></script>
+		<script src="/js/CustomEase.min.js"></script>
+		<script src="/js/CustomBounce.min.js"></script>
+		<script src="/js/CustomWiggle.min.js"></script>
+		<script src="js/ScrollTrigger.min.js"></script>
+		<script src="js/Draggable.min.js"></script>
+		<script src="js/Physics2DPlugin.min.js"></script>
+		<script src="/js/main.js"></script>
+		<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+	</body>
 </html>

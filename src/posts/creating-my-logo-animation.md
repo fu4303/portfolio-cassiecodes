@@ -3,6 +3,8 @@ title: Creating my logo animation
 metaTitle: Creating an SVG path drawing animation.
 metaDesc: Creating my logo animation using SVG and Greensock
 socialImage: /images/meta.jpg
+image: /images/cassie.png
+alt: "Cassie's logo"
 date: '2019-07-30'
 tags:
   - code
@@ -11,7 +13,7 @@ tags:
 
 Last week I posted my new logo animation on [twitter](https://twitter.com/cassiecodes/status/1154650488681435137?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1154650488681435137&ref_url=http%3A%2F%2Flocalhost%3A8080%2Fposts%2Fcreating-my-logo-animation%2F%23heading-svg-stroke-dasharray).
 
-Amongst everyone saying *a ton* of lovely things, (thankyou) there was a resounding cry of "tutorial". So I'm going to try and break it down for you. Hope this helps someone, I had a ton of fun making it!
+Amongst everyone saying _a ton_ of lovely things, (thankyou) there was a resounding cry of "tutorial". So I'm going to try and break it down for you. Hope this helps someone, I had a ton of fun making it!
 
 There's a few things going on in this logo animation. We've got -
 
@@ -25,15 +27,15 @@ There's a few things going on in this logo animation. We've got -
 
 I won't dive too much into Greensock for this article. But as [Sara Soueidan](https://twitter.com/SaraSoueidan) has said
 
->Greensock is the best thing that happened to SVG animations since SVG animations.
+> Greensock is the best thing that happened to SVG animations since SVG animations.
 
-Greensock provides better cross browser support for SVG animation than we get with CSS. It also, crucially, gives you the ability to chain animations and group animations on timelines. This is invaluable for longer and more complex animation. 
+Greensock provides better cross browser support for SVG animation than we get with CSS. It also, crucially, gives you the ability to chain animations and group animations on timelines. This is invaluable for longer and more complex animation.
 
 They also have a bunch of fun plugins, some of which have been made specifically for SVG, like [Draw SVG](https://greensock.com/drawSVG) and [Morph SVG](https://greensock.com/morphSVG).
 
 I've been side-eying their custom bounce plugin for a while, so when I saw an chance to use it to give the little dot some character I jumped (bounced? 😬) at the chance.
 
-Although I love Greensock, you don't need to learn a whole Javascript animation library to do SVG path animations. 
+Although I love Greensock, you don't need to learn a whole Javascript animation library to do SVG path animations.
 
 We can do them with CSS too. So I'll run through a couple of different ways to create the same effect.
 
@@ -54,6 +56,7 @@ Let's get going. First up...
   stroke-dasharray: 10;
 }
 ```
+
 You can play around with what these values look like in this pen.
 
 <p class="codepen" data-height="400" data-theme-id="0" data-default-tab="result" data-user="cassie-codes" data-slug-hash="EqZqXL" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="SVG stroke dasharray demo">
@@ -101,7 +104,6 @@ We can also use Greensock's [draw svg plugin](https://greensock.com/drawSVG) to 
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
-
 Under the hood, this is how my logo animation works, but rather than having one continuous line I've broken the path up into nine separate sections. This gives me more control over the timing and helps to avoid any clipping overlaps, which we'll get to in a minute.
 
 <p class="codepen" data-height="400" data-theme-id="0" data-default-tab="result" data-user="cassie-codes" data-slug-hash="85df19ba523672229f92e5aa4ac675af" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Cassie! - without clip paths - break down">
@@ -118,7 +120,6 @@ You may have noticed that this version of my logo looks a little... messy though
 
 Enter `<clipPath>`, we can use clip path to "cut out" a more stylised shape.
 
-
 ## SVG `<clipPath>`
 
 SVG [clip path](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/clipPath) can be used to clip (or hide) parts of SVG elements according to a certain path. The parts of the shape inside the `<clipPath>` are visible, and the parts outside are hidden.
@@ -128,7 +129,6 @@ SVG [clip path](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/clipPat
 Lets go back to our little line animation.
 
 In illustrator I drew out the path that we animated (purple), and then I drew a shape over the top (black). This will be used as a clip path.
-
 
 <svg viewBox="0 0 403.44 74.33" xmlns="http://www.w3.org/2000/svg">
   <path d="M14.2 65.54s36-36.79 56.31-35.66 38.6 27.31 58.13 26.56 26.34-5.91 37.6-13 30.53-19.52 39.48-19.14 19.48 8.23 31.12 19.87 18.91 13.2 25.25 13.16S278.24 58 297 40.76s25.86-17.86 31.49-17.86 48.11 15.42 65 13.27" fill="none" stroke="#a387be" stroke-miterlimit="10" stroke-width="18"/>
@@ -142,19 +142,19 @@ This is what the syntax for a clip path looks like in SVG
   <clipPath id="myClipPath">
     <circle cx="40" cy="35" r="35" />
   </clipPath>
- 
+
   <path clip-path="url(#myClipPath)"... />
 </svg>
 ```
 
-Anything you put inside the clip path element will be used as a clipping object. 
+Anything you put inside the clip path element will be used as a clipping object.
 You reference a clip path on the clipping target using an ID
 
 You can also reference a clip path in CSS like this:
 
 ```css
 .element {
-    clip-path: url("#myClipPath");
+  clip-path: url('#myClipPath');
 }
 ```
 
@@ -166,8 +166,6 @@ This is what the line animation looks like with a clip path applied. Much Nicer!
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-
-
 
 For my logo animation I created a clip path for each stroke.
 
@@ -197,6 +195,7 @@ For my logo animation I created a clip path for each stroke.
 </svg>
 
 So the end result looks like this!
+
 <p class="codepen" data-height="400" data-theme-id="0" data-default-tab="result" data-user="cassie-codes" data-slug-hash="942590678837398a4390506983586e59" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Cassie! - with clip paths - break down">
   <span>See the Pen <a href="https://codepen.io/cassie-codes/pen/942590678837398a4390506983586e59/">
   Cassie! - with clip paths - break down</a> by Cassie Evans (<a href="https://codepen.io/cassie-codes">@cassie-codes</a>)
@@ -204,7 +203,8 @@ So the end result looks like this!
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
-----
+---
+
 ## The duotone effect
 
 I've created the duotone effect by animating two paths instead of one along each section, one purple and one green.
@@ -222,7 +222,7 @@ These paths are grouped together in a `<g>` element which is the target for the 
 
 The final cherry on top is the little dot on the i. 💚
 
-In order to make a realistic bounce, the element needs to abide by the [squash and stretch](https://blog.animationmentor.com/squash-and-stretch-the-12-basic-principles-of-animation/) animation principle. 
+In order to make a realistic bounce, the element needs to abide by the [squash and stretch](https://blog.animationmentor.com/squash-and-stretch-the-12-basic-principles-of-animation/) animation principle.
 
 This helps make the movement feel more lifelike. The i should squash and stick to the ground at the bottom of the bounce and stretch out at the top. You can definitely achieve this with some really fine tuned keyframes or individual, overlapping tweens. But Greensock make it easier for us with their [Custom Bounce](https://greensock.com/wiggle-bounce) plugin.
 
@@ -231,15 +231,19 @@ Using the plugin you set a few parameters and it creates an ease for the bounce 
 `strength` determines how bouncy the ease is and `squash` determines how long the squash should last.
 
 ```js
-CustomBounce.create("myBounce", {strength:0.7, squash:3, squashID:"myBounce-squash"});
+CustomBounce.create('myBounce', {strength: 0.7, squash: 3, squashID: 'myBounce-squash'});
 ```
 
 You can then use that bounce ease the same way you would use a normal ease in a Greensock tween, by referring to it in your tween parameters.
 The squash ease ID will be whatever the ID of the bounce is plus `-squash` appended to the end, for example, `ease:"myBounce-squash"`
 
 ```js
-tl.to("#ball", duration, {y:550, ease:"myBounce"})
-  .to("#ball", duration, {scaleY:0.5, scaleX:1.3, ease:"myBounce-squash"}, 0)
+tl.to('#ball', duration, {y: 550, ease: 'myBounce'}).to(
+  '#ball',
+  duration,
+  {scaleY: 0.5, scaleX: 1.3, ease: 'myBounce-squash'},
+  0
+);
 ```
 
 <p class="codepen" data-height="600" data-theme-id="0" data-default-tab="result" data-user="cassie-codes" data-slug-hash="MNpVxy" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Video: CustomBounce from GreenSock">

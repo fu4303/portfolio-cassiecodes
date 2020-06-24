@@ -1,26 +1,37 @@
 {% extends 'layouts/base.njk' %}
 {% set pageType = 'Homepage' %}
-
 {# Intro content #}
-{% set introHeading = title %}
-{% set introSummary %}
-  {{ content | safe }}
-{% endset %}
-
-{# Post list content #}
+{%
+set introHeading = title %}
+{% set introSummary %}{{ content | safe }}{% endset %}
+{# Post
+list content #}
 {% set postListHeading = postsHeading %}
-{% set postListItems = collections.postFeed.slice(0, 1) %}
-
+{% set postListItems =
+collections.postFeed.slice(0, 1) %}
 {# Archive link #}
-{% if postListItems.length < collections.posts.length %} 
-  {% set paginationNextText = archiveButtonText %}
-  {% set paginationNextUrl = '/writing' %}
+{% if postListItems.length <
+collections.posts.length %}
+	{% set paginationNextText = archiveButtonText %}
+	{% set
+paginationNextUrl = '/writing' %}
 {% endif %}
-
 {% block content %}
-  <main id="main-content" tabindex="-1">
-    {% include "partials/components/mainIntro.njk" %}
-    {% include "partials/components/post-list.njk" %}
-    {% include "partials/components/pagination.njk" %}
-  </main>
+
+	{% set speakingImage = '/images/speaker.jpg' %}
+	{% set speakingAlt = 'black and white photo of Cassie on stage at beyond tellerand. Screen behind her shows an SVG neopet.'%}
+	{% set speakingCaption = 'beyond tellerand' %}
+	{% set speakingHeading = "Speaking." %}
+	{% set speakingIntro = "<p>The first time I got asked to speak at a conference, my gut reaction was “heck no. That sounds terrifying”.</p><p>So naturally I said yes. Since then I’ve spoken at conferences and meet-ups all over the world. It still terrifies me.</p>" %}
+	{% set talks = true %}
+
+	<main id="main-content" class="main-content" tabindex="-1">
+		{% include "partials/components/hero.njk" %}
+		{% include "partials/components/posts-intro.njk" %}
+		{% include "partials/components/speaking.njk" %}
+	</main>
+
+	<section class="slide-out">
+		{% include "partials/components/contact.njk" %}
+	</section>
 {% endblock %}

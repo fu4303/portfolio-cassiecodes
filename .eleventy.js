@@ -38,27 +38,37 @@ module.exports = function(config) {
 
   // Custom collections
   const livePosts = post => post.date <= now && !post.data.draft;
-  const public    = post => !post.data.tags.includes('notes');
+  const public = post => !post.data.tags.includes('notes');
 
   config.addCollection('posts', collection => {
     return [
-      ...collection.getFilteredByGlob('./src/posts/*.md').filter(livePosts).filter(public)
-    ].reverse()
+      ...collection
+        .getFilteredByGlob('./src/posts/*.md')
+        .filter(livePosts)
+        .filter(public)
+    ].reverse();
   });
-
-
 
   config.addCollection('postFeed', collection => {
-    return [...collection.getFilteredByGlob('./src/posts/*.md').filter(livePosts).filter(public)]
+    return [
+      ...collection
+        .getFilteredByGlob('./src/posts/*.md')
+        .filter(livePosts)
+        .filter(public)
+    ]
       .reverse()
       .slice(0, site.maxPostsPerPage);
   });
 
-
   config.addCollection('notes', collection => {
-    return [...collection.getFilteredByTag("notes").filter(livePosts)]
+    return [...collection.getFilteredByTag('notes').filter(livePosts)]
       .reverse()
       .slice(0, site.maxPostsPerPage);
+  });
+
+  // Returns workshops
+  config.addCollection('speaking', collection => {
+    return collection.getFilteredByGlob('./src/speaking/*.md');
   });
 
   // Plugins

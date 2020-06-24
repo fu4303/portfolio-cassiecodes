@@ -11,7 +11,6 @@ pre[class*='language-'] {
   font-family: Consolas, Menlo, Monaco, 'Andale Mono WT', 'Andale Mono', 'Lucida Console',
     'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
     'Liberation Mono', 'Nimbus Mono L', 'Courier New', Courier, monospace;
-  font-size: 14px;
   line-height: 1.375;
   direction: ltr;
   text-align: left;
@@ -27,8 +26,8 @@ pre[class*='language-'] {
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
-  background: #1d262f;
-  color: #7eb6f6;
+  background: var(--color-dark-down);
+  color: var(--color-mint);
 }
 
 pre[class*='language-']::-moz-selection,
@@ -36,7 +35,7 @@ pre[class*='language-'] ::-moz-selection,
 code[class*='language-']::-moz-selection,
 code[class*='language-'] ::-moz-selection {
   text-shadow: none;
-  background: #d8b8ff;
+  background: none;
 }
 
 pre[class*='language-']::selection,
@@ -44,7 +43,7 @@ pre[class*='language-'] ::selection,
 code[class*='language-']::selection,
 code[class*='language-'] ::selection {
   text-shadow: none;
-  background: #d8b8ff;
+  background: none;
 }
 
 /* Code blocks */
@@ -64,11 +63,11 @@ pre[class*='language-'] {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: #6edcbf;
+  color: var(--color-sea);
 }
 
 .token.punctuation {
-  color: #6edcbf;
+  color: var(--color-sea);
 }
 
 .token.namespace {
@@ -78,23 +77,23 @@ pre[class*='language-'] {
 .token.tag,
 .token.operator,
 .token.number {
-  color: #d1f4ff;
+  color: var(--color-marshmellow);
 }
 
 .token.property,
 .token.function {
-  color: #7eb6f6;
+  color: var(--color-lilac);
 }
 
 .token.tag-id,
 .token.selector,
 .token.atrule-id {
-  color: #ebf4ff;
+  color: var(--color-marshmellow);
 }
 
 code.language-javascript,
 .token.attr-name {
-  color: #7eb6f6;
+  color: var(--color-lilac);
 }
 
 code.language-css,
@@ -114,7 +113,7 @@ code.language-scss,
 .token.statement,
 .token.regex,
 .token.atrule {
-  color: #47ebb4;
+  color: var(--color-sea);
 }
 
 .token.placeholder,
@@ -127,7 +126,7 @@ code.language-scss,
 }
 
 .token.inserted {
-  border-bottom: 1px dotted #d1f4ff;
+  border-bottom: 1px dotted var(--color-rose);
   text-decoration: none;
 }
 
@@ -141,7 +140,7 @@ code.language-scss,
 }
 
 .token.important {
-  color: #7eb6f6;
+  color: var(--color-mint);
 }
 
 .token.entity {
