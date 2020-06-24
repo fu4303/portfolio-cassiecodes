@@ -399,6 +399,7 @@
   });
 })();
 
+// computer
 (function() {
   let illustration = document.querySelector('.Illustration');
   if (!illustration) {
@@ -552,6 +553,7 @@
     );
 })();
 
+// browser draggable
 (function() {
   let browsers = document.querySelectorAll('.js-browser');
 
@@ -562,4 +564,170 @@
   Draggable.create('.js-browser', {
     bounds: document.querySelector('.js-browsers')
   });
+})();
+
+(function() {
+  let hoverTalk = document.querySelector('.js-hover-talk');
+
+  if (!hoverTalk) {
+    return;
+  }
+
+  const tl = gsap.timeline({paused: true});
+
+  tl.from(
+    '.gsap-swipe',
+    {
+      rotate: -30,
+      duration: 3,
+      transformOrigin: '30% 80%',
+      ease: Elastic.easeOut.config(1, 0.5)
+    },
+    0
+  )
+    .fromTo(
+      '.swipe',
+      {
+        xPercent: -100
+      },
+      {
+        duration: 1,
+        xPercent: 100,
+        ease: Sine.easeInOut,
+        stagger: {
+          each: 0.15
+        }
+      },
+      0
+    )
+    .from(
+      '.maskSwipe',
+      {
+        xPercent: -100,
+        ease: Sine.easeInOut
+      },
+      0.4
+    )
+    .from(
+      '#hello',
+      {
+        duration: 1.5,
+        drawSVG: '0%'
+      },
+      1
+    )
+    .from(
+      '.swoop',
+      {
+        duration: 2,
+        drawSVG: '0%'
+      },
+      1
+    )
+    .from(
+      '.line',
+      {
+        drawSVG: '0%',
+        duration: 0.5,
+        stagger: {
+          each: 0.2
+        }
+      },
+      1
+    )
+    .from(
+      '.shape',
+      {
+        scale: 0,
+        duration: 1.3,
+        transformOrigin: '50% 50%',
+        rotate: '+=random(-60, 60)',
+        ease: Elastic.easeOut.config(1, 0.8),
+        stagger: {
+          each: 0.2
+        }
+      },
+      0.2
+    );
+
+  hoverTalk.addEventListener('mouseover', playTl);
+  hoverTalk.addEventListener('mouseout', resetTl);
+
+  function playTl() {
+    tl.timeScale(1.2).restart();
+  }
+
+  function resetTl() {
+    tl.progress(0).pause();
+  }
+})();
+
+(function() {
+  let hoverWrite = document.querySelector('.js-hover-write');
+
+  if (!hoverWrite) {
+    return;
+  }
+
+  gsap.registerPlugin(Physics2DPlugin);
+
+  const tl = gsap.timeline({paused: true});
+
+  for (let i = 0; i < 20; i++) {
+    hoverWrite.insertAdjacentHTML('beforeend', `<span class="js-pencil${i}">✏️</span>`);
+    tl.to(
+      `.js-pencil${i}`,
+      {
+        keyframes: [
+          {
+            opacity: 1,
+            duration: 0.01
+          },
+          {
+            duration: 3,
+            physics2D: {
+              velocity: Math.random() * 400 + 150,
+              angle: Math.random() * 40 + 250,
+              gravity: 600
+            }
+          },
+          {
+            opacity: 0,
+            duration: 0.3,
+            delay: -0.3
+          }
+        ]
+      },
+      Math.random() * 1
+    );
+  }
+
+  // tl.to('.js-pencil', {
+  //   ease: Sine.easeOut,
+  //   keyframes: [
+  //     {x: 0, y: 0, opacity: 0},
+  //     {
+  //       opacity: 1,
+  //       duration: 0.001
+  //     },
+  //     {
+  //       x: '+=random(-150, 150)',
+  //       y: '+=random(-200, 200)',
+  //       rotate: '+=random(-360, 360)',
+  //       duration: 2
+  //     },
+  //     {
+  //       opacity: 0,
+  //       delay: -0.01,
+  //       duration: 0.01
+  //     }
+  //   ]
+  // });
+
+  hoverWrite.addEventListener('mouseover', playTl);
+  hoverWrite.addEventListener('mouseout', resetTl);
+
+  function playTl() {
+    tl.restart();
+  }
 })();
