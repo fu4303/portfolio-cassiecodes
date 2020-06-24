@@ -702,30 +702,7 @@
     );
   }
 
-  // tl.to('.js-pencil', {
-  //   ease: Sine.easeOut,
-  //   keyframes: [
-  //     {x: 0, y: 0, opacity: 0},
-  //     {
-  //       opacity: 1,
-  //       duration: 0.001
-  //     },
-  //     {
-  //       x: '+=random(-150, 150)',
-  //       y: '+=random(-200, 200)',
-  //       rotate: '+=random(-360, 360)',
-  //       duration: 2
-  //     },
-  //     {
-  //       opacity: 0,
-  //       delay: -0.01,
-  //       duration: 0.01
-  //     }
-  //   ]
-  // });
-
   hoverWrite.addEventListener('mouseover', playTl);
-  hoverWrite.addEventListener('mouseout', resetTl);
 
   function playTl() {
     tl.restart();
