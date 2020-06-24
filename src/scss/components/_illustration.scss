@@ -28,6 +28,10 @@
   }
 }
 
+#light {
+  cursor: pointer;
+}
+
 .night {
   .Illustration {
     filter: brightness(90%) saturate(90%);
