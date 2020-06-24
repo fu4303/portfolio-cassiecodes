@@ -90,6 +90,7 @@
 // me
 (function() {
   let me = document.querySelector('#me');
+
   if (!me) {
     return;
   }
@@ -108,21 +109,25 @@
   gsap.set('#me', {opacity: 1});
 
   meTl
-    .from('#me', {duration: 1, yPercent: 100, ease: Elastic.easeOut.config(0.5, 0.4)})
+    .from(
+      '#me',
+      {duration: 1, yPercent: 100, ease: Elastic.easeOut.config(0.5, 0.4)},
+      0.5
+    )
     .from(
       ['#head', '.hair', '.shadow'],
       {duration: 0.9, yPercent: 20, ease: Elastic.easeOut.config(0.58, 0.25)},
-      0.1
+      0.6
     )
     .from(
       '#ear-right',
       {duration: 1, rotate: 40, yPercent: 10, ease: Elastic.easeOut.config(0.5, 0.2)},
-      0.2
+      0.7
     )
     .from(
       '#ear-left',
       {duration: 1, rotate: -40, yPercent: 10, ease: Elastic.easeOut.config(0.5, 0.2)},
-      0.2
+      0.7
     )
     .to(
       '#glasses',
@@ -131,15 +136,15 @@
         keyframes: [{yPercent: -10}, {yPercent: -0}],
         ease: Elastic.easeOut.config(0.5, 0.2)
       },
-      0.25
+      0.75
     )
     .from(
       ['#eyebrow-right', '#eyebrow-left'],
       {duration: 1, yPercent: 300, ease: Elastic.easeOut.config(0.5, 0.2)},
-      0.2
+      0.7
     )
-    .to(['#eye-right', '#eye-left'], {duration: 0.01, opacity: 1}, 0.35)
-    .to(['#eye-right-2', '#eye-left-2'], {duration: 0.01, opacity: 0}, 0.35);
+    .to(['#eye-right', '#eye-left'], {duration: 0.01, opacity: 1}, 0.85)
+    .to(['#eye-right-2', '#eye-left-2'], {duration: 0.01, opacity: 0}, 0.85);
   // end animation
 
   // check for intersection
@@ -156,7 +161,7 @@
         if (entry.intersectionRatio != 0) {
           hasBeenInView = true;
         } else if (hasBeenInView && isScrollingDown) {
-          meTl.play();
+          meTl.play().timeScale(0.8);
         } else {
           // rewind and pause animations
           meTl.progress(0).pause();
@@ -355,6 +360,7 @@
   window.addEventListener('resize', updateWindowSize);
 })();
 
+// video player
 (function() {
   const video = document.querySelector('#js-featured-video');
   const loader = document.querySelector('#js-featured-loader');
@@ -390,5 +396,170 @@
         loader.style.opacity = '0';
       }, 800);
     });
+  });
+})();
+
+(function() {
+  let illustration = document.querySelector('.Illustration');
+  if (!illustration) {
+    return;
+  }
+
+  let fun = document.querySelector('.js-fun');
+
+  let isPlaying = false;
+
+  function playShapes() {
+    if (!isPlaying) {
+      isPlaying = true;
+
+      gsap.to('#shapes > *', {
+        ease: Sine.easeOut,
+        onComplete: isFinished,
+        keyframes: [
+          {x: 0, y: 0, opacity: 0},
+          {
+            opacity: 1,
+            duration: 0.001
+          },
+          {
+            x: '+=random(-150, 150)',
+            y: '+=random(-200, 20)',
+            rotate: '+=random(-360, 360)',
+            duration: 2
+          },
+          {
+            opacity: 0,
+            delay: -0.4,
+            duration: 0.4
+          }
+        ]
+      });
+    }
+
+    function isFinished() {
+      isPlaying = false;
+    }
+  }
+
+  fun.addEventListener('mouseover', playShapes);
+
+  const computer = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.Illustration',
+      toggleActions: 'play reset resume none',
+      start: 'top top', // when the top of the trigger hits the top of the viewport
+      end: '+=1000' // end after scrolling 500px beyond the start
+    }
+  });
+
+  computer
+    .to(
+      '#cursor',
+      {
+        repeat: 20,
+        keyframes: [
+          {
+            opacity: 0,
+            duration: 0.01,
+            delay: 0.4
+          },
+          {
+            opacity: 1,
+            duration: 0.01,
+            delay: 0.4
+          }
+        ]
+      },
+      0
+    )
+    .from(
+      '.line',
+      {
+        scaleX: 0,
+        ease: Sine.easeOut,
+        stagger: {
+          duration: 3,
+          amount: 3
+        }
+      },
+      0
+    )
+    .to(
+      '#website',
+      {
+        ease: Sine.easeInOut,
+        yPercent: -60,
+        duration: 4
+      },
+      1
+    )
+    .to(
+      '#scrollbar',
+      {
+        ease: Sine.easeInOut,
+        yPercent: 260,
+        duration: 4
+      },
+      1
+    )
+    .to(
+      '#iterm',
+      {
+        opacity: 1,
+        delay: -0.1,
+        duration: 0.01
+      },
+      2
+    )
+    .from(
+      '#iterm',
+      {
+        ease: Elastic.easeOut.config(0.17, 0.2),
+        transformOrigin: '50% 50%',
+        y: 60,
+        x: -20,
+        duration: 1,
+        scale: 0
+      },
+      2
+    )
+    .fromTo(
+      '.steam',
+      {
+        opacity: 1,
+        drawSVG: '0%'
+      },
+      {
+        drawSVG: '100%',
+        duration: 3,
+        stagger: {
+          each: 0.5
+        }
+      },
+      2
+    )
+    .to(
+      '.steam',
+      {
+        opacity: 0,
+        duration: 4,
+        stagger: {
+          each: 0.5
+        }
+      },
+      3
+    );
+})();
+
+(function() {
+  let browsers = document.querySelectorAll('.js-browser');
+
+  if (!browsers) {
+    return;
+  }
+
+  Draggable.create('.js-browser', {
+    bounds: document.querySelector('.js-browsers')
   });
 })();

@@ -23,7 +23,7 @@
     &:after {
       content: '';
       position: absolute;
-      top: 0;
+      top: 2rem;
       bottom: 0;
       left: 0;
       right: 0;
@@ -81,7 +81,7 @@
 .night .Browser {
   --underline: var(--color-mint);
   color: var(--color-dark);
-  background-color: transparent;
+  background-color: var(--color-lilac);
 
   &:before {
     filter: invert(1) brightness(1.3);

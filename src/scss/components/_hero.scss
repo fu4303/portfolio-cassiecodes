@@ -47,10 +47,6 @@
       flex-direction: row;
       justify-content: flex-start;
       align-items: center;
-
-      > * + * {
-        padding-left: 2rem;
-      }
     }
 
     &__content {
@@ -80,7 +76,7 @@
 @media screen and (min-width: 1900px) {
   .Hero {
     &__content {
-      width: 59%;
+      width: 45%;
     }
   }
 }
