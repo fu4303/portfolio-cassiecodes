@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Cassie codes.
-metaTitle: "Cassie Evans's Blog | "
+metaTitle: "Cassie Evans's Blog"
 metaDesc: Excitable musings about front-end development from Cassie Evans.
 postsHeading: Latest blog post
 archiveButtonText: See more...
