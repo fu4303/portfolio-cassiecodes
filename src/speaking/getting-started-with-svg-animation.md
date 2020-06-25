@@ -28,6 +28,12 @@ events:
     link: 'https://twitter.com/cassiecodes/status/1231605011437801477'
     date: "2019-02-23"
     location: Brighton, UK
+testimonials:
+  - url : 'https://twitter.com/indextwo'
+    name : Lawrie M.
+    testimonial : "Cassie's SVG Animation Workshop really opened my eyes to what is possible, getting to the core of how & why things work and how to achieve great results. A fantastic resource for anyone interested in animation regardless of experience."
+  - name : Tony Hunt.
+    testimonial : "Had a great time at Cassie's workshop. It's impossible to not get caught up in her infectious enthusiasm. And she really knows her shit!"
 ---
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Had the best day at <a href="https://twitter.com/cassiecodes?ref_src=twsrc%5Etfw">@cassiecodes</a> SVG workshop! I learnt so much, a lot I can apply immediately to my current projects and my fear of javascript has waned! Now sleep and I&#39;ll finalise the animation of my cat tomorrow! <a href="https://twitter.com/hashtag/css?src=hash&amp;ref_src=twsrc%5Etfw">#css</a> <a href="https://twitter.com/hashtag/svg?src=hash&amp;ref_src=twsrc%5Etfw">#svg</a> <a href="https://twitter.com/hashtag/learning?src=hash&amp;ref_src=twsrc%5Etfw">#learning</a> <a href="https://twitter.com/hashtag/cpd?src=hash&amp;ref_src=twsrc%5Etfw">#cpd</a></p>&mdash; Lee Pearson (@LeePearson_) <a href="https://twitter.com/LeePearson_/status/1231704685830168577?ref_src=twsrc%5Etfw">February 23, 2020</a></blockquote>
