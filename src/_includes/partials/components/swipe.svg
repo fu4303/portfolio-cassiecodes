@@ -25,7 +25,7 @@
     </mask>
   </defs>
   <g id="Layer_1" data-name="Layer 1">
-    <image filter="url(#duotone)" mask="url(#swipeMask)" width="370" height="436" xlink:href="https://assets.codepen.io/756881/me.jpg"/>
+    <image filter="url(#duotone)" mask="url(#swipeMask)" width="370" height="436" xlink:href="/images/me-speaking.jpg"/>
   </g>
   <g id="objects">
     <rect class="swipe" width="370" height="436" fill="#fef8b4" />
