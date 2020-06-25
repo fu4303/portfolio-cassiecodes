@@ -17,7 +17,7 @@
   const logoTl = gsap.timeline({});
 
   logoTl
-    .addLabel('i', 3.6)
+    .addLabel('i', 3.1)
     .set('.logo', {autoAlpha: 1})
     .timeScale(0.9)
     .staggerTo('.cPath', 0.5, {drawSVG: '100%', ease: Linear.easeNone}, 0.2, 1)
