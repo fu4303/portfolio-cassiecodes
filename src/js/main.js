@@ -14,7 +14,7 @@
 
   CustomBounce.create('myBounce', {strength: 0.6, squash: 2});
 
-  const logoTl = gsap.timeline({});
+  const logoTl = gsap.timeline({paused: true});
 
   logoTl
     .addLabel('i', 3.1)
@@ -43,6 +43,15 @@
     .to('#strokes', 0.2, {
       opacity: 0
     });
+
+  const safeToAnimate = window.matchMedia('(prefers-reduced-motion: no-preference)')
+    .matches;
+
+  if (safeToAnimate) {
+    logoTl.play();
+  } else {
+    logoTl.progress(1).pause();
+  }
 })();
 
 // night mode toggle
@@ -349,12 +358,17 @@
 
   // function being called at the end of main timeline
   function addMouseEvent() {
-    document.addEventListener('mousemove', updateScreenCoords);
+    const safeToAnimate = window.matchMedia('(prefers-reduced-motion: no-preference)')
+      .matches;
 
-    // gsap's RAF, falls back to set timeout
-    gsap.ticker.add(animateFace);
+    if (safeToAnimate) {
+      document.addEventListener('mousemove', updateScreenCoords);
 
-    blink.play();
+      // gsap's RAF, falls back to set timeout
+      gsap.ticker.add(animateFace);
+
+      blink.play();
+    }
   }
 
   window.addEventListener('resize', updateWindowSize);
@@ -403,6 +417,13 @@
 (function() {
   let illustration = document.querySelector('.Illustration');
   if (!illustration) {
+    return;
+  }
+
+  const safeToAnimate = window.matchMedia('(prefers-reduced-motion: no-preference)')
+    .matches;
+
+  if (!safeToAnimate || window.innerWidth < 800) {
     return;
   }
 
@@ -555,6 +576,13 @@
 
 // browser draggable
 (function() {
+  const safeToAnimate = window.matchMedia('(prefers-reduced-motion: no-preference)')
+    .matches;
+
+  if (!safeToAnimate || window.innerWidth < 800) {
+    return;
+  }
+
   let browsers = document.querySelectorAll('.js-browser');
 
   if (!browsers) {
@@ -573,18 +601,33 @@
     return;
   }
 
+  const safeToAnimate = window.matchMedia('(prefers-reduced-motion: no-preference)')
+    .matches;
+
+  if (!safeToAnimate || window.innerWidth < 800) {
+    return;
+  }
+
   const tl = gsap.timeline({paused: true});
 
-  tl.from(
+  tl.to(
     '.gsap-swipe',
     {
-      rotate: -30,
-      duration: 3,
-      transformOrigin: '30% 80%',
-      ease: Elastic.easeOut.config(1, 0.5)
+      opacity: 1,
+      duration: 0.0001
     },
     0
   )
+    .from(
+      '.gsap-swipe',
+      {
+        rotate: -30,
+        duration: 3,
+        transformOrigin: '30% 80%',
+        ease: Elastic.easeOut.config(1, 0.5)
+      },
+      0
+    )
     .fromTo(
       '.swipe',
       {
@@ -666,6 +709,13 @@
   let hoverWrite = document.querySelector('.js-hover-write');
 
   if (!hoverWrite) {
+    return;
+  }
+
+  const safeToAnimate = window.matchMedia('(prefers-reduced-motion: no-preference)')
+    .matches;
+
+  if (!safeToAnimate || window.innerWidth < 800) {
     return;
   }
 
