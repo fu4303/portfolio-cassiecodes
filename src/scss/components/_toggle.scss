@@ -18,6 +18,10 @@
   pointer-events: none;
 }
 
+.switch__checkbox:focus + span {
+  outline: -webkit-focus-ring-color auto 1px;
+}
+
 /* default states */
 
 .switch .switch__toggle::before,

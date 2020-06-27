@@ -90,7 +90,7 @@
     });
   }
 
-  toggle.addEventListener('mouseup', e => {
+  toggle.addEventListener('change', e => {
     toggleMode();
     localStorage.setItem('darkMode', checkbox.checked ? false : true);
   });
