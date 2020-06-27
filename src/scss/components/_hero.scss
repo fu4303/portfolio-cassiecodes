@@ -38,6 +38,10 @@
     .outline:hover {
       -webkit-text-fill-color: var(--color-dark);
     }
+
+    a {
+      text-decoration: none;
+    }
   }
 
   .js-hover-talk {
@@ -79,7 +83,9 @@
     }
   }
 
-  .js-fun, .js-hover-talk, .js-hover-write {
+  .js-fun,
+  .js-hover-talk,
+  .js-hover-write {
     &:hover {
       cursor: pointer;
     }
