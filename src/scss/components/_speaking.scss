@@ -1,6 +1,7 @@
 .Speaking {
   background-color: var(--color-sherbet);
   min-height: 100vh;
+  --color-selection-bg: var(--color-dark-selection);
   --color-selection: var(--color-peach);
 
   &__heading {

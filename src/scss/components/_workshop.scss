@@ -1,4 +1,6 @@
 .Workshop {
+  --color-selection: var(--color-lilac);
+  --color-selection-bg: var(--color-dark-selection);
   background-color: var(--color-sherbet);
 
   &__heading {

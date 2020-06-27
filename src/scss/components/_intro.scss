@@ -201,6 +201,8 @@
 }
 
 .writing {
+  --color-selection: var(--color-peach);
+  --color-selection-bg: var(--color-dark-selection);
   .Intro {
     &:after {
       background-color: var(--color-lilac);

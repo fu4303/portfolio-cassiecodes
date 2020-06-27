@@ -3,16 +3,4 @@
   @each $color in $stalfos-colors {
     #{'--color-' + nth($color, 1)}: #{nth($color, 2)};
   }
-
-  // Don't need alias's for now
-  // --color-bg: #{get-color('light')};
-  // --color-text: #{get-color('dark')};
-  // --color-selection-text: #{get-color('light')};
-  // --color-selection-bg: #{get-color('mint')};
-  // --color-stroke: #{get-color('mid')};
-  // --color-action-bg: #{get-color('mint')};
-  // --color-action-text: #{get-color('light')};
-  // --color-primary: #{get-color('primary')};
-  // --color-primary-glare: #{get-color('primary-glare')};
-  // --color-highlight: #{get-color('highlight')};
 }

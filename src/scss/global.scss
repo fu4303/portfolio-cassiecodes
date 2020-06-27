@@ -32,8 +32,8 @@
   --color-dark-down: hsl(0, 0%, 98%);
   --color-mint-selection: rgba(119, 64, 105, 0.9);
   --color-lilac-selection: rgba(76, 58, 105, 0.9);
-  --color-light-selection: rgba(38, 37, 40, 0.9);
-  --color-dark-selection: rgba(250, 250, 250, 0.9);
+  --color-light-selection: rgba(38, 37, 40, 0.99);
+  --color-dark-selection: rgba(250, 250, 250, 0.99);
 }
 
 .day {
@@ -62,8 +62,8 @@
   --color-dark-down: hsl(237, 18%, 23%);
   --color-mint-selection: rgba(111, 220, 191, 0.9);
   --color-lilac-selection: rgba(173, 143, 219, 0.9);
-  --color-light-selection: rgba(247, 247, 247, 0.9);
-  --color-dark-selection: rgba(64, 64, 64, 0.9);
+  --color-light-selection: rgba(247, 247, 247, 0.99);
+  --color-dark-selection: rgba(64, 64, 64, 0.99);
 }
 
 pre {
@@ -86,8 +86,8 @@ body {
   position: relative;
   scroll-behavior: smooth;
   color: var(--color-dark);
-  --color-selection: var(--color-dark);
-  --color-selection-bg: var(--color-mint);
+  --color-selection: var(--color-mint);
+  --color-selection-bg: var(--color-light-selection);
   background-color: var(--color-light-fade);
 }
 
@@ -121,6 +121,11 @@ main {
   bottom: 0;
   left: 0;
   width: 100%;
+}
+
+.speaking {
+  --color-selection: var(--color-peach);
+  --color-selection-bg: var(--color-dark-selection);
 }
 
 .speaking .Speaking__image {

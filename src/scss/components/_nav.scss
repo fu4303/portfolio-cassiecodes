@@ -16,6 +16,8 @@
   @include apply-utility('font', 'sans-serif');
   font-size: 0.8rem;
   font-weight: 600;
+  padding-bottom: env(safe-area-inset-bottom);
+
   &__list {
     > * + * {
       margin-left: get-size(500);
