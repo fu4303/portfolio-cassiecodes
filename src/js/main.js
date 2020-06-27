@@ -65,16 +65,26 @@
     document.body.classList.toggle('day');
   }
 
-  if (
-    window.localStorage.darkMode === 'true' ||
-    (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
-  ) {
+  let systemDarkModeOn = window.matchMedia('(prefers-color-scheme: dark)').matches
+  let localDarkMode = window.localStorage.darkMode 
+
+  if(localDarkMode === "true") {
+
     checkbox.checked = true;
     document.body.classList.add('night');
     document.body.classList.remove('day');
-  } else {
+
+  } else if (localDarkMode === "false") {
+
     document.body.classList.add('day');
     document.body.classList.remove('night');
+
+  } else if(systemDarkModeOn) {
+
+    checkbox.checked = true;
+    document.body.classList.add('night');
+    document.body.classList.remove('day');
+
   }
 
   if (!toggle) {
@@ -92,7 +102,7 @@
 
   toggle.addEventListener('change', e => {
     toggleMode();
-    localStorage.setItem('darkMode', checkbox.checked ? false : true);
+    localStorage.setItem('darkMode', checkbox.checked ? true : false);
   });
 })();
 
