@@ -111,6 +111,8 @@
       bottom: 0;
       background-color: var(--color-mint);
       z-index: 0;
+      //your screen is ridiculously large m8
+      max-width: 1800px;
     }
   }
 }
