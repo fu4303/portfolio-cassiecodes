@@ -78,6 +78,12 @@
       z-index: 1;
     }
   }
+
+  .js-fun, .js-hover-talk, .js-hover-write {
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }
 
 @media screen and (min-width: 800px) {
