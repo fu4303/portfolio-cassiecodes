@@ -15,7 +15,7 @@ I'm so excited to have _finally_ launched my website.
 
 This was one of my favourite bits to make **by far**. A little animated me that responds to the cursor position.
 
-<p class="codepen" data-height="582" data-theme-id="dark" data-default-tab="result" data-user="cassie-codes" data-slug-hash="WNQqZJG" style="height: 582px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="lil' me.">
+<p class="codepen" data-height="580" data-theme-id="dark" data-default-tab="result" data-user="cassie-codes" data-slug-hash="WNQqZJG" style="height: 582px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="lil' me.">
   <span>See the Pen <a href="https://codepen.io/cassie-codes/pen/WNQqZJG">
   lil' me.</a> by Cassie Evans (<a href="https://codepen.io/cassie-codes">@cassie-codes</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
@@ -46,7 +46,7 @@ Cool right! Greensock is great at this kind of thing, but there's a lot going on
 
 So, there's another way we can modify values in CSS with Javascript. [CSS custom properties!](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
 
-<p class="codepen" data-height="422" data-theme-id="dark" data-default-tab="result" data-user="cassie-codes" data-slug-hash="OJMOLML" style="height: 422px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Mouse movement demo">
+<p class="codepen" data-height="500" data-theme-id="dark" data-default-tab="result" data-user="cassie-codes" data-slug-hash="OJMOLML" style="height: 422px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Mouse movement demo">
   <span>See the Pen <a href="https://codepen.io/cassie-codes/pen/OJMOLML">
   Mouse movement demo</a> by Cassie Evans (<a href="https://codepen.io/cassie-codes">@cassie-codes</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
@@ -107,7 +107,7 @@ requestAnimationFrame(movePointer);
 Right now, the x and y position we're getting back from `event.clientX` and `event.clientY` are pixel values, this isn't really useful to us.
 If we plug them straight into our custom properties we could end up transforming our pointer hundreds of pixels off in one direction.
 
-<p class="codepen" data-height="504" data-theme-id="dark" data-default-tab="result" data-user="cassie-codes" data-slug-hash="5ed677605b34f86eeb488b4b2a9bfe6a" style="height: 504px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Mouse movement demo">
+<p class="codepen" data-height="500" data-theme-id="dark" data-default-tab="result" data-user="cassie-codes" data-slug-hash="5ed677605b34f86eeb488b4b2a9bfe6a" style="height: 504px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Mouse movement demo">
   <span>See the Pen <a href="https://codepen.io/cassie-codes/pen/5ed677605b34f86eeb488b4b2a9bfe6a">
   Mouse movement demo</a> by Cassie Evans (<a href="https://codepen.io/cassie-codes">@cassie-codes</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
@@ -209,7 +209,7 @@ if (!safeToAnimate) return;
 
 And that's the lot!
 
-<p class="codepen" data-height="422" data-theme-id="light" data-default-tab="result js" data-user="cassie-codes" data-slug-hash="OJMOLML" style="height: 422px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Mouse movement demo">
+<p class="codepen" data-height="500" data-theme-id="dark" data-default-tab="result js" data-user="cassie-codes" data-slug-hash="OJMOLML" style="height: 422px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Mouse movement demo">
   <span>See the Pen <a href="https://codepen.io/cassie-codes/pen/OJMOLML">
   Mouse movement demo</a> by Cassie Evans (<a href="https://codepen.io/cassie-codes">@cassie-codes</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
@@ -262,7 +262,7 @@ function movePointer() {
 gsap.ticker.add(movePointer);
 ```
 
-<p class="codepen" data-height="422" data-theme-id="dark" data-default-tab="result" data-user="cassie-codes" data-slug-hash="oNboYNy" style="height: 422px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Mouse movement demo - GSAP">
+<p class="codepen" data-height="500" data-theme-id="dark" data-default-tab="result" data-user="cassie-codes" data-slug-hash="oNboYNy" style="height: 422px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Mouse movement demo - GSAP">
   <span>See the Pen <a href="https://codepen.io/cassie-codes/pen/oNboYNy">
   Mouse movement demo - GSAP</a> by Cassie Evans (<a href="https://codepen.io/cassie-codes">@cassie-codes</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
