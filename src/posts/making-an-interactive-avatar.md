@@ -5,7 +5,7 @@ metaDesc: How to get values from mouse movement and plug them into an animation.
 socialImage: /images/avatar.jpg
 image: /images/avatar.jpg
 alt: "Cassie's logo"
-date: '2019-07-30'
+date: '2020-06-30'
 tags:
   - code
   - blog
