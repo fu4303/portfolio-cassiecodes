@@ -254,7 +254,8 @@ function movePointer() {
 
   gsap.to('.pointer', {
     xPercent: x,
-    yPercent: y
+    yPercent: y,
+    ease: 'none'
   });
 }
 // gsap's RAF, falls back to set timeout
