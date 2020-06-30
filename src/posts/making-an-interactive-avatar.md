@@ -207,8 +207,6 @@ const safeToAnimate = window.matchMedia('(prefers-reduced-motion: no-preference)
 if (!safeToAnimate) return;
 ```
 
-And that's the lot!
-
 <p class="codepen" data-height="500" data-theme-id="dark" data-default-tab="result js" data-user="cassie-codes" data-slug-hash="OJMOLML" style="height: 422px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Mouse movement demo">
   <span>See the Pen <a href="https://codepen.io/cassie-codes/pen/OJMOLML">
   Mouse movement demo</a> by Cassie Evans (<a href="https://codepen.io/cassie-codes">@cassie-codes</a>)
@@ -218,7 +216,7 @@ And that's the lot!
 
 ## What about Greensock?!
 
-Ok ok. Let's see how we can do the same thing using Greensock!
+Let's see how we can do the same thing using Greensock!
 First we have to include the core library, if you're on codepen, you can go to your pen settings and search for greensock.
 
 ![pen settings on codepen](/images/gsap-include.png)

@@ -52,16 +52,16 @@
 
     pre * {
       scrollbar-width: auto;
-      scrollbar-color: var(--color-lilac-no-swop) var(--color-dark);
+      scrollbar-color: var(--color-lilac-no-swop) var(--color-dark-no-swop);
     }
 
     pre *::-webkit-scrollbar-track {
-      background: var(--color-dark);
+      background: var(--color-dark-no-swop);
     }
     pre *::-webkit-scrollbar-thumb {
       background-color: var(--color-lilac-no-swop);
       border-radius: 6px;
-      border: 3px solid var(--color-dark);
+      border: 3px solid var(--color-dark-no-swop);
     }
 
     code {
