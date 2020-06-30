@@ -27,7 +27,7 @@ pre[class*='language-'] {
   -ms-hyphens: none;
   hyphens: none;
   background: var(--color-dark-down);
-  color: var(--color-mint);
+  color: #e6a3de;
 }
 
 pre[class*='language-']::-moz-selection,
@@ -35,7 +35,6 @@ pre[class*='language-'] ::-moz-selection,
 code[class*='language-']::-moz-selection,
 code[class*='language-'] ::-moz-selection {
   text-shadow: none;
-  background: none;
 }
 
 pre[class*='language-']::selection,
@@ -43,7 +42,6 @@ pre[class*='language-'] ::selection,
 code[class*='language-']::selection,
 code[class*='language-'] ::selection {
   text-shadow: none;
-  background: none;
 }
 
 /* Code blocks */
@@ -59,11 +57,14 @@ pre[class*='language-'] {
   border-radius: 0.3em;
 }
 
-.token.comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
   color: var(--color-sea);
+}
+
+.token.comment {
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .token.punctuation {

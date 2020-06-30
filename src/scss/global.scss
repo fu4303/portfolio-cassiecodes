@@ -88,10 +88,10 @@ body {
   color: var(--color-dark);
   --color-selection: var(--color-mint);
   --color-selection-bg: var(--color-light-selection);
-  background-color: var(--color-light-fade);
+  background-color: var(--color-light);
 }
 
-* ::-webkit-scrollbar {
+*::-webkit-scrollbar {
   width: 11px;
 }
 * {
@@ -104,7 +104,7 @@ body {
 *::-webkit-scrollbar-thumb {
   background-color: var(--color-mint);
   border-radius: 6px;
-  border: 3px solid vvar(--color-sherbet-fade);
+  border: 0px;
 }
 
 main {
@@ -195,10 +195,11 @@ main:focus {
 
 hr {
   display: block;
-  height: 1px;
-  max-width: 500px;
-  background: var(--color-stroke);
+  height: 2px;
+  width: 100%;
+  background: var(--color-mint);
   border: none;
+  opacity: 1;
   margin: get-size(700) auto;
 }
 
