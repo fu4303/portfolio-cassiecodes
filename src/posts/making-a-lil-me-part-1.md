@@ -1,6 +1,6 @@
 ---
 title: Making lil' me - part 1.
-metaTitle: How to get values from mouse movement and plug them into an animation.
+metaTitle: Making a lil' me - Part 1.
 metaDesc: How to get values from mouse movement and plug them into an animation.
 socialImage: /images/avatar.jpg
 image: /images/avatar.jpg
