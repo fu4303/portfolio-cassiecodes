@@ -289,7 +289,7 @@ function movePointer() {
 gsap.ticker.add(movePointer);
 ```
 
-I've added a couple more easing equations in here so you can comment change them out and see what a difference it can make to the movement.
+I've added a couple more easing equations in here so you can change them out and see what a difference it can make to the movement.
 
 <p class="codepen" data-height="400" data-theme-id="dark" data-preview="true" data-default-tab="js,result" data-user="cassie-codes" data-slug-hash="rNxYpzO" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Mouse movement demo - GSAP - easing">
   <span>See the Pen <a href="https://codepen.io/cassie-codes/pen/rNxYpzO">
