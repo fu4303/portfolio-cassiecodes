@@ -15,7 +15,7 @@ I'm so excited to have _finally_ launched my website.
 
 This was one of my favourite bits to make **by far**. A little animated me that responds to the cursor position.
 
-<p class="codepen" data-height="580" data-theme-id="dark" data-default-tab="result" data-user="cassie-codes" data-slug-hash="WNQqZJG" style="height: 582px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="lil' me.">
+<p class="codepen" data-height="580" data-theme-id="dark" data-preview="true" data-default-tab="result" data-user="cassie-codes" data-slug-hash="WNQqZJG" style="height: 582px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="lil' me.">
   <span>See the Pen <a href="https://codepen.io/cassie-codes/pen/WNQqZJG">
   lil' me.</a> by Cassie Evans (<a href="https://codepen.io/cassie-codes">@cassie-codes</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
@@ -198,7 +198,7 @@ function movePointer() {
 😇 another _super important_ bit is checking whether the user has a preference set in their OS for reduced motion.
 Some people have vestibular disorders and get mega quesy when looking at animations.
 
-I pop this at the start of all my animation functions.
+I pop this check at the start of all my animation functions, and return out if necessary.
 
 ```js
 const safeToAnimate = window.matchMedia('(prefers-reduced-motion: no-preference)')
@@ -207,7 +207,7 @@ const safeToAnimate = window.matchMedia('(prefers-reduced-motion: no-preference)
 if (!safeToAnimate) return;
 ```
 
-<p class="codepen" data-height="500" data-theme-id="dark" data-default-tab="result js" data-user="cassie-codes" data-slug-hash="OJMOLML" style="height: 422px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Mouse movement demo">
+<p class="codepen" data-height="500" data-theme-id="dark" data-preview="true" data-default-tab="result js" data-user="cassie-codes" data-slug-hash="OJMOLML" style="height: 422px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Mouse movement demo">
   <span>See the Pen <a href="https://codepen.io/cassie-codes/pen/OJMOLML">
   Mouse movement demo</a> by Cassie Evans (<a href="https://codepen.io/cassie-codes">@cassie-codes</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
@@ -235,40 +235,97 @@ function movePointer() {
 gsap.ticker.add(movePointer);
 ```
 
-And then instead of updating CSS variable, we just pop our x and y values into a greensock tween.
+Aside from making structuring animation itself more intuitive, Greensock provides a load of super cool utility functions that make your life easier.
+Remember all that work we did to get a nice usable range? Chuck that all in the bin. Look what we can do now!
 
+```js
+// Set up our coordinate mapping with GSAP utils!
+let mapWidth;
+let mapHeight;
+function setMaps() {
+  mapWidth = gsap.utils.mapRange(0, innerWidth, -50, 50);
+  mapHeight = gsap.utils.mapRange(0, innerHeight, -50, 50);
+}
+window.addEventListener('resize', setMaps);
+setMaps();
+```
+
+Now we can listen to the mouse movement, feed `clientX` and `clientY` into mapWidth, and we'll get back a value within the range we've set!
+
+```js
+let xPosition;
+let yPosition;
+
+// updating the mouse coordinates
+function updateMouseCoords(event) {
+  xPosition = mapWidth(event.clientX);
+  yPosition = mapWidth(event.clientY);
+}
+window.addEventListener('mousemove', updateMouseCoords);
+```
+
+So tidy and concise!
+
+Instead of updating CSS custom properties, we're going to use a Greensock tween.
 A Tween is what does all the animation work, as I said at the start, it's like a high-performance property manipulator.
 
 A tween takes in two parameters
 
-The targets, which are the object(s) whose properties you want to animate. Greensock uses `document.querySelectorAll()` internally so you can use any selector you would use in CSS.
+The targets, which are the object(s) whose properties you want to animate. Greensock uses `document.querySelectorAll()` internally so we can use any CSS selector we would use in CSS, or a direct reference to an element.
 
 And the vars, an object containing all the properties/values you want to animate, along with any special properties like delay, ease, or duration.
 
 ```js
 function movePointer() {
-  x = percentage(xPosition, windowWidth) - 50;
-  y = percentage(yPosition, windowHeight) - 50;
-
-  gsap.to('.pointer', {
-    xPercent: x,
-    yPercent: y,
+  gsap.to(pointer, {
+    xPercent: xPosition,
+    yPercent: yPosition,
     ease: 'none'
+    // ease: 'power4.out',
+    // ease: 'power4.in'
   });
 }
 // gsap's RAF, falls back to set timeout
 gsap.ticker.add(movePointer);
 ```
 
-<p class="codepen" data-height="500" data-theme-id="dark" data-default-tab="result" data-user="cassie-codes" data-slug-hash="oNboYNy" style="height: 422px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Mouse movement demo - GSAP">
+I've added a couple more easing equations in here so you can comment change them out and see what a difference it can make to the movement.
+
+<p class="codepen" data-height="400" data-theme-id="dark" data-preview="true" data-default-tab="js,result" data-user="cassie-codes" data-slug-hash="rNxYpzO" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Mouse movement demo - GSAP - easing">
+  <span>See the Pen <a href="https://codepen.io/cassie-codes/pen/rNxYpzO">
+  Mouse movement demo - GSAP - easing</a> by Cassie Evans (<a href="https://codepen.io/cassie-codes">@cassie-codes</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+If you want to focus more on performance than easing you can use gsap.quickSetter to update the transforms.
+Creating a quickSetter function can boost performance around 50% - 250%!
+
+```js
+// Use .quickSetter for best performance since we're updating values a lot dynamically
+//apply it to the pointer x/y properties and append a "%" unit
+const xSet = gsap.quickSetter(pointer, 'x', '%');
+const ySet = gsap.quickSetter(pointer, 'y', '%');
+
+function movePointer() {
+  xSet(xPosition);
+  ySet(yPosition);
+}
+// gsap's RAF, falls back to set timeout
+gsap.ticker.add(movePointer);
+```
+
+<p class="codepen" data-height="400" data-theme-id="dark" data-preview="true" data-default-tab="js,result" data-user="cassie-codes" data-slug-hash="oNboYNy" style="height: 422px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Mouse movement demo - GSAP">
   <span>See the Pen <a href="https://codepen.io/cassie-codes/pen/oNboYNy">
   Mouse movement demo - GSAP</a> by Cassie Evans (<a href="https://codepen.io/cassie-codes">@cassie-codes</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
-Thanks for reading. Next up - lets apply this to a SVG and fake some three dimensional movement!
+Thanks for reading!
+
+Next up - lets apply this to a SVG and fake some three dimensional movement!
 
 (check back in for the next article in a couple of days!)
 
-Need help with any SVG stuff, or got any questions about this article [Just pop me a message!](https://twitter.com/cassiecodes)
+Got any questions about this article? [Just pop me a message!](https://twitter.com/cassiecodes)
