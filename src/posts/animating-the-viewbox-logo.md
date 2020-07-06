@@ -1,9 +1,9 @@
 ---
-title: Making lil' me - part 1.
-metaTitle: Making a lil' me - Part 1.
-metaDesc: How to get values from mouse movement and plug them into an animation.
-socialImage: /images/avatar.jpg
-image: /images/avatar.jpg
+title: Animating the viewbox logo.
+metaTitle: Animating the viewbox logo.
+metaDesc: Setting up clip-paths in an SVG can be fiddly and time consuming. But the results are well worth the effort..
+socialImage: /images/viewbox.png
+image: /images/viewbox.png
 alt: "Cassie's logo"
 date: '2020-06-30'
 tags:

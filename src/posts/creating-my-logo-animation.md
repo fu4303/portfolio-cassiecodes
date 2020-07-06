@@ -8,7 +8,7 @@ alt: "Cassie's logo"
 date: '2019-07-30'
 tags:
   - code
-  - blog
+  - SVG
 ---
 
 Last week I posted my new logo animation on [twitter](https://twitter.com/cassiecodes/status/1154650488681435137?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1154650488681435137&ref_url=http%3A%2F%2Flocalhost%3A8080%2Fposts%2Fcreating-my-logo-animation%2F%23heading-svg-stroke-dasharray).
