@@ -326,6 +326,8 @@ Thanks for reading!
 
 Next up - lets apply this to a SVG and fake some three dimensional movement!
 
-(check back in for the next article in a couple of days!)
+(check back in for the next article soon!)
+
+Edit - 30/07 - it's on it's way! I just got a little busy
 
 Got any questions about this article? [Just pop me a message!](https://twitter.com/cassiecodes)
