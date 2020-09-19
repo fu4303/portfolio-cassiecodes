@@ -20,6 +20,15 @@
       "date": "2020-07-29 19:00:00",
       "location": "Live on twitch",
       "time": "6pm BST"
+    },
+    {
+      "title": "SVG Animation Masterclass",
+      "link": "https://smashingconf.com/online-workshops/workshops/cassie-evans",
+      "date": "2020-10-08 17:00:00",
+      "endDate": "2020-10-22 17:00:00",
+      "location": "The interwebz",
+      "time": "5pm BST",
+      "info": "Workshop, 5×2h + Q&A • Thursdays & Fridays"
     }
   ]
 }
