@@ -31,7 +31,7 @@ events:
   - title: SVG animation masterclass
     link: 'https://smashingconf.com/online-workshops/workshops/cassie-evans'
     date: "2020-10-08"
-    endDate: "2020-10-22 17:00:00",
+    endDate: "2020-10-22 17:00:00"
     location: Smashing conf - online
 testimonials:
   - url : 'https://twitter.com/indextwo'
