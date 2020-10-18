@@ -123,6 +123,18 @@ main {
   width: 100%;
 }
 
+.feedbackForm {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  > * {
+    max-width: 600px;
+    margin-top: 6rem;
+  }
+}
+
 .speaking {
   --color-selection: var(--color-peach);
   --color-selection-bg: var(--color-dark-selection);
