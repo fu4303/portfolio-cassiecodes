@@ -44,6 +44,21 @@
       },
       "date": "2019-12-03",
       "url": "https://css-tricks.com/the-many-ways-to-change-an-svg-fill-on-hover-and-when-to-use-them/"
+    },
+    {
+      "external": true,
+      "data": {
+        "title": "Static sites, slack and scrollytelling.",
+        "metaDesc": "Since I started at Clearleft, I’ve had my eye on our timeline…",
+        "image": "/images/timeline.svg",
+        "alt": "clearleft est. 2005"
+      },
+      "publication": {
+        "name": "Clearleft",
+        "url": "https://clearleft.com/"
+      },
+      "date": "2020-11-18",
+      "url": "https://clearleft.com/posts/static-sites-slack-and-scrollytelling"
     }
   ]
 }
