@@ -83,7 +83,7 @@ gsap.to('#innerFace', {
 
 ## A little tip.
 
-You can pass the dom element itself straight into a GSAP tween, but when I'm animating stuff that'll be updating frequently, like mouse reactive animation, I tend to assign the DOM elements to variables so that the DOM is hit less. It's only a small performance gain - but small wins are important with animation!
+You can pass the DOM element itself straight into a GSAP tween, but when I'm animating stuff that'll be updating frequently, like mouse reactive animation, I tend to assign the elements to variables so that the DOM is hit less. It's only a small performance gain - but small wins are important with animation!
 
 ```js
 // Get the elements that we need
