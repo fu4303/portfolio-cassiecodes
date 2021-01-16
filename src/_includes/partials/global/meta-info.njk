@@ -13,24 +13,29 @@
 
 <title>{{ pageTitle }}</title>
 
-<meta property="og:site_name" content="{{ siteTitle }}" />
-<meta property="og:title" content="{{ pageTitle }}" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="{{ currentUrl }}" />
+<meta property="og:site_name" content="{{ siteTitle }}"/>
+<meta property="og:title" content="{{ pageTitle }}"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="{{ currentUrl }}"/>
 
 {% if site.authorHandle %}
-  <meta name="twitter:creator" content="@{{ site.authorHandle | replace('@', '') }}" />
+  <meta name="twitter:creator" content="@{{ site.authorHandle | replace('@', '') }}"/>
 {% endif %}
 
 {% if metaDesc %}
-  <meta name="description" content="{{ metaDesc }}" />
-  <meta name="twitter:description" content="{{ metaDesc }}" />
-  <meta property="og:description" content="{{ metaDesc }}" />
+  <meta name="description" content="{{ metaDesc }}"/>
+  <meta name="twitter:description" content="{{ metaDesc }}"/>
+  <meta property="og:description" content="{{ metaDesc }}"/>
 {% endif %}
 
-{% if socialImage %}  
-  <meta property="og:image" content="{{ site.url }}{{ socialImage }}" />
-  <meta name="twitter:image" content="{{ site.url }}{{ socialImage }}" />
-  <meta property="og:image:alt" content="Page image for {{ site.name }}" />
-  <meta name="twitter:image:alt" content="Page image for {{ site.name }}" />
+{% if socialImage %}
+  <meta property="og:image" content="{{ site.url }}{{ socialImage }}"/>
+  <meta name="twitter:image" content="{{ site.url }}{{ socialImage }}"/>
+  <meta property="og:image:alt" content="Page image for {{ site.name }}"/>
+  <meta name="twitter:image:alt" content="Page image for {{ site.name }}"/>
+{% else %}
+  <meta property="og:image" content="{{ site.url }}/images/meta.jpg"/>
+  <meta name="twitter:image" content="{{ site.url }}/images/meta.jpg"/>
+  <meta property="og:image:alt" content="Page image for {{ site.name }}"/>
+  <meta name="twitter:image:alt" content="Page image for {{ site.name }}"/>
 {% endif %}
