@@ -1,23 +1,17 @@
 ---
-title: Getting started with SVG animation
-description: "<p>I only managed to throw this workshop twice before *the situation* happened</p>
-<p>I'm currently working on getting it online. But I hope I'll get the chance to host it again sometime in the future. It was great fun and I love seeing what everyone makes!</p>"
+title: SVG animation workshop.
+description: "<p>This workshop was originally a one day in-person setup – I only managed to throw it twice before the pandemic kicked off. But with the help of the lovely Smashing crew, the workshop is now online!
+<p>Check out the <strong>amazing</strong> things past attendees made in this <a href='https://codepen.io/collection/Xvbjpy'>codepen collection</a></p>
+"
+
 subContent: "<h2 class='h5'>What will you learn?</h2>
-<ul>
-  <li>Animation principles</li>
-  <li>SVG markup and optimisation</li>
-  <li>Creating & sourcing SVG graphics</li>
-  <li>Animating with CSS & JS animation libraries</li>
-  <li>Clipping and Masking</li>
-  <li>Morphing</li>
-  <li>Motion path animation</li>
-  <li>Easing</li>
-  <li>Accessibility</li>
-  <li>And a bunch more</li>
-</ul>"
+<ul><li>How to use motion design principles to improve your animations.</li><li>How best to structure and optimize your SVG for <strong>performance and accessibility</strong>.</li><li>Unlocking SVG’s superpowers — <strong>clipping, masking</strong> and <strong>filters</strong>.</li><li>How to <strong>animate SVG with CSS</strong> and the gotcha’s to be aware of.</li><li>Utilizing a <strong>JavaScript animation library</strong> for more complex animations — <a href='https://greensock.com/'>Greensock</a>.</li><li>Creating animation with personality — choosing the right <strong>ease and timing</strong>.</li><li>Planning out and structuring your animation.</li><li>Achieving effects like stroke animation and morphing with Greensock’s plugins.</li><li><strong>Debugging</strong> your animations &amp; avoiding common pitfalls.</li><li>How to use your new powers responsibly — respecting user preferences.</li></ul>"
 type: talk
+cta: "https://smashingconf.com/online-workshops/workshops/cassie-evans-feb"
+ctaText: "Get a ticket"
 tweets: true
-image: '/images/stickers.jpeg'
+# image: '/images/stickers.jpeg'
+video: 'https://player.vimeo.com/video/499779679'
 imageCaption: Stickers!
 events:
   - title: Workshop Summit
@@ -31,24 +25,19 @@ events:
   - title: SVG animation masterclass
     link: 'https://smashingconf.com/online-workshops/workshops/cassie-evans'
     date: "2020-10-08"
-    endDate: "2020-10-22 17:00:00",
+    endDate: "2020-10-22 17:00:00"
     location: Smashing conf - online
 testimonials:
-  - url : 'https://twitter.com/indextwo'
-    name : Lawrie M.
-    testimonial : "Cassie's SVG Animation Workshop really opened my eyes to what is possible, getting to the core of how & why things work and how to achieve great results. A fantastic resource for anyone interested in animation regardless of experience."
-  - name : Tony Hunt.
-    testimonial : "Had a great time at Cassie's workshop. It's impossible to not get caught up in her infectious enthusiasm. And she really knows her shit!"
+  - name : Joshua.
+    testimonial : "You covered ALL OF THE COOL THINGS. I'm seriously so excited to make a ton of cool stuff. It was all so helpful and inspiring and imo you can't put a price on inspiration!"
+  - name : Paul.
+    testimonial : "I thoroughly enjoyed the workshop. It was really well paced, everything explained in detail and the docs are outstanding."
+  - name : Natalia.
+    testimonial : "This was, hands down, the best workshop I have ever participated in. Not only was I able to enjoy myself during our lessons (even though I was coding after a full day of coding), I couldn't wait for the next ones to come."
 ---
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Had the best day at <a href="https://twitter.com/cassiecodes?ref_src=twsrc%5Etfw">@cassiecodes</a> SVG workshop! I learnt so much, a lot I can apply immediately to my current projects and my fear of javascript has waned! Now sleep and I&#39;ll finalise the animation of my cat tomorrow! <a href="https://twitter.com/hashtag/css?src=hash&amp;ref_src=twsrc%5Etfw">#css</a> <a href="https://twitter.com/hashtag/svg?src=hash&amp;ref_src=twsrc%5Etfw">#svg</a> <a href="https://twitter.com/hashtag/learning?src=hash&amp;ref_src=twsrc%5Etfw">#learning</a> <a href="https://twitter.com/hashtag/cpd?src=hash&amp;ref_src=twsrc%5Etfw">#cpd</a></p>&mdash; Lee Pearson (@LeePearson_) <a href="https://twitter.com/LeePearson_/status/1231704685830168577?ref_src=twsrc%5Etfw">February 23, 2020</a></blockquote>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">How it started: How it&#39;s going: <a href="https://t.co/NqFhlNgswv">pic.twitter.com/NqFhlNgswv</a></p>&mdash; Morgane Peng (@morganepeng) <a href="https://twitter.com/morganepeng/status/1317863074590752773?ref_src=twsrc%5Etfw">October 18, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Amazing workshop on getting started with SVG animation by <a href="https://twitter.com/cassiecodes?ref_src=twsrc%5Etfw">@cassiecodes</a>! She made it really easy to understand! Amazing instructor!<br>Big thanks to <a href="https://twitter.com/optisnv?ref_src=twsrc%5Etfw">@optisnv</a> and <a href="https://twitter.com/hackages?ref_src=twsrc%5Etfw">@hackages</a> for the opportunity!</p>&mdash; Gunther Laurijssens (@laurigun) <a href="https://twitter.com/laurigun/status/1235606216182816768?ref_src=twsrc%5Etfw">March 5, 2020</a></blockquote>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Every once in a while someone asks me how they can get started with <a href="https://twitter.com/hashtag/SVG?src=hash&amp;ref_src=twsrc%5Etfw">#SVG</a> animation...<br><br>If you&#39;re at all interested in getting into SVG animation, <a href="https://twitter.com/cassiecodes?ref_src=twsrc%5Etfw">@cassiecodes</a> is a wonderful teacher to learn from, and her <a href="https://twitter.com/smashingconf?ref_src=twsrc%5Etfw">@smashingconf</a> workshop is a fantastic place to start. <a href="https://t.co/LTsaHDiEcQ">https://t.co/LTsaHDiEcQ</a></p>&mdash; Sara Soueidan (@SaraSoueidan) <a href="https://twitter.com/SaraSoueidan/status/1346777634076766208?ref_src=twsrc%5Etfw">January 6, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Thanks <a href="https://twitter.com/cassiecodes?ref_src=twsrc%5Etfw">@cassiecodes</a> for yesterday&#39;s SVG animation workshop. Loved the tons of references and examples and also the accessibility notes at the end. <a href="https://twitter.com/hashtag/SVGanimation?src=hash&amp;ref_src=twsrc%5Etfw">#SVGanimation</a></p>&mdash; Anna Negrini (@pannacida) <a href="https://twitter.com/pannacida/status/1231881840547565568?ref_src=twsrc%5Etfw">February 24, 2020</a></blockquote>
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Absolutely brilliant day at <a href="https://twitter.com/cassiecodes?ref_src=twsrc%5Etfw">@cassiecodes</a>’ SVG animation workshop! Learned so much and cannot wait to put it into practice 💫 <a href="https://t.co/7i1HbY89Ih">pic.twitter.com/7i1HbY89Ih</a></p>&mdash; Alexandra Moore (@alexandrathedev) <a href="https://twitter.com/alexandrathedev/status/1231657521921822720?ref_src=twsrc%5Etfw">February 23, 2020</a></blockquote>
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Thank you <a href="https://twitter.com/cassiecodes?ref_src=twsrc%5Etfw">@cassiecodes</a> for your SVG animation workshop yesterday. It was so fun! <br><br>Here is my very happy (and hungry?) puppy 🐶<a href="https://t.co/JsL6JylZZH">https://t.co/JsL6JylZZH</a></p>&mdash; Zara (@madebyzara) <a href="https://twitter.com/madebyzara/status/1232016625534164992?ref_src=twsrc%5Etfw">February 24, 2020</a></blockquote>
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Animating SVG is so cool! <a href="https://t.co/xfAKfPW55Y">https://t.co/xfAKfPW55Y</a> via <a href="https://twitter.com/CodePen?ref_src=twsrc%5Etfw">@CodePen</a> Thanks for the workshop <a href="https://twitter.com/cassiecodes?ref_src=twsrc%5Etfw">@cassiecodes</a>!</p>&mdash; Tony Hunt (@TechnoTone) <a href="https://twitter.com/TechnoTone/status/1231632505041752065?ref_src=twsrc%5Etfw">February 23, 2020</a></blockquote>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I made this fun little animation for the delightful SVG workshop <a href="https://twitter.com/cassiecodes?ref_src=twsrc%5Etfw">@cassiecodes</a> is teaching. Made me reminisce about the old Flash days. (I do that a lot.) <a href="https://t.co/5hKsHdrqPq">https://t.co/5hKsHdrqPq</a></p>&mdash; Soma Holiday (@somahol) <a href="https://twitter.com/somahol/status/1318434912446205952?ref_src=twsrc%5Etfw">October 20, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

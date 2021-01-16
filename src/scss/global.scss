@@ -248,6 +248,10 @@ a:not([class]) {
   }
 }
 
+a.unstyled {
+  color: inherit;
+}
+
 .underline__text {
   line-height: 1;
   display: inline;

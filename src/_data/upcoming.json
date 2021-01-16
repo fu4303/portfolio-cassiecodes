@@ -36,6 +36,15 @@
       "date": "2020-010-28 19:00:00",
       "location": "On the interwebs",
       "time": "18:30 CET"
+    },
+    {
+      "title": "SVG Animation Masterclass",
+      "link": "https://smashingconf.com/online-workshops/workshops/cassie-evans-feb",
+      "date": "2022-02-11 17:00:00",
+      "endDate": "2022-11-26 17:00:00",
+      "location": "The interwebz",
+      "time": "5pm BST",
+      "info": "Workshop, 5×2h + Q&A • Thursdays & Fridays"
     }
   ]
 }
