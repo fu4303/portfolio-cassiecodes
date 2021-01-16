@@ -25,8 +25,17 @@
     max-width: 100%;
   }
 
-  .twitter-tweet {
-    max-width: 300px;
+  &__tweets {
+    .twitter-tweet {
+      max-width: 400px !important;
+      margin: 0 auto;
+    }
+  }
+
+  &__footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   .Blockquote {
@@ -104,7 +113,7 @@
   }
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 600px) {
   .Workshop {
     &__tweets {
       display: flex;
@@ -120,8 +129,31 @@
   }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1000px) {
   .Workshop {
+    &__head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      > * {
+        flex: 1 1 50%;
+      }
+
+      .button {
+        margin-top: 0;
+      }
+    }
+
+    &__cta {
+      display: flex;
+      justify-content: center;
+    }
+
+    &__intro {
+      padding-right: 2rem;
+    }
+
     &__resources {
       display: flex;
       margin-left: -1rem;
@@ -129,6 +161,10 @@
       > * {
         flex: 1 1 50%;
       }
+    }
+
+    &__subcontent {
+      margin-right: 3rem;
     }
 
     &__video {
