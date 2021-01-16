@@ -5,6 +5,7 @@
   padding-bottom: 1rem;
   &__item {
     flex: 1 0 220px;
+    max-width: 350px;
     padding: 1.5rem 1rem;
     background-color: var(--color-sherbet-fade);
     border-radius: 20px;

@@ -1,10 +1,10 @@
 ---
 title: A scheduled post
-date: '2022-06-18'
+date: '2028-06-18'
 tags:
-- demo-content
-  - code
-  - blog
+  - demo-content
+    - code
+    - blog
 ---
 
 This post is scheduled for the future, specifically mid-2022. Hopefully you're still blogging by then too. Once that date ticks by, this post will automatically become published and visible.
@@ -28,6 +28,5 @@ How about an ordered list of stuff:
 1. Sed posuere consectetur est at lobortis
 2. Aenean lacinia bibendum nulla sed consectetur
 3. Sed posuere consectetur est at lobortis
-
 
 Hopefully, this has demonstrated how simple it is to make a nice looking blog with Hylia.
