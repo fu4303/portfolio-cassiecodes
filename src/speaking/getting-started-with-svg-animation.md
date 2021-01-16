@@ -6,7 +6,7 @@ description: "<p>This workshop was originally a one day in-person setup – I on
 
 subContent: "<h2 class='h5'>What will you learn?</h2>
 <ul><li>How to use motion design principles to improve your animations.</li><li>How best to structure and optimize your SVG for <strong>performance and accessibility</strong>.</li><li>Unlocking SVG’s superpowers — <strong>clipping, masking</strong> and <strong>filters</strong>.</li><li>How to <strong>animate SVG with CSS</strong> and the gotcha’s to be aware of.</li><li>Utilizing a <strong>JavaScript animation library</strong> for more complex animations — <a href='https://greensock.com/'>Greensock</a>.</li><li>Creating animation with personality — choosing the right <strong>ease and timing</strong>.</li><li>Planning out and structuring your animation.</li><li>Achieving effects like stroke animation and morphing with Greensock’s plugins.</li><li><strong>Debugging</strong> your animations &amp; avoiding common pitfalls.</li><li>How to use your new powers responsibly — respecting user preferences.</li></ul>"
-type: talk
+type: workshop
 cta: "https://smashingconf.com/online-workshops/workshops/cassie-evans-feb"
 ctaText: "Get a ticket"
 tweets: true
