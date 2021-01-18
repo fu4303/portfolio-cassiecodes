@@ -4,7 +4,7 @@ metaTitle: My Typical Day
 metaDesc: "A typical day during a time that's anything but."
 image: /images/calendar.svg
 alt: 'A schedule lies on a lilac background'
-socialImage: /images/calendar.svg
+socialImage: '/images/calendar.png'
 date: '2021-01-18'
 tags:
   - blog
