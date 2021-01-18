@@ -374,6 +374,14 @@ a.arrow {
   }
 }
 
+#heading-schedule ~ p {
+  img {
+    display: block;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
 // @media screen and (min-width: 800px) {
 //   .subpage {
 //     position: relative;
