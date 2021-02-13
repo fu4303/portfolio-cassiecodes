@@ -9,7 +9,7 @@
 					<h1 class="[ Workshop__heading ] [ h1 ]">{{ title }}</h1>
 					{% if cta %}
 						<div class="[ Workshop__cta ]">
-							<a class='[ button ] [ h6 ]' data-content='{{ ctaText }}' href='{{ cta }}'>{{ ctaText }}</a>
+							<a class='[ button ] [ h6 ]' target='_blank' data-content='{{ ctaText }}' href='{{ cta }}'>{{ ctaText }}</a>
 						</div>
 					{% endif %}
 				</div>
@@ -113,7 +113,7 @@
 
 			{% if cta %}
 				<div class="[ Workshop__footer ]  [ pad-before pad-after-xlg ]">
-					<a class='[ button ] [ h6 ]' data-content='Go on... join us!' href='{{ cta }}'>Go on... join us!</a>
+					<a class='[ button ] [ h6 ]' target='_blank' data-content='{{ ctaText }}' href='{{ cta }}'>{{ ctaText }}</a>
 				</div>
 			{% endif %}
 		</main>
