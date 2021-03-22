@@ -88,7 +88,7 @@ body {
   color: var(--color-dark);
   --color-selection: var(--color-mint);
   --color-selection-bg: var(--color-light-selection);
-  background-color: var(--color-light);
+  background-color: var(--color-light-fade);
 }
 
 *::-webkit-scrollbar {
@@ -121,6 +121,18 @@ main {
   bottom: 0;
   left: 0;
   width: 100%;
+}
+
+.feedbackForm {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  > * {
+    max-width: 600px;
+    margin-top: 6rem;
+  }
 }
 
 .speaking {
@@ -248,6 +260,10 @@ a:not([class]) {
   }
 }
 
+a.unstyled {
+  color: inherit;
+}
+
 .underline__text {
   line-height: 1;
   display: inline;
@@ -355,6 +371,14 @@ a.arrow {
     > * + * {
       margin-top: 0;
     }
+  }
+}
+
+#heading-schedule ~ p {
+  img {
+    display: block;
+    max-width: 500px;
+    margin: 0 auto;
   }
 }
 

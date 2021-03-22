@@ -1,7 +1,7 @@
 ---
 title: Making lil' me - part 1.
 metaTitle: Making a lil' me - Part 1.
-metaDesc: How to get values from mouse movement and plug them into an animation.
+metaDesc: How to get values from mouse movement and plug them into an animation - the mouse movement bit.
 socialImage: /images/avatar.jpg
 image: /images/avatar.jpg
 alt: "Cassie's logo"
@@ -326,6 +326,10 @@ Thanks for reading!
 
 Next up - lets apply this to a SVG and fake some three dimensional movement!
 
-(check back in for the next article in a couple of days!)
+(check back in for the next article soon!)
+
+Edit - 30/07/2020 - it's on it's way! I just got a little busy
+
+Edit - 01/01/2021 - Yep. Note to self. Don't try to do 2 part blog post series during a pandemic.
 
 Got any questions about this article? [Just pop me a message!](https://twitter.com/cassiecodes)
