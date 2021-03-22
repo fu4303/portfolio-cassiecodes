@@ -88,7 +88,7 @@ body {
   color: var(--color-dark);
   --color-selection: var(--color-mint);
   --color-selection-bg: var(--color-light-selection);
-  background-color: var(--color-light);
+  background-color: var(--color-light-fade);
 }
 
 *::-webkit-scrollbar {
