@@ -4,8 +4,11 @@ module.exports = {
   },
   getReadingTime(text) {
     const wordsPerMinute = 200;
-    const numberOfWords = text.split(/\s/g).length;
-    return Math.ceil(numberOfWords / wordsPerMinute);
+
+    let noSVGMarkup = text.replace(/<svg.*svg>/mg, "removed");
+    const numberOfWords = noSVGMarkup.split(/\s/g).length;
+
+    return Math.ceil(numberOfWords / wordsPerMinute)
   },
   isUpcoming(date) {
     const now = new Date();

@@ -65,26 +65,20 @@
     document.body.classList.toggle('day');
   }
 
-  let systemDarkModeOn = window.matchMedia('(prefers-color-scheme: dark)').matches
-  let localDarkMode = window.localStorage.darkMode 
+  let systemDarkModeOn = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  let localDarkMode = window.localStorage.darkMode;
 
-  if(localDarkMode === "true") {
-
+  if (localDarkMode === 'true') {
     checkbox.checked = true;
     document.body.classList.add('night');
     document.body.classList.remove('day');
-
-  } else if (localDarkMode === "false") {
-
+  } else if (localDarkMode === 'false') {
     document.body.classList.add('day');
     document.body.classList.remove('night');
-
-  } else if(systemDarkModeOn) {
-
+  } else if (systemDarkModeOn) {
     checkbox.checked = true;
     document.body.classList.add('night');
     document.body.classList.remove('day');
-
   }
 
   if (!toggle) {
@@ -767,4 +761,129 @@
   function playTl() {
     tl.restart();
   }
+})();
+
+(function() {
+  var HeroGrid = document.querySelector('.anim-hero');
+
+  var animationIsOk = window.matchMedia('(prefers-reduced-motion: no-preference)')
+    .matches;
+
+  gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin);
+
+  if (!animationIsOk || !HeroGrid) {
+    return;
+  }
+
+  var griddy = gsap.timeline({
+    scrollTrigger: {
+      trigger: '#anim-grid-strokes',
+      start: 'top center',
+      toggleActions: 'play pause resume reset'
+    }
+  });
+  griddy.from('.gridstroke', {
+    drawSVG: '0%',
+    duration: 1.5,
+    stagger: 1.5,
+    ease: 'none'
+  });
+  griddy.from(
+    '#blue',
+    {
+      opacity: 0
+    },
+    '+=0.2'
+  );
+  griddy.from(
+    '#pink',
+    {
+      opacity: 0
+    },
+    '+=0.2'
+  );
+  griddy.from(
+    '#green',
+    {
+      opacity: 0
+    },
+    '+=0.2'
+  );
+
+  var tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.anim-hero',
+      start: 'top center'
+    },
+    defaults: {
+      transformOrigin: 'right center',
+      ease: 'expo.out',
+      duration: 1.2,
+      stagger: {
+        each: 0.5,
+        from: 'end'
+      }
+    }
+  });
+  tl.set('.fouc--hero', {
+    opacity: 1
+  })
+    .from('.hero__swipe-1', {
+      scaleX: 0
+    })
+    .from(
+      '.hero__swipe-2',
+      {
+        scaleX: 0
+      },
+      '<'
+    )
+    .from(
+      '.hero__swipe-3',
+      {
+        scaleX: 0
+      },
+      '<'
+    )
+    .from(
+      '.hero__swipe-4',
+      {
+        scaleX: 0
+      },
+      '<'
+    )
+    .from(
+      '.hero__circle',
+      {
+        duration: 0.7,
+        transformOrigin: 'center',
+        opacity: 0,
+        scale: 0.7,
+        ease: 'sine.out'
+      },
+      '<'
+    );
+
+  var slider = document.querySelector('.clipslider');
+  var output = document.querySelector('.clipoutput');
+
+  slider.addEventListener('input', e => {
+    output.innerHTML = `transform: translateX(${slider.value}px)`;
+
+    gsap.set('#anim-clipdemo', {
+      xPercent: slider.value
+    });
+  });
+
+  var radios = document.querySelectorAll('.sliceDemoInput');
+  var imgRatios = document.querySelectorAll('.changeAspectRatio');
+
+  radios.forEach(radio => {
+    radio.addEventListener('change', e => { 
+      imgRatios.forEach(img => {
+        img.setAttribute('preserveAspectRatio', e.target.value)
+      });
+    });
+  })
+  
 })();
