@@ -5,7 +5,7 @@ metaDesc: SVG isn't just useful for illustrative animation. It's hella handy for
 socialImage: /images/grid.png
 image: /images/grid.png
 alt: 'a handdrawn 10 by 10 grid'
-date: '2021-03-22'
+date: '2021-04-04'
 tags:
   - code
   - SVG
