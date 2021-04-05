@@ -59,7 +59,7 @@ Let's break down a layout together. The `rect` element takes x and y coordinates
 
 See, it's as simple as counting out some grid blocks.
 
-> 💡 We want the pink rectangle to be on top so you'll notice it's last in the DOM. This is becasue SVG has an implicit drawing order and `z-index` doesn't work, no matter how many 9999's you put in.
+> 💡 We want the pink rectangle to be on top so you'll notice it's last in the DOM. This is because SVG has an implicit drawing order and `z-index` doesn't work, no matter how many 9999's you put in.
 
 Cool, so here's our lovely responsive SVG grid.
 
