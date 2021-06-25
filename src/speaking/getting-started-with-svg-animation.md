@@ -16,12 +16,17 @@ tweets: true
 video: 'https://player.vimeo.com/video/499779679'
 imageCaption: Stickers!
 upcoming:
+  - title: Details to come
+    link: 'https://smashingconf.com/online-workshops/workshops'
+    date: "2021-09-02 17:00:00"
+    endDate: "2021-09-16 17:00:00"
+    location: Online
+events:
   - title: SVG animation masterclass
     link: 'https://smashingconf.com/online-workshops/workshops/cassie-evans-feb'
     date: "2021-02-11 17:00:00"
     endDate: "2021-02-26 17:00:00"
     location: Smashing conf - online
-events:
   - title: Workshop Summit
     link: 'https://workshop-summit.com/'
     date: "2020-03-05"
