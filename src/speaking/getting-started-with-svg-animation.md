@@ -1,6 +1,8 @@
 ---
 title: SVG animation workshop.
-description: "<p>This workshop was originally a one day in-person setup – I only managed to throw it twice before the pandemic kicked off. But with the help of the lovely Smashing crew, the workshop is now online!
+description: "<p>SVG animation is a brilliant way to bring personality and character to an online experience. But in an industry focused on metrics, these whimsical details are often overlooked or undervalued.<p>
+
+<p>In this hands-on online workshop, you’ll learn how to craft delightful animations using SVG, CSS and GSAP, and have a ton of fun while doing it.</p>
 <p>Check out the <strong>amazing</strong> things past attendees made in this <a href='https://codepen.io/collection/Xvbjpy'>codepen collection</a></p>
 "
 

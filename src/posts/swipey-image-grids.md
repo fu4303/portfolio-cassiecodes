@@ -153,9 +153,11 @@ I use [Greensock](https://greensock.com/) for most of my animation because it ma
 
 Here's the final codepen if you want to dig into it!
 
-<iframe height="265" style="width: 100%;" scrolling="no" title="swipey grid - clearleft" src="https://codepen.io/cassie-codes/embed/d323b4217b3a7cd14b0a863ddbb3b4c9?height=265&theme-id=light&default-tab=js,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/cassie-codes/pen/d323b4217b3a7cd14b0a863ddbb3b4c9'>swipey grid - clearleft</a> by Cassie Evans
-  (<a href='https://codepen.io/cassie-codes'>@cassie-codes</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+<p class="codepen" data-height="500" data-default-tab="html,result" data-slug-hash="mdRbGzO" data-user="cassie-codes" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/cassie-codes/pen/mdRbGzO">
+  swipey grid - clearleft</a> by Cassie Evans (<a href="https://codepen.io/cassie-codes">@cassie-codes</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 Got any questions about this article? [Just pop me a message!](https://twitter.com/cassiecodes)
